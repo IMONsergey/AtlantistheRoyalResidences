@@ -1,0 +1,7 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Button from '../components/Button.astro';
+---
+<Layout title="Page not found | Atlantis The Royal Residences"><Header detail/><main id="main" class="not-found"><p class="editorial">A different destination</p><h1 class="display">Page not found</h1><p>The page you are looking for is not here. Continue exploring Atlantis The Royal Residences.</p><Button label="Return to the residences" href="/"/></main></Layout>
+<style>.not-found{min-height:calc(100dvh - 80px);padding:140px 24px 100px;text-align:center;background:var(--cream)}.not-found .editorial{font-size:28px}.not-found h1{font-size:72px;color:var(--gold);margin:32px 0}.not-found>p:not(.editorial){max-width:420px;margin:0 auto 40px;font-size:15px}@media(max-width:800px){.not-found{padding-top:100px}.not-found h1{font-size:46px}.not-found .editorial{font-size:24px}}</style>

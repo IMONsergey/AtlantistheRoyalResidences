@@ -1,0 +1,16 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Button from '../components/Button.astro';
+---
+<Layout title="Enquiry privacy notice | Atlantis The Royal Residences">
+ <Header detail/>
+ <main id="main" class="privacy-page"><p class="editorial">Your enquiry</p><h1 class="display">Privacy notice</h1>
+  <section><h2>Information you provide</h2><p>When you submit an enquiry, this website collects your name, email address, optional telephone number and the residence or material you are interested in. It also records your consent to be contacted, the submission time and a reference for your request.</p></section>
+  <section><h2>How the information is used</h2><p>Your enquiry is sent to the operator of this website and stored in a private enquiry inbox so it can be reviewed and answered. Submitting the form is a request for information. It does not reserve a residence, create a purchase agreement or confirm availability.</p></section>
+  <section><h2>Browser storage and external services</h2><p>The website does not use advertising cookies or advertising trackers. The enquiry form uses a temporary submission reference to avoid duplicate requests when you retry. Links to maps open an external website, whose own privacy terms apply.</p></section>
+  <section><h2>Questions about your information</h2><p>You can request information about your enquiry, correct your details or ask for your enquiry to be deleted. Use the buttons below and the email address associated with your original request.</p><div class="privacy-actions"><Button label="Privacy enquiry" context="Privacy information request"/><Button label="Request deletion" context="Request deletion of my enquiry" variant="outline"/></div></section>
+  <a class="link-line" href="/">← Return to Atlantis The Royal Residences</a>
+ </main>
+</Layout>
+<style>.privacy-page{max-width:860px;margin:auto;padding:65px 40px 100px}.privacy-page>.editorial{font-size:24px}.privacy-page h1{font-size:64px;color:var(--gold);margin:24px 0 60px}.privacy-page section{margin:0 0 38px}.privacy-page h2{font-family:var(--editorial);font-size:30px;margin-bottom:14px}.privacy-page section p{font-size:15px;line-height:1.9}.privacy-actions{display:flex;flex-wrap:wrap;gap:16px;margin-top:28px}.privacy-page>.link-line{display:inline-block;margin-top:30px}@media(max-width:800px){.privacy-page{padding:40px 24px 70px}.privacy-page h1{font-size:44px;margin-bottom:42px}.privacy-page h2{font-size:26px}.privacy-page section p{font-size:14px}.privacy-actions{flex-direction:column}.privacy-actions :global(.pill){width:100%}.privacy-page>.link-line{font-size:10px}}</style>

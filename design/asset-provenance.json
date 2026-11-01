@@ -1,0 +1,1765 @@
+{
+  "figmaFile": "m3N3lJCoutaziEm4nt4CwO",
+  "figmaPage": "148:2",
+  "assets": {
+    "beach.imgImage26": {
+      "sourceContext": "beach",
+      "sourceKey": "imgImage26",
+      "sourceSha256": "a0023c5fc1af17661f8c95ce3bd755ac52178d78626472cb88ea3f4e445b97b4",
+      "sourceDimensions": [
+        1024,
+        683
+      ],
+      "dimensions": [
+        1024,
+        683
+      ],
+      "path": "/assets/beach-imgImage26.webp",
+      "bytes": 136028
+    },
+    "beach.imgSubtract": {
+      "sourceContext": "beach",
+      "sourceKey": "imgSubtract",
+      "sourceSha256": "ebba5b01a15186d5af1aa49fc90e16bd031c0263e9685cc9b332fbbe3a218aa6",
+      "sourceDimensions": [
+        2880,
+        1820
+      ],
+      "dimensions": [
+        2400,
+        1517
+      ],
+      "path": "/assets/beach-imgSubtract.webp",
+      "bytes": 388344
+    },
+    "beach.imgGroup1000003367": {
+      "sourceContext": "beach",
+      "sourceKey": "imgGroup1000003367",
+      "sourceSha256": "6009dc1bcdd481caa0c821979fe9d1925626c6431330404572651717ea03a85d",
+      "path": "/assets/beach-imgGroup1000003367.svg",
+      "bytes": 1194
+    },
+    "beach.imgGroup1000003334": {
+      "sourceContext": "beach",
+      "sourceKey": "imgGroup1000003334",
+      "sourceSha256": "c3211fc50d44843c60122e894d6dd081ff9f7c14d1fe0b16b61870de10e2331d",
+      "path": "/assets/beach-imgGroup1000003334.svg",
+      "bytes": 1228
+    },
+    "beachMask.imgSubtract": {
+      "sourceContext": "beachMask",
+      "sourceKey": "imgSubtract",
+      "sourceSha256": "ebba5b01a15186d5af1aa49fc90e16bd031c0263e9685cc9b332fbbe3a218aa6",
+      "sourceDimensions": [
+        2880,
+        1820
+      ],
+      "dimensions": [
+        2400,
+        1517
+      ],
+      "path": "/assets/beach-imgSubtract.webp",
+      "bytes": 388344
+    },
+    "catalogue.imgBrandStar": {
+      "sourceContext": "catalogue",
+      "sourceKey": "imgBrandStar",
+      "sourceSha256": "0c10b1ae1c50fc318a661e988dad290d6a9cb12bcf7172f87297d2bee9939629",
+      "path": "/assets/catalogue-imgBrandStar.svg",
+      "bytes": 378
+    },
+    "catalogue.img202506071124321": {
+      "sourceContext": "catalogue",
+      "sourceKey": "img202506071124321",
+      "sourceSha256": "644118e6e307a804c5d3dc6c5bbadf586ea38d44a5faafcdf230af81a7651e54",
+      "sourceDimensions": [
+        1270,
+        706
+      ],
+      "dimensions": [
+        1270,
+        706
+      ],
+      "path": "/assets/catalogue-img202506071124321.webp",
+      "bytes": 15356
+    },
+    "catalogue.img202506071124531": {
+      "sourceContext": "catalogue",
+      "sourceKey": "img202506071124531",
+      "sourceSha256": "ab192aa717826d01423dbdd612eeb476ff85dcc3a225d72c6a2e0392f7a51f55",
+      "sourceDimensions": [
+        2178,
+        1046
+      ],
+      "dimensions": [
+        2178,
+        1046
+      ],
+      "path": "/assets/catalogue-img202506071124531.webp",
+      "bytes": 41240
+    },
+    "catalogue.img202506071118051": {
+      "sourceContext": "catalogue",
+      "sourceKey": "img202506071118051",
+      "sourceSha256": "aedbcaf92c8a4c83fc526a784388eb37783098a52be6dec93d6d9c733cdbc07f",
+      "sourceDimensions": [
+        1832,
+        1466
+      ],
+      "dimensions": [
+        1832,
+        1466
+      ],
+      "path": "/assets/catalogue-img202506071118051.webp",
+      "bytes": 167388
+    },
+    "catalogue.imgLine7": {
+      "sourceContext": "catalogue",
+      "sourceKey": "imgLine7",
+      "sourceSha256": "694453f33901ffafaab0d92fed402950967908eaa872dc60919a6635775a4a92",
+      "path": "/assets/catalogue-imgLine7.svg",
+      "bytes": 246
+    },
+    "catalogue.imgEllipse6": {
+      "sourceContext": "catalogue",
+      "sourceKey": "imgEllipse6",
+      "sourceSha256": "7efa8547a5a9faf66c5eeebbea41da2a743fdfef2174784b6e5bb3a5f5a194b6",
+      "path": "/assets/catalogue-imgEllipse6.svg",
+      "bytes": 371
+    },
+    "catalogue.imgVector384": {
+      "sourceContext": "catalogue",
+      "sourceKey": "imgVector384",
+      "sourceSha256": "d30d22a5bc5ec973304f5651f1b2a20aed55ee88b24479441ab07d65fcbe74bc",
+      "path": "/assets/catalogue-imgVector384.svg",
+      "bytes": 290
+    },
+    "catalogue.imgLine11": {
+      "sourceContext": "catalogue",
+      "sourceKey": "imgLine11",
+      "sourceSha256": "c5351470387d4f511c15edcac8fc3b1ea035d09530c01c344b58e4f74c0eefcb",
+      "path": "/assets/catalogue-imgLine11.svg",
+      "bytes": 226
+    },
+    "catalogue.imgLine8": {
+      "sourceContext": "catalogue",
+      "sourceKey": "imgLine8",
+      "sourceSha256": "3bd13c2315b322df92dd1553b22ebc250090c33333a64e152af64dde74b9a77a",
+      "path": "/assets/catalogue-imgLine8.svg",
+      "bytes": 249
+    },
+    "footer.img23": {
+      "sourceContext": "footer",
+      "sourceKey": "img23",
+      "sourceSha256": "d0ea2cd276e934e11de6dc802aa18231d4e374fcb7eb4d90962aab6613b5bee9",
+      "sourceDimensions": [
+        1024,
+        695
+      ],
+      "dimensions": [
+        1024,
+        695
+      ],
+      "path": "/assets/footer-img23.webp",
+      "bytes": 21572
+    },
+    "footer.imgShutterstock17273486773": {
+      "sourceContext": "footer",
+      "sourceKey": "imgShutterstock17273486773",
+      "sourceSha256": "11f8b3d5ef9b2fec87ef1893c5890da120e318c7a1f3efd4fd0e5a9988516586",
+      "sourceDimensions": [
+        1024,
+        683
+      ],
+      "dimensions": [
+        1024,
+        683
+      ],
+      "path": "/assets/footer-imgShutterstock17273486773.webp",
+      "bytes": 188208
+    },
+    "footer.imgDe6F86905020335E18C230133D87": {
+      "sourceContext": "footer",
+      "sourceKey": "imgDe6F86905020335E18C230133D87",
+      "sourceSha256": "7dda3540decf8d4f32abccd230d19ade48e9a8ecf35d4915d0c4fa5c6b30756d",
+      "sourceDimensions": [
+        1080,
+        1080
+      ],
+      "dimensions": [
+        1080,
+        1080
+      ],
+      "path": "/assets/footer-imgDe6F86905020335E18C230133D87.webp",
+      "bytes": 216154
+    },
+    "footer.imgDe6F86905020335E18C230133D83Photoroom1": {
+      "sourceContext": "footer",
+      "sourceKey": "imgDe6F86905020335E18C230133D83Photoroom1",
+      "sourceSha256": "d6098f6e7712719f8110ce12752206257a4778ac7446a9a47a147390889862b8",
+      "sourceDimensions": [
+        608,
+        1024
+      ],
+      "dimensions": [
+        608,
+        1024
+      ],
+      "path": "/assets/footer-imgDe6F86905020335E18C230133D83Photoroom1.webp",
+      "bytes": 64570
+    },
+    "footer.imgDe6F86905020335E18C230133D83Photoroom4": {
+      "sourceContext": "footer",
+      "sourceKey": "imgDe6F86905020335E18C230133D83Photoroom4",
+      "sourceSha256": "9fba258a8b42f3d8129f1695ae6ef489226e84e2a9502418d7e917798370c681",
+      "sourceDimensions": [
+        608,
+        1024
+      ],
+      "dimensions": [
+        608,
+        1024
+      ],
+      "path": "/assets/footer-imgDe6F86905020335E18C230133D83Photoroom4.webp",
+      "bytes": 52304
+    },
+    "footer.imgRectangle155": {
+      "sourceContext": "footer",
+      "sourceKey": "imgRectangle155",
+      "sourceSha256": "0479a6ebea92069357ee57b82c58eed7bffc17ad24c89fda194d63416642297c",
+      "sourceDimensions": [
+        1024,
+        683
+      ],
+      "dimensions": [
+        1024,
+        683
+      ],
+      "path": "/assets/footer-imgRectangle155.webp",
+      "bytes": 83454
+    },
+    "footer.imgRectangle156": {
+      "sourceContext": "footer",
+      "sourceKey": "imgRectangle156",
+      "sourceSha256": "840e28a13944bf1c29534a0a8e1b758e4047516a68fe479bda8accc284cd3467",
+      "sourceDimensions": [
+        4096,
+        2731
+      ],
+      "dimensions": [
+        2400,
+        1600
+      ],
+      "path": "/assets/footer-imgRectangle156.webp",
+      "bytes": 154100
+    },
+    "footer.imgEllipse20": {
+      "sourceContext": "footer",
+      "sourceKey": "imgEllipse20",
+      "sourceSha256": "72199635e5d64c6572a7ab88a467bd64014e76600f3bec6f5882fb6dced054b3",
+      "sourceDimensions": [
+        302,
+        302
+      ],
+      "dimensions": [
+        302,
+        302
+      ],
+      "path": "/assets/footer-imgEllipse20.webp",
+      "bytes": 15752
+    },
+    "footer.img22": {
+      "sourceContext": "footer",
+      "sourceKey": "img22",
+      "sourceSha256": "6676b38928e53e3c5686297be3c6ccddb113238f0fc9bd006ce2d2a4f71a58de",
+      "path": "/assets/footer-img22.svg",
+      "bytes": 602
+    },
+    "footer.imgShutterstock17273486772": {
+      "sourceContext": "footer",
+      "sourceKey": "imgShutterstock17273486772",
+      "sourceSha256": "e9d8f9bff826acb967a218c81539643c68a30b1d214d5983039044b1da8911e7",
+      "path": "/assets/footer-imgShutterstock17273486772.svg",
+      "bytes": 561
+    },
+    "footer.imgDe6F86905020335E18C230133D84": {
+      "sourceContext": "footer",
+      "sourceKey": "imgDe6F86905020335E18C230133D84",
+      "sourceSha256": "5fb69826b430fe4c43bdab60c3050e3b21715644bb4b5fc1aa7e740d4753545a",
+      "path": "/assets/footer-imgDe6F86905020335E18C230133D84.svg",
+      "bytes": 582
+    },
+    "footer.imgDe6F86905020335E18C230133D85": {
+      "sourceContext": "footer",
+      "sourceKey": "imgDe6F86905020335E18C230133D85",
+      "sourceSha256": "dacdba41fa433dd2084cd4463507529c29287881cf4e565f172d38a9bb50276d",
+      "path": "/assets/footer-imgDe6F86905020335E18C230133D85.svg",
+      "bytes": 612
+    },
+    "footer.imgDe6F86905020335E18C230133D86": {
+      "sourceContext": "footer",
+      "sourceKey": "imgDe6F86905020335E18C230133D86",
+      "sourceSha256": "66e229ec62a0f572f9ae1f2cde9c7ff28145aa8c600809053e9d3bf58f9550f1",
+      "path": "/assets/footer-imgDe6F86905020335E18C230133D86.svg",
+      "bytes": 558
+    },
+    "footer.imgDe6F86905020335E18C230133D83Photoroom3": {
+      "sourceContext": "footer",
+      "sourceKey": "imgDe6F86905020335E18C230133D83Photoroom3",
+      "sourceSha256": "c16a1def977c0610a88e817540e56833d7dbb9c56d69ef8ad947b3cc34e559dd",
+      "path": "/assets/footer-imgDe6F86905020335E18C230133D83Photoroom3.svg",
+      "bytes": 601
+    },
+    "footer.imgRectangle151": {
+      "sourceContext": "footer",
+      "sourceKey": "imgRectangle151",
+      "sourceSha256": "88019aab0104834d0aadd3502e2557b0aeab9c541df1725631cbd4fdfd75090c",
+      "path": "/assets/footer-imgRectangle151.webp",
+      "bytes": 651736,
+      "derivative": "Transparent raster format derivative of the individual source mask, without content or crop changes."
+    },
+    "footer.imgRectangle145": {
+      "sourceContext": "footer",
+      "sourceKey": "imgRectangle145",
+      "sourceSha256": "7a70bbf0a9af497e568281eaa51c3118b391544e947b43a67a496d247faa153b",
+      "path": "/assets/footer-imgRectangle145.svg",
+      "bytes": 259557
+    },
+    "footer.imgStar1": {
+      "sourceContext": "footer",
+      "sourceKey": "imgStar1",
+      "sourceSha256": "3beb4aa1b3dac7652d33c57b871b41fc940181ccdc770e94976bd19da6beee33",
+      "path": "/assets/footer-imgStar1.svg",
+      "bytes": 376
+    },
+    "footer.imgStar2": {
+      "sourceContext": "footer",
+      "sourceKey": "imgStar2",
+      "sourceSha256": "18907375ebdd969b54fb2fb607bdb3f254891b7f8b1757eb5864c25e47eb835f",
+      "path": "/assets/footer-imgStar2.svg",
+      "bytes": 374
+    },
+    "form.imgBrandStar": {
+      "sourceContext": "form",
+      "sourceKey": "imgBrandStar",
+      "sourceSha256": "0c10b1ae1c50fc318a661e988dad290d6a9cb12bcf7172f87297d2bee9939629",
+      "path": "/assets/catalogue-imgBrandStar.svg",
+      "bytes": 378
+    },
+    "hero.imgShutterstock22659398173": {
+      "sourceContext": "hero",
+      "sourceKey": "imgShutterstock22659398173",
+      "sourceSha256": "0ff5a2048e9c7c3dc3faf272e86febc3efb695e981c869a0c74fb4e565d1f960",
+      "sourceDimensions": [
+        1024,
+        1024
+      ],
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "path": "/assets/hero-imgShutterstock22659398173.webp",
+      "bytes": 43024
+    },
+    "hero.imgImage1": {
+      "sourceContext": "hero",
+      "sourceKey": "imgImage1",
+      "sourceSha256": "1fd682fc7ec383ce51e56e3ddb625702a618340570f0eb841a4c79ebfec58800",
+      "sourceDimensions": [
+        2735,
+        2366
+      ],
+      "dimensions": [
+        2400,
+        2076
+      ],
+      "path": "/assets/hero-imgImage1.webp",
+      "bytes": 416256
+    },
+    "hero.imgImage2": {
+      "sourceContext": "hero",
+      "sourceKey": "imgImage2",
+      "sourceSha256": "edbb49eba67cf87f08b9f6db369c830863a9c25298731fce95ceeded0301a2c5",
+      "sourceDimensions": [
+        2735,
+        2366
+      ],
+      "dimensions": [
+        2400,
+        2076
+      ],
+      "path": "/assets/hero-imgImage2.webp",
+      "bytes": 419490
+    },
+    "hero.imgImage3": {
+      "sourceContext": "hero",
+      "sourceKey": "imgImage3",
+      "sourceSha256": "b7d6557203b527e6aa0fa748b01b76553245065bbde027256ea3fe937dbe3ad9",
+      "sourceDimensions": [
+        2735,
+        2366
+      ],
+      "dimensions": [
+        2400,
+        2076
+      ],
+      "path": "/assets/hero-imgImage3.webp",
+      "bytes": 277058
+    },
+    "hero.imgImage4": {
+      "sourceContext": "hero",
+      "sourceKey": "imgImage4",
+      "sourceSha256": "033c0dcbe7f789c08689e0aad14d5f5592ed56691b7487870a6bf58bd0e82f8d",
+      "sourceDimensions": [
+        2735,
+        2366
+      ],
+      "dimensions": [
+        2400,
+        2076
+      ],
+      "path": "/assets/hero-imgImage4.webp",
+      "bytes": 333632
+    },
+    "hero.imgMaskGroup2": {
+      "sourceContext": "hero",
+      "sourceKey": "imgMaskGroup2",
+      "sourceSha256": "162757c93df60af3bf8f909da41e963dfdb693f523756902dc68a05b30430712",
+      "sourceDimensions": [
+        231,
+        138
+      ],
+      "dimensions": [
+        231,
+        138
+      ],
+      "path": "/assets/hero-imgMaskGroup2.webp",
+      "bytes": 3360
+    },
+    "hero.imgRectangle": {
+      "sourceContext": "hero",
+      "sourceKey": "imgRectangle",
+      "sourceSha256": "8b3d9bf3a227bfa8083f0a14001466d90ea47955b91aac893248f376b50ce9c1",
+      "sourceDimensions": [
+        1121,
+        432
+      ],
+      "dimensions": [
+        1121,
+        432
+      ],
+      "path": "/assets/hero-imgRectangle.webp",
+      "bytes": 64730
+    },
+    "hero.imgRectangle1": {
+      "sourceContext": "hero",
+      "sourceKey": "imgRectangle1",
+      "sourceSha256": "d222ae8216d3253ba21450da6a1acfdae688eddb2d768c613849f6f4c65eabf0",
+      "sourceDimensions": [
+        1256,
+        487
+      ],
+      "dimensions": [
+        1256,
+        487
+      ],
+      "path": "/assets/hero-imgRectangle1.webp",
+      "bytes": 120186
+    },
+    "hero.imgShutterstock22659398172": {
+      "sourceContext": "hero",
+      "sourceKey": "imgShutterstock22659398172",
+      "sourceSha256": "ee013290490fbabf7b49de54548e657721127159d8e0603662b281a032464934",
+      "path": "/assets/hero-imgShutterstock22659398172.svg",
+      "bytes": 631
+    },
+    "hero.imgImage": {
+      "sourceContext": "hero",
+      "sourceKey": "imgImage",
+      "sourceSha256": "62fe86cff7f7221d7712269f65e3e071ddf948afc9e967124970ee062830b0da",
+      "path": "/assets/hero-imgImage.svg",
+      "bytes": 495
+    },
+    "hero.imgStar1": {
+      "sourceContext": "hero",
+      "sourceKey": "imgStar1",
+      "sourceSha256": "a853663ebb7380f8427fe0610c89222ab00c393b7748f01eea2cdee3dbc51f37",
+      "path": "/assets/hero-imgStar1.svg",
+      "bytes": 358
+    },
+    "hero.imgEllipse10": {
+      "sourceContext": "hero",
+      "sourceKey": "imgEllipse10",
+      "sourceSha256": "4b769f05b0e8abc7f3d803b3d173d2a67f3958b4ece0cfd1d2a5aead6b2a2486",
+      "path": "/assets/hero-imgEllipse10.svg",
+      "bytes": 682
+    },
+    "highlightPool.imgImage": {
+      "sourceContext": "highlightPool",
+      "sourceKey": "imgImage",
+      "sourceSha256": "9997a89a3e91b24a708869e5edeec9a8d6cb6113c6a2d57e53fe7c63b9a38b2c",
+      "sourceDimensions": [
+        1140,
+        640
+      ],
+      "dimensions": [
+        1140,
+        640
+      ],
+      "path": "/assets/highlightPool-imgImage.webp",
+      "bytes": 51916
+    },
+    "highlightPool.imgSubtract": {
+      "sourceContext": "highlightPool",
+      "sourceKey": "imgSubtract",
+      "sourceSha256": "6b5f84376ec699a61b30a8f2a928039724609426d46bec269571d9c31c511d7d",
+      "sourceDimensions": [
+        2880,
+        1820
+      ],
+      "dimensions": [
+        2400,
+        1517
+      ],
+      "path": "/assets/highlightPool-imgSubtract.webp",
+      "bytes": 102198
+    },
+    "highlightPool.imgGroup1000003334": {
+      "sourceContext": "highlightPool",
+      "sourceKey": "imgGroup1000003334",
+      "sourceSha256": "c3211fc50d44843c60122e894d6dd081ff9f7c14d1fe0b16b61870de10e2331d",
+      "path": "/assets/beach-imgGroup1000003334.svg",
+      "bytes": 1228
+    },
+    "highlightSpace.img3": {
+      "sourceContext": "highlightSpace",
+      "sourceKey": "img3",
+      "sourceSha256": "2e921ee0ab926bbd2ebbe10e01144c3026fc8edc537e724d5d46609858f1b7b8",
+      "sourceDimensions": [
+        1600,
+        1067
+      ],
+      "dimensions": [
+        1600,
+        1067
+      ],
+      "path": "/assets/highlightSpace-img3.webp",
+      "bytes": 278398
+    },
+    "highlightSpace.img4": {
+      "sourceContext": "highlightSpace",
+      "sourceKey": "img4",
+      "sourceSha256": "0e67fcdd0b0da7347426eeca62bf0b2f7a47b27a33ae1442ba95a0029466411a",
+      "sourceDimensions": [
+        1600,
+        1067
+      ],
+      "dimensions": [
+        1600,
+        1067
+      ],
+      "path": "/assets/highlightSpace-img4.webp",
+      "bytes": 341418
+    },
+    "highlightSpace.imgSubtract": {
+      "sourceContext": "highlightSpace",
+      "sourceKey": "imgSubtract",
+      "sourceSha256": "31025d72b3fc44a30625e283f54884add4c1828953b7d085adf150b1e23639ee",
+      "sourceDimensions": [
+        2880,
+        1820
+      ],
+      "dimensions": [
+        2400,
+        1517
+      ],
+      "path": "/assets/highlightSpace-imgSubtract.webp",
+      "bytes": 450022
+    },
+    "highlightSpace.imgSubtract1": {
+      "sourceContext": "highlightSpace",
+      "sourceKey": "imgSubtract1",
+      "sourceSha256": "b6888e1e7690f306eb614859ae5d3db017d03f70c1c6678e26f34e7f2fe6b34d",
+      "path": "/assets/highlightSpace-imgSubtract1.svg",
+      "bytes": 668
+    },
+    "highlightSpace.imgSubtract2": {
+      "sourceContext": "highlightSpace",
+      "sourceKey": "imgSubtract2",
+      "sourceSha256": "bd99fed81e8c090fd2c48420112530b5f9440240a562366b9a41714047966d33",
+      "path": "/assets/highlightSpace-imgSubtract2.svg",
+      "bytes": 665
+    },
+    "highlightSpace.imgGroup1000003334": {
+      "sourceContext": "highlightSpace",
+      "sourceKey": "imgGroup1000003334",
+      "sourceSha256": "c3211fc50d44843c60122e894d6dd081ff9f7c14d1fe0b16b61870de10e2331d",
+      "path": "/assets/beach-imgGroup1000003334.svg",
+      "bytes": 1228
+    },
+    "interiorLast.imgRectangle6": {
+      "sourceContext": "interiorLast",
+      "sourceKey": "imgRectangle6",
+      "sourceSha256": "7deba96eaa0036a007c226b4c28edab9b99feff635693ad4ea9ee29613630896",
+      "sourceDimensions": [
+        2768,
+        1848
+      ],
+      "dimensions": [
+        2400,
+        1602
+      ],
+      "path": "/assets/interiorLast-imgRectangle6.webp",
+      "bytes": 672338
+    },
+    "interiorMiddle.imgRectangle5": {
+      "sourceContext": "interiorMiddle",
+      "sourceKey": "imgRectangle5",
+      "sourceSha256": "cdb2180d10736ecf251d432394863148a909de26d68a080dfe701291d6e1b5c4",
+      "sourceDimensions": [
+        1024,
+        683
+      ],
+      "dimensions": [
+        1024,
+        683
+      ],
+      "path": "/assets/interiorMiddle-imgRectangle5.webp",
+      "bytes": 73556
+    },
+    "interiorPhoto3.imgRectangle6": {
+      "sourceContext": "interiorPhoto3",
+      "sourceKey": "imgRectangle6",
+      "sourceSha256": "7deba96eaa0036a007c226b4c28edab9b99feff635693ad4ea9ee29613630896",
+      "sourceDimensions": [
+        2768,
+        1848
+      ],
+      "dimensions": [
+        2400,
+        1602
+      ],
+      "path": "/assets/interiorLast-imgRectangle6.webp",
+      "bytes": 672338
+    },
+    "interiors.imgRectangle4": {
+      "sourceContext": "interiors",
+      "sourceKey": "imgRectangle4",
+      "sourceSha256": "0e67fcdd0b0da7347426eeca62bf0b2f7a47b27a33ae1442ba95a0029466411a",
+      "sourceDimensions": [
+        1600,
+        1067
+      ],
+      "dimensions": [
+        1600,
+        1067
+      ],
+      "path": "/assets/highlightSpace-img4.webp",
+      "bytes": 341418
+    },
+    "interiors.imgRectangle6": {
+      "sourceContext": "interiors",
+      "sourceKey": "imgRectangle6",
+      "sourceSha256": "7deba96eaa0036a007c226b4c28edab9b99feff635693ad4ea9ee29613630896",
+      "sourceDimensions": [
+        2768,
+        1848
+      ],
+      "dimensions": [
+        2400,
+        1602
+      ],
+      "path": "/assets/interiorLast-imgRectangle6.webp",
+      "bytes": 672338
+    },
+    "intro.imgShutterstock24763543831": {
+      "sourceContext": "intro",
+      "sourceKey": "imgShutterstock24763543831",
+      "sourceSha256": "b5c996da8a7da7e17f59fb56ca7b9d1109d0cb9a3f1201d6f0d6ad37b4524284",
+      "sourceDimensions": [
+        1024,
+        591
+      ],
+      "dimensions": [
+        1024,
+        591
+      ],
+      "path": "/assets/intro-imgShutterstock24763543831.webp",
+      "bytes": 80374
+    },
+    "intro.imgSubtract1": {
+      "sourceContext": "intro",
+      "sourceKey": "imgSubtract1",
+      "sourceSha256": "850896b9080d37b1d8fafac88883bbfc0e497a332c7fccea87b6a147cf6601fe",
+      "sourceDimensions": [
+        2880,
+        1820
+      ],
+      "dimensions": [
+        2400,
+        1517
+      ],
+      "path": "/assets/intro-imgSubtract1.webp",
+      "bytes": 118542
+    },
+    "intro.imgSubtract": {
+      "sourceContext": "intro",
+      "sourceKey": "imgSubtract",
+      "sourceSha256": "ef2479e26e92ce22b74b721bb549187c302c39cf4d92ac1780978bd0f27005f5",
+      "path": "/assets/intro-imgSubtract.svg",
+      "bytes": 196
+    },
+    "location.imgImage6Photoroom3": {
+      "sourceContext": "location",
+      "sourceKey": "imgImage6Photoroom3",
+      "sourceSha256": "a7247112067fb885b8a0a33cf63c85b8ce65a06c6eb2a78131f8e2722158ce34",
+      "sourceDimensions": [
+        1024,
+        1024
+      ],
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "path": "/assets/location-imgImage6Photoroom3.webp",
+      "bytes": 35226
+    },
+    "location.imgShutterstock20871900492": {
+      "sourceContext": "location",
+      "sourceKey": "imgShutterstock20871900492",
+      "sourceSha256": "a1bf429f4d50d17a32c49d8e83789decb427c3f44c1827131455493c73614675",
+      "sourceDimensions": [
+        1024,
+        576
+      ],
+      "dimensions": [
+        1024,
+        576
+      ],
+      "path": "/assets/location-imgShutterstock20871900492.webp",
+      "bytes": 170184
+    },
+    "location.img121": {
+      "sourceContext": "location",
+      "sourceKey": "img121",
+      "sourceSha256": "4419afd4a129997ff06a5155b0c870cec44bcb5cea5cf05e4a2d0b994839ff34",
+      "sourceDimensions": [
+        2000,
+        1410
+      ],
+      "dimensions": [
+        2000,
+        1410
+      ],
+      "path": "/assets/location-img121.webp",
+      "bytes": 52112
+    },
+    "location.imgImage4": {
+      "sourceContext": "location",
+      "sourceKey": "imgImage4",
+      "sourceSha256": "6b4c7f414ced1c25e5544244c9a835be946a8011a01f6e44cda13ae49837ba87",
+      "sourceDimensions": [
+        1515,
+        958
+      ],
+      "dimensions": [
+        1515,
+        958
+      ],
+      "path": "/assets/location-imgImage4.webp",
+      "bytes": 25626
+    },
+    "location.imgImage7": {
+      "sourceContext": "location",
+      "sourceKey": "imgImage7",
+      "sourceSha256": "523356428e34d4acb46fc5b99a6ad3879249674664e42c30a46e89699edcf0cb",
+      "sourceDimensions": [
+        4096,
+        1416
+      ],
+      "dimensions": [
+        2400,
+        830
+      ],
+      "path": "/assets/location-imgImage7.webp",
+      "bytes": 189704
+    },
+    "location.img31": {
+      "sourceContext": "location",
+      "sourceKey": "img31",
+      "sourceSha256": "b22ed11d2835ed208fe3efa4c96d23d939fae7310161e1bb918e06f4963d8e1b",
+      "sourceDimensions": [
+        2880,
+        3232
+      ],
+      "dimensions": [
+        2139,
+        2400
+      ],
+      "path": "/assets/location-img31.webp",
+      "bytes": 1763056
+    },
+    "location.imgShutterstock17915352414": {
+      "sourceContext": "location",
+      "sourceKey": "imgShutterstock17915352414",
+      "sourceSha256": "2c05e1b5a35c8ddcf8b59b2fdd5e52d5351864c16e04e15e2a217776a123e7f4",
+      "sourceDimensions": [
+        1024,
+        768
+      ],
+      "dimensions": [
+        1024,
+        768
+      ],
+      "path": "/assets/location-imgShutterstock17915352414.webp",
+      "bytes": 165196
+    },
+    "location.imgImage6Photoroom2": {
+      "sourceContext": "location",
+      "sourceKey": "imgImage6Photoroom2",
+      "sourceSha256": "1f8723173ce280918c085fae73f27bc19c987cf6e7b96f3523386e1e9938a177",
+      "path": "/assets/location-imgImage6Photoroom2.svg",
+      "bytes": 582
+    },
+    "location.imgShutterstock20871900491": {
+      "sourceContext": "location",
+      "sourceKey": "imgShutterstock20871900491",
+      "sourceSha256": "c833a9e70509a78d957b6b70e33617a810d671bff27245f794430c58af894d4d",
+      "path": "/assets/location-imgShutterstock20871900491.svg",
+      "bytes": 523
+    },
+    "location.imgRectangle107": {
+      "sourceContext": "location",
+      "sourceKey": "imgRectangle107",
+      "sourceSha256": "53094d7532b4f1bbe55de5e445e514557db92e71f6ddfc6b0ed392f78cd93154",
+      "path": "/assets/location-imgRectangle107.svg",
+      "bytes": 414
+    },
+    "location.imgGroup1000003297": {
+      "sourceContext": "location",
+      "sourceKey": "imgGroup1000003297",
+      "sourceSha256": "7189791789cbc929b47ce2113cb74a1f11e0835324ccb4ed4a2fc2428e0d6ee1",
+      "path": "/assets/location-imgGroup1000003297.svg",
+      "bytes": 525
+    },
+    "location.imgQuoteRightSvgrepoCom1": {
+      "sourceContext": "location",
+      "sourceKey": "imgQuoteRightSvgrepoCom1",
+      "sourceSha256": "80533643952a8c8d139e5eb0d87a8715b89865d312f5feb4258eb31d3100b6b9",
+      "path": "/assets/location-imgQuoteRightSvgrepoCom1.svg",
+      "bytes": 455
+    },
+    "location.imgRectangle108": {
+      "sourceContext": "location",
+      "sourceKey": "imgRectangle108",
+      "sourceSha256": "7a526b192e80c0b32a98df013ff2bb05954bcd2ecc07901e913e5c2294774ddf",
+      "path": "/assets/location-imgRectangle108.svg",
+      "bytes": 432
+    },
+    "location.imgGroup1000003337": {
+      "sourceContext": "location",
+      "sourceKey": "imgGroup1000003337",
+      "sourceSha256": "95272adcf15df155397ffc5be3d22598073f7bd2f2c10f464b392153643e0bde",
+      "path": "/assets/location-imgGroup1000003337.svg",
+      "bytes": 509
+    },
+    "location.imgShutterstock17915352412": {
+      "sourceContext": "location",
+      "sourceKey": "imgShutterstock17915352412",
+      "sourceSha256": "dc19a9d84d2c31b843bb58664547a5b91b22e162c69079aad7bdf58405cd384b",
+      "path": "/assets/location-imgShutterstock17915352412.svg",
+      "bytes": 606
+    },
+    "location.imgShutterstock17915352413": {
+      "sourceContext": "location",
+      "sourceKey": "imgShutterstock17915352413",
+      "sourceSha256": "cb6155fec9321a159ff118a2e78bf57f38bf626018454903ea129adeb80792b7",
+      "path": "/assets/location-imgShutterstock17915352413.svg",
+      "bytes": 623
+    },
+    "location.imgRectangle137": {
+      "sourceContext": "location",
+      "sourceKey": "imgRectangle137",
+      "sourceSha256": "d6c981d156c6b00f0d09b6c65563452080902819ac93ccb24e44d0e8212b8e3d",
+      "path": "/assets/location-imgRectangle137.webp",
+      "bytes": 18067456,
+      "derivative": "Transparent raster format derivative of the individual source mask, without content or crop changes."
+    },
+    "location.img32": {
+      "sourceContext": "location",
+      "sourceKey": "img32",
+      "sourceSha256": "be1bdfdfe7c63b159ce907bd5e217822e5b0c389c06937d7b77c081914ce1710",
+      "path": "/assets/location-img32.svg",
+      "bytes": 770
+    },
+    "location.imgExclude": {
+      "sourceContext": "location",
+      "sourceKey": "imgExclude",
+      "sourceSha256": "defe3f85e0d8c60908c8cf6efe77d9199e13fc2bebc6e8de938e28a984bbbf36",
+      "path": "/assets/location-imgExclude.svg",
+      "bytes": 310
+    },
+    "location.imgStar1": {
+      "sourceContext": "location",
+      "sourceKey": "imgStar1",
+      "sourceSha256": "18907375ebdd969b54fb2fb607bdb3f254891b7f8b1757eb5864c25e47eb835f",
+      "path": "/assets/footer-imgStar2.svg",
+      "bytes": 374
+    },
+    "mobileHero.imgImage1": {
+      "sourceContext": "mobileHero",
+      "sourceKey": "imgImage1",
+      "sourceSha256": "1fd682fc7ec383ce51e56e3ddb625702a618340570f0eb841a4c79ebfec58800",
+      "sourceDimensions": [
+        2735,
+        2366
+      ],
+      "dimensions": [
+        2400,
+        2076
+      ],
+      "path": "/assets/hero-imgImage1.webp",
+      "bytes": 416256
+    },
+    "mobileHero.imgImage2": {
+      "sourceContext": "mobileHero",
+      "sourceKey": "imgImage2",
+      "sourceSha256": "edbb49eba67cf87f08b9f6db369c830863a9c25298731fce95ceeded0301a2c5",
+      "sourceDimensions": [
+        2735,
+        2366
+      ],
+      "dimensions": [
+        2400,
+        2076
+      ],
+      "path": "/assets/hero-imgImage2.webp",
+      "bytes": 419490
+    },
+    "mobileHero.imgImage3": {
+      "sourceContext": "mobileHero",
+      "sourceKey": "imgImage3",
+      "sourceSha256": "b7d6557203b527e6aa0fa748b01b76553245065bbde027256ea3fe937dbe3ad9",
+      "sourceDimensions": [
+        2735,
+        2366
+      ],
+      "dimensions": [
+        2400,
+        2076
+      ],
+      "path": "/assets/hero-imgImage3.webp",
+      "bytes": 277058
+    },
+    "mobileHero.imgImage4": {
+      "sourceContext": "mobileHero",
+      "sourceKey": "imgImage4",
+      "sourceSha256": "033c0dcbe7f789c08689e0aad14d5f5592ed56691b7487870a6bf58bd0e82f8d",
+      "sourceDimensions": [
+        2735,
+        2366
+      ],
+      "dimensions": [
+        2400,
+        2076
+      ],
+      "path": "/assets/hero-imgImage4.webp",
+      "bytes": 333632
+    },
+    "mobileHero.imgMaskGroup2": {
+      "sourceContext": "mobileHero",
+      "sourceKey": "imgMaskGroup2",
+      "sourceSha256": "3b1f172dedbae08d2d6461bbc7dfd3a3e1775ca13ea50563d2aec6cdf97590b2",
+      "sourceDimensions": [
+        197,
+        118
+      ],
+      "dimensions": [
+        197,
+        118
+      ],
+      "path": "/assets/mobileHero-imgMaskGroup2.webp",
+      "bytes": 2744
+    },
+    "mobileHero.imgImage": {
+      "sourceContext": "mobileHero",
+      "sourceKey": "imgImage",
+      "sourceSha256": "a1e08a2d4cb88d9c46554027df88a30acdf3d85e58975ed96bf55bffb3566283",
+      "path": "/assets/mobileHero-imgImage.svg",
+      "bytes": 496
+    },
+    "mobileHero.imgBrandStar": {
+      "sourceContext": "mobileHero",
+      "sourceKey": "imgBrandStar",
+      "sourceSha256": "0c10b1ae1c50fc318a661e988dad290d6a9cb12bcf7172f87297d2bee9939629",
+      "path": "/assets/catalogue-imgBrandStar.svg",
+      "bytes": 378
+    },
+    "mobileLocation.imgBrandStar": {
+      "sourceContext": "mobileLocation",
+      "sourceKey": "imgBrandStar",
+      "sourceSha256": "4b891422d38c79b9f592e414d40986d2b10b4c6921aa2357943265c63c2b70f3",
+      "path": "/assets/mobileLocation-imgBrandStar.svg",
+      "bytes": 380
+    },
+    "mobileLocation.imgShutterstock20871900492": {
+      "sourceContext": "mobileLocation",
+      "sourceKey": "imgShutterstock20871900492",
+      "sourceSha256": "a1bf429f4d50d17a32c49d8e83789decb427c3f44c1827131455493c73614675",
+      "sourceDimensions": [
+        1024,
+        576
+      ],
+      "dimensions": [
+        1024,
+        576
+      ],
+      "path": "/assets/location-imgShutterstock20871900492.webp",
+      "bytes": 170184
+    },
+    "mobileLocation.img121": {
+      "sourceContext": "mobileLocation",
+      "sourceKey": "img121",
+      "sourceSha256": "4419afd4a129997ff06a5155b0c870cec44bcb5cea5cf05e4a2d0b994839ff34",
+      "sourceDimensions": [
+        2000,
+        1410
+      ],
+      "dimensions": [
+        2000,
+        1410
+      ],
+      "path": "/assets/location-img121.webp",
+      "bytes": 52112
+    },
+    "mobileLocation.imgImage4": {
+      "sourceContext": "mobileLocation",
+      "sourceKey": "imgImage4",
+      "sourceSha256": "6b4c7f414ced1c25e5544244c9a835be946a8011a01f6e44cda13ae49837ba87",
+      "sourceDimensions": [
+        1515,
+        958
+      ],
+      "dimensions": [
+        1515,
+        958
+      ],
+      "path": "/assets/location-imgImage4.webp",
+      "bytes": 25626
+    },
+    "mobileLocation.imgShutterstock20871900491": {
+      "sourceContext": "mobileLocation",
+      "sourceKey": "imgShutterstock20871900491",
+      "sourceSha256": "d874f1c89ec731f03c9fc36d9fe817a75625259b6117e7f8f44bbdbeb1906087",
+      "path": "/assets/mobileLocation-imgShutterstock20871900491.svg",
+      "bytes": 532
+    },
+    "mobileLocation.imgRectangle107": {
+      "sourceContext": "mobileLocation",
+      "sourceKey": "imgRectangle107",
+      "sourceSha256": "4dda7c1229bb8ed2ec27007b53ca6989b186610133a25ae55a311faf0b578b78",
+      "path": "/assets/mobileLocation-imgRectangle107.svg",
+      "bytes": 437
+    },
+    "mobileLocation.imgGroup1000003297": {
+      "sourceContext": "mobileLocation",
+      "sourceKey": "imgGroup1000003297",
+      "sourceSha256": "50f732a617a486617513433123dc8c4cda9b58347c3652009f21e9790bb0998f",
+      "path": "/assets/mobileLocation-imgGroup1000003297.svg",
+      "bytes": 540
+    },
+    "originArt.imgTheAtlantisRoyalResidence1": {
+      "sourceContext": "originArt",
+      "sourceKey": "imgTheAtlantisRoyalResidence1",
+      "sourceSha256": "e33358c38069159a1f2ae7f59f83ebe6aa7530230eaa06a240ed29cd22dba087",
+      "sourceDimensions": [
+        3354,
+        2434
+      ],
+      "dimensions": [
+        2400,
+        1742
+      ],
+      "path": "/assets/originArt-imgTheAtlantisRoyalResidence1.webp",
+      "bytes": 574584
+    },
+    "originArt.imgTheAtlantisRoyalResidence2": {
+      "sourceContext": "originArt",
+      "sourceKey": "imgTheAtlantisRoyalResidence2",
+      "sourceSha256": "45fa5f841846aec6faf0890d2bf9c6b1ebb2d3b4ac500345b86f6feb4fcede7e",
+      "sourceDimensions": [
+        1024,
+        744
+      ],
+      "dimensions": [
+        1024,
+        744
+      ],
+      "path": "/assets/originArt-imgTheAtlantisRoyalResidence2.webp",
+      "bytes": 167656
+    },
+    "originArt.imgTheAtlantisRoyalResidence4": {
+      "sourceContext": "originArt",
+      "sourceKey": "imgTheAtlantisRoyalResidence4",
+      "sourceSha256": "6057326163b0c2c244b06effb3b05a677c551e2f7bf0ac31ad0686c0d2efba82",
+      "sourceDimensions": [
+        1024,
+        744
+      ],
+      "dimensions": [
+        1024,
+        744
+      ],
+      "path": "/assets/originArt-imgTheAtlantisRoyalResidence4.webp",
+      "bytes": 196382
+    },
+    "originArt.imgTheAtlantisRoyalResidence3": {
+      "sourceContext": "originArt",
+      "sourceKey": "imgTheAtlantisRoyalResidence3",
+      "sourceSha256": "1e43a6a642727fd1587b0652fc41d29dbafd472b4be24f8a119105f6582ac24a",
+      "path": "/assets/originArt-imgTheAtlantisRoyalResidence3.svg",
+      "bytes": 552
+    },
+    "originCollage.imgImage": {
+      "sourceContext": "originCollage",
+      "sourceKey": "imgImage",
+      "sourceSha256": "9997a89a3e91b24a708869e5edeec9a8d6cb6113c6a2d57e53fe7c63b9a38b2c",
+      "sourceDimensions": [
+        1140,
+        640
+      ],
+      "dimensions": [
+        1140,
+        640
+      ],
+      "path": "/assets/highlightPool-imgImage.webp",
+      "bytes": 51916
+    },
+    "originCollage.imgRectangle4": {
+      "sourceContext": "originCollage",
+      "sourceKey": "imgRectangle4",
+      "sourceSha256": "b0274f2ab6816dbce46e08fc82b1c22030526ac1dff2b64afc380cdc7e7b9e83",
+      "sourceDimensions": [
+        1024,
+        573
+      ],
+      "dimensions": [
+        1024,
+        573
+      ],
+      "path": "/assets/originCollage-imgRectangle4.webp",
+      "bytes": 63058
+    },
+    "originCollage.imgRectangle3": {
+      "sourceContext": "originCollage",
+      "sourceKey": "imgRectangle3",
+      "sourceSha256": "67ceaeeddbed79b294658fb75d8f27b71210669560a7042e49af610cbf468240",
+      "sourceDimensions": [
+        2649,
+        1041
+      ],
+      "dimensions": [
+        2400,
+        943
+      ],
+      "path": "/assets/originCollage-imgRectangle3.webp",
+      "bytes": 566584
+    },
+    "originCollage.imgRectangle5": {
+      "sourceContext": "originCollage",
+      "sourceKey": "imgRectangle5",
+      "sourceSha256": "b1a0e390ae0660ea97d20c4d93400f426dfc2038d22d00e719755b7e73d3e37c",
+      "sourceDimensions": [
+        1200,
+        800
+      ],
+      "dimensions": [
+        1200,
+        800
+      ],
+      "path": "/assets/originCollage-imgRectangle5.webp",
+      "bytes": 254502
+    },
+    "originCollage.imgRectangle6": {
+      "sourceContext": "originCollage",
+      "sourceKey": "imgRectangle6",
+      "sourceSha256": "25f9000c2cee93ccd48c2fdc77fb055533ced6f35e4b64af2bbe589c017619ae",
+      "sourceDimensions": [
+        2635,
+        1045
+      ],
+      "dimensions": [
+        2400,
+        952
+      ],
+      "path": "/assets/originCollage-imgRectangle6.webp",
+      "bytes": 328572
+    },
+    "originCollage.imgRectangle7": {
+      "sourceContext": "originCollage",
+      "sourceKey": "imgRectangle7",
+      "sourceSha256": "7b2461a705736155887474ce17c15cf293dd4821f350f5070227a3ca64460908",
+      "sourceDimensions": [
+        1186,
+        888
+      ],
+      "dimensions": [
+        1186,
+        888
+      ],
+      "path": "/assets/originCollage-imgRectangle7.webp",
+      "bytes": 166534
+    },
+    "originCollage.imgRectangle8": {
+      "sourceContext": "originCollage",
+      "sourceKey": "imgRectangle8",
+      "sourceSha256": "0f4459113abdc5632bce2433b586a1e54b0d59c1f5c19bd5a49872822485747b",
+      "sourceDimensions": [
+        2605,
+        2014
+      ],
+      "dimensions": [
+        2400,
+        1856
+      ],
+      "path": "/assets/originCollage-imgRectangle8.webp",
+      "bytes": 653270
+    },
+    "originCollage.imgRectangle9": {
+      "sourceContext": "originCollage",
+      "sourceKey": "imgRectangle9",
+      "sourceSha256": "769622a657a2d3c007a2fbecf251a3a3138dab5684fb2c609f912644fd3c5edb",
+      "sourceDimensions": [
+        1024,
+        683
+      ],
+      "dimensions": [
+        1024,
+        683
+      ],
+      "path": "/assets/originCollage-imgRectangle9.webp",
+      "bytes": 225000
+    },
+    "originCollage.imgRectangle10": {
+      "sourceContext": "originCollage",
+      "sourceKey": "imgRectangle10",
+      "sourceSha256": "fe15fd9b4be95e49a2bed7c9ee31be033bb0467345869f0736d12afe1ed9d119",
+      "sourceDimensions": [
+        1024,
+        683
+      ],
+      "dimensions": [
+        1024,
+        683
+      ],
+      "path": "/assets/originCollage-imgRectangle10.webp",
+      "bytes": 104222
+    },
+    "originCollage.imgRectangle11": {
+      "sourceContext": "originCollage",
+      "sourceKey": "imgRectangle11",
+      "sourceSha256": "b90a4d7ee31f1506f8b1260f71fd2c085c44e3b413d0c9f2fee51542ceacc2c7",
+      "sourceDimensions": [
+        1920,
+        1080
+      ],
+      "dimensions": [
+        1920,
+        1080
+      ],
+      "path": "/assets/originCollage-imgRectangle11.webp",
+      "bytes": 621434
+    },
+    "originCollage.imgRectangle12": {
+      "sourceContext": "originCollage",
+      "sourceKey": "imgRectangle12",
+      "sourceSha256": "c5fe719b058dc9c5dfaf6c5fe95881cca087c172748938618f5a24ed4ba72657",
+      "sourceDimensions": [
+        1280,
+        720
+      ],
+      "dimensions": [
+        1280,
+        720
+      ],
+      "path": "/assets/originCollage-imgRectangle12.webp",
+      "bytes": 152152
+    },
+    "originCollage.imgRectangle13": {
+      "sourceContext": "originCollage",
+      "sourceKey": "imgRectangle13",
+      "sourceSha256": "4432dec08b77e3d0842f1cd89b240f76e17e3b9b41d943333aa9bfff024369de",
+      "sourceDimensions": [
+        683,
+        1024
+      ],
+      "dimensions": [
+        683,
+        1024
+      ],
+      "path": "/assets/originCollage-imgRectangle13.webp",
+      "bytes": 75726
+    },
+    "originCollage.imgImage1": {
+      "sourceContext": "originCollage",
+      "sourceKey": "imgImage1",
+      "sourceSha256": "469433f3fff7496062d5b5ac8321621d172c58ef374d832ca3c97b6dceb86884",
+      "sourceDimensions": [
+        1024,
+        683
+      ],
+      "dimensions": [
+        1024,
+        683
+      ],
+      "path": "/assets/originCollage-imgImage1.webp",
+      "bytes": 207352
+    },
+    "originComplete.imgTheAtlantisRoyalResidence1": {
+      "sourceContext": "originComplete",
+      "sourceKey": "imgTheAtlantisRoyalResidence1",
+      "sourceSha256": "e33358c38069159a1f2ae7f59f83ebe6aa7530230eaa06a240ed29cd22dba087",
+      "sourceDimensions": [
+        3354,
+        2434
+      ],
+      "dimensions": [
+        2400,
+        1742
+      ],
+      "path": "/assets/originArt-imgTheAtlantisRoyalResidence1.webp",
+      "bytes": 574584
+    },
+    "originComplete.imgTheAtlantisRoyalResidence2": {
+      "sourceContext": "originComplete",
+      "sourceKey": "imgTheAtlantisRoyalResidence2",
+      "sourceSha256": "45fa5f841846aec6faf0890d2bf9c6b1ebb2d3b4ac500345b86f6feb4fcede7e",
+      "sourceDimensions": [
+        1024,
+        744
+      ],
+      "dimensions": [
+        1024,
+        744
+      ],
+      "path": "/assets/originArt-imgTheAtlantisRoyalResidence2.webp",
+      "bytes": 167656
+    },
+    "originComplete.imgTheAtlantisRoyalResidence4": {
+      "sourceContext": "originComplete",
+      "sourceKey": "imgTheAtlantisRoyalResidence4",
+      "sourceSha256": "6057326163b0c2c244b06effb3b05a677c551e2f7bf0ac31ad0686c0d2efba82",
+      "sourceDimensions": [
+        1024,
+        744
+      ],
+      "dimensions": [
+        1024,
+        744
+      ],
+      "path": "/assets/originArt-imgTheAtlantisRoyalResidence4.webp",
+      "bytes": 196382
+    },
+    "originComplete.imgImage": {
+      "sourceContext": "originComplete",
+      "sourceKey": "imgImage",
+      "sourceSha256": "9997a89a3e91b24a708869e5edeec9a8d6cb6113c6a2d57e53fe7c63b9a38b2c",
+      "sourceDimensions": [
+        1140,
+        640
+      ],
+      "dimensions": [
+        1140,
+        640
+      ],
+      "path": "/assets/highlightPool-imgImage.webp",
+      "bytes": 51916
+    },
+    "originComplete.imgRectangle4": {
+      "sourceContext": "originComplete",
+      "sourceKey": "imgRectangle4",
+      "sourceSha256": "b0274f2ab6816dbce46e08fc82b1c22030526ac1dff2b64afc380cdc7e7b9e83",
+      "sourceDimensions": [
+        1024,
+        573
+      ],
+      "dimensions": [
+        1024,
+        573
+      ],
+      "path": "/assets/originCollage-imgRectangle4.webp",
+      "bytes": 63058
+    },
+    "originComplete.imgRectangle3": {
+      "sourceContext": "originComplete",
+      "sourceKey": "imgRectangle3",
+      "sourceSha256": "67ceaeeddbed79b294658fb75d8f27b71210669560a7042e49af610cbf468240",
+      "sourceDimensions": [
+        2649,
+        1041
+      ],
+      "dimensions": [
+        2400,
+        943
+      ],
+      "path": "/assets/originCollage-imgRectangle3.webp",
+      "bytes": 566584
+    },
+    "originComplete.imgRectangle5": {
+      "sourceContext": "originComplete",
+      "sourceKey": "imgRectangle5",
+      "sourceSha256": "b1a0e390ae0660ea97d20c4d93400f426dfc2038d22d00e719755b7e73d3e37c",
+      "sourceDimensions": [
+        1200,
+        800
+      ],
+      "dimensions": [
+        1200,
+        800
+      ],
+      "path": "/assets/originCollage-imgRectangle5.webp",
+      "bytes": 254502
+    },
+    "originComplete.imgRectangle6": {
+      "sourceContext": "originComplete",
+      "sourceKey": "imgRectangle6",
+      "sourceSha256": "25f9000c2cee93ccd48c2fdc77fb055533ced6f35e4b64af2bbe589c017619ae",
+      "sourceDimensions": [
+        2635,
+        1045
+      ],
+      "dimensions": [
+        2400,
+        952
+      ],
+      "path": "/assets/originCollage-imgRectangle6.webp",
+      "bytes": 328572
+    },
+    "originComplete.imgRectangle7": {
+      "sourceContext": "originComplete",
+      "sourceKey": "imgRectangle7",
+      "sourceSha256": "7b2461a705736155887474ce17c15cf293dd4821f350f5070227a3ca64460908",
+      "sourceDimensions": [
+        1186,
+        888
+      ],
+      "dimensions": [
+        1186,
+        888
+      ],
+      "path": "/assets/originCollage-imgRectangle7.webp",
+      "bytes": 166534
+    },
+    "originComplete.imgRectangle8": {
+      "sourceContext": "originComplete",
+      "sourceKey": "imgRectangle8",
+      "sourceSha256": "0f4459113abdc5632bce2433b586a1e54b0d59c1f5c19bd5a49872822485747b",
+      "sourceDimensions": [
+        2605,
+        2014
+      ],
+      "dimensions": [
+        2400,
+        1856
+      ],
+      "path": "/assets/originCollage-imgRectangle8.webp",
+      "bytes": 653270
+    },
+    "originComplete.imgRectangle9": {
+      "sourceContext": "originComplete",
+      "sourceKey": "imgRectangle9",
+      "sourceSha256": "769622a657a2d3c007a2fbecf251a3a3138dab5684fb2c609f912644fd3c5edb",
+      "sourceDimensions": [
+        1024,
+        683
+      ],
+      "dimensions": [
+        1024,
+        683
+      ],
+      "path": "/assets/originCollage-imgRectangle9.webp",
+      "bytes": 225000
+    },
+    "originComplete.imgRectangle10": {
+      "sourceContext": "originComplete",
+      "sourceKey": "imgRectangle10",
+      "sourceSha256": "fe15fd9b4be95e49a2bed7c9ee31be033bb0467345869f0736d12afe1ed9d119",
+      "sourceDimensions": [
+        1024,
+        683
+      ],
+      "dimensions": [
+        1024,
+        683
+      ],
+      "path": "/assets/originCollage-imgRectangle10.webp",
+      "bytes": 104222
+    },
+    "originComplete.imgRectangle11": {
+      "sourceContext": "originComplete",
+      "sourceKey": "imgRectangle11",
+      "sourceSha256": "b90a4d7ee31f1506f8b1260f71fd2c085c44e3b413d0c9f2fee51542ceacc2c7",
+      "sourceDimensions": [
+        1920,
+        1080
+      ],
+      "dimensions": [
+        1920,
+        1080
+      ],
+      "path": "/assets/originCollage-imgRectangle11.webp",
+      "bytes": 621434
+    },
+    "originComplete.imgRectangle12": {
+      "sourceContext": "originComplete",
+      "sourceKey": "imgRectangle12",
+      "sourceSha256": "27969b13e48091eb4b40bbb93effb14d01cc5aefd97c060d35dd790dd8ff149a",
+      "sourceDimensions": [
+        1280,
+        720
+      ],
+      "dimensions": [
+        1280,
+        720
+      ],
+      "path": "/assets/originCollage-imgRectangle12.webp",
+      "bytes": 152152
+    },
+    "originComplete.imgRectangle13": {
+      "sourceContext": "originComplete",
+      "sourceKey": "imgRectangle13",
+      "sourceSha256": "c384babc514bf727ac655328446a04da613e1221bd88e633b40d7828d2d85e1b",
+      "sourceDimensions": [
+        683,
+        1024
+      ],
+      "dimensions": [
+        683,
+        1024
+      ],
+      "path": "/assets/originCollage-imgRectangle13.webp",
+      "bytes": 75726
+    },
+    "originComplete.imgImage1": {
+      "sourceContext": "originComplete",
+      "sourceKey": "imgImage1",
+      "sourceSha256": "446ef73c41a5dd9c3c2df395e688a4c24bbef34ad9357bf9981da71c28759789",
+      "sourceDimensions": [
+        1024,
+        683
+      ],
+      "dimensions": [
+        1024,
+        683
+      ],
+      "path": "/assets/originCollage-imgImage1.webp",
+      "bytes": 207352
+    },
+    "originComplete.imgTheAtlantisRoyalResidence3": {
+      "sourceContext": "originComplete",
+      "sourceKey": "imgTheAtlantisRoyalResidence3",
+      "sourceSha256": "e3c5520a6d2c28f0757f6bdd79da7892a6324a7405a00cc2a01eb8acd3465a98",
+      "path": "/assets/originComplete-imgTheAtlantisRoyalResidence3.svg",
+      "bytes": 554
+    },
+    "originComplete.imgStar1": {
+      "sourceContext": "originComplete",
+      "sourceKey": "imgStar1",
+      "sourceSha256": "18907375ebdd969b54fb2fb607bdb3f254891b7f8b1757eb5864c25e47eb835f",
+      "path": "/assets/footer-imgStar2.svg",
+      "bytes": 374
+    },
+    "originComplete.imgEllipse11": {
+      "sourceContext": "originComplete",
+      "sourceKey": "imgEllipse11",
+      "sourceSha256": "e9beb456f9a3107fdcf257c1310a595026048f2ce81b9ddd15a83c029bb00942",
+      "path": "/assets/originComplete-imgEllipse11.svg",
+      "bytes": 237
+    },
+    "originComplete.imgI": {
+      "sourceContext": "originComplete",
+      "sourceKey": "imgI",
+      "sourceSha256": "147ccbcf14814bde0869f2f9ace7d8e6cfec325b680653b8eeee5deb753974cb",
+      "path": "/assets/originComplete-imgI.svg",
+      "bytes": 590
+    },
+    "originComplete.imgGroup1000003334": {
+      "sourceContext": "originComplete",
+      "sourceKey": "imgGroup1000003334",
+      "sourceSha256": "c3211fc50d44843c60122e894d6dd081ff9f7c14d1fe0b16b61870de10e2331d",
+      "path": "/assets/beach-imgGroup1000003334.svg",
+      "bytes": 1228
+    },
+    "originStory.imgStar1": {
+      "sourceContext": "originStory",
+      "sourceKey": "imgStar1",
+      "sourceSha256": "18907375ebdd969b54fb2fb607bdb3f254891b7f8b1757eb5864c25e47eb835f",
+      "path": "/assets/footer-imgStar2.svg",
+      "bytes": 374
+    },
+    "unit.imgBrandStar": {
+      "sourceContext": "unit",
+      "sourceKey": "imgBrandStar",
+      "sourceSha256": "0c10b1ae1c50fc318a661e988dad290d6a9cb12bcf7172f87297d2bee9939629",
+      "path": "/assets/catalogue-imgBrandStar.svg",
+      "bytes": 378
+    },
+    "unit.imgBrandStar1": {
+      "sourceContext": "unit",
+      "sourceKey": "imgBrandStar1",
+      "sourceSha256": "4b891422d38c79b9f592e414d40986d2b10b4c6921aa2357943265c63c2b70f3",
+      "path": "/assets/mobileLocation-imgBrandStar.svg",
+      "bytes": 380
+    },
+    "unit.imgOpenInterior1": {
+      "sourceContext": "unit",
+      "sourceKey": "imgOpenInterior1",
+      "sourceSha256": "73c0af62e116707413032c7b1183a6691f405c284c05be05879c3f25bdf8828f",
+      "sourceDimensions": [
+        2880,
+        1920
+      ],
+      "dimensions": [
+        2400,
+        1600
+      ],
+      "path": "/assets/unit-imgOpenInterior1.webp",
+      "bytes": 288856
+    },
+    "unit.imgOpenInterior2": {
+      "sourceContext": "unit",
+      "sourceKey": "imgOpenInterior2",
+      "sourceSha256": "fb8504165f08da0a767b06874587dee5c2decbf509b817622d6d19434d5e9881",
+      "sourceDimensions": [
+        1920,
+        1080
+      ],
+      "dimensions": [
+        1920,
+        1080
+      ],
+      "path": "/assets/unit-imgOpenInterior2.webp",
+      "bytes": 257100
+    },
+    "unit.imgOpenPlanZoom": {
+      "sourceContext": "unit",
+      "sourceKey": "imgOpenPlanZoom",
+      "sourceSha256": "aedbcaf92c8a4c83fc526a784388eb37783098a52be6dec93d6d9c733cdbc07f",
+      "sourceDimensions": [
+        1832,
+        1466
+      ],
+      "dimensions": [
+        1832,
+        1466
+      ],
+      "path": "/assets/catalogue-img202506071118051.webp",
+      "bytes": 167388
+    },
+    "unit.imgBuildingDiagram": {
+      "sourceContext": "unit",
+      "sourceKey": "imgBuildingDiagram",
+      "sourceSha256": "ab192aa717826d01423dbdd612eeb476ff85dcc3a225d72c6a2e0392f7a51f55",
+      "sourceDimensions": [
+        2178,
+        1046
+      ],
+      "dimensions": [
+        2178,
+        1046
+      ],
+      "path": "/assets/catalogue-img202506071124531.webp",
+      "bytes": 41240
+    },
+    "unit.imgLevel34Diagram": {
+      "sourceContext": "unit",
+      "sourceKey": "imgLevel34Diagram",
+      "sourceSha256": "644118e6e307a804c5d3dc6c5bbadf586ea38d44a5faafcdf230af81a7651e54",
+      "sourceDimensions": [
+        1270,
+        706
+      ],
+      "dimensions": [
+        1270,
+        706
+      ],
+      "path": "/assets/catalogue-img202506071124321.webp",
+      "bytes": 15356
+    },
+    "unitThird.imgRectangle144": {
+      "sourceContext": "unitThird",
+      "sourceKey": "imgRectangle144",
+      "sourceSha256": "73c0af62e116707413032c7b1183a6691f405c284c05be05879c3f25bdf8828f",
+      "sourceDimensions": [
+        2880,
+        1920
+      ],
+      "dimensions": [
+        2400,
+        1600
+      ],
+      "path": "/assets/unit-imgOpenInterior1.webp",
+      "bytes": 288856
+    },
+    "unitThird.imgRectangle145": {
+      "sourceContext": "unitThird",
+      "sourceKey": "imgRectangle145",
+      "sourceSha256": "fb8504165f08da0a767b06874587dee5c2decbf509b817622d6d19434d5e9881",
+      "sourceDimensions": [
+        1920,
+        1080
+      ],
+      "dimensions": [
+        1920,
+        1080
+      ],
+      "path": "/assets/unit-imgOpenInterior2.webp",
+      "bytes": 257100
+    },
+    "unitThird.imgRectangle146": {
+      "sourceContext": "unitThird",
+      "sourceKey": "imgRectangle146",
+      "sourceSha256": "2d02dec30971c2faed827b37d2d18b777379bb1d08d3a5f3a6b5e0915d65c7f3",
+      "sourceDimensions": [
+        3000,
+        2000
+      ],
+      "dimensions": [
+        2400,
+        1600
+      ],
+      "path": "/assets/unitThird-imgRectangle146.webp",
+      "bytes": 745722
+    },
+    "mobileIntro.imgArchitectureBackground": {
+      "sourceContext": "mobileIntro",
+      "sourceKey": "imgArchitectureBackground",
+      "sourceSha256": "338a795f06e30f0216c162fb0e188db9595cb2cbc90557524e4dc28c670b6531",
+      "sourceDimensions": [
+        32,
+        32
+      ],
+      "dimensions": [
+        32,
+        32
+      ],
+      "path": "/assets/mobileIntro-imgArchitectureBackground.webp",
+      "bytes": 88
+    },
+    "mobileIntro.imgSignatureTexturedMask": {
+      "sourceContext": "mobileIntro",
+      "sourceKey": "imgSignatureTexturedMask",
+      "sourceSha256": "2bbb2f002ce82d15fefc607c3a0bcc33cab4fbb7cba1b1f20d51a01cee333302",
+      "sourceDimensions": [
+        2016,
+        1274
+      ],
+      "dimensions": [
+        2016,
+        1274
+      ],
+      "path": "/assets/mobileIntro-imgSignatureTexturedMask.webp",
+      "bytes": 92164
+    }
+  }
+}

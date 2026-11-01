@@ -1,0 +1,30 @@
+---
+import '../styles/global.css';
+import Enquiry from '../components/Enquiry.astro';
+import Lightbox from '../components/Lightbox.astro';
+import assets from '../data/assets.json';
+interface Props {title?:string;description?:string;}
+const {title='Atlantis The Royal Residences | Created for legendary living',description='Discover Atlantis The Royal Residences on The Palm, Dubai. Explore the architecture, interiors and the four-bedroom Signature Residence 3402.'}=Astro.props;
+const canonical=Astro.site?new URL(Astro.url.pathname,Astro.site):undefined;
+const shareImage=Astro.site?new URL(assets['originArt.imgTheAtlantisRoyalResidence2'],Astro.site):undefined;
+---
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="description" content={description}/><meta name="theme-color" content="#041927"/>
+  <title>{title}</title>
+  <meta property="og:title" content={title}/><meta property="og:description" content={description}/><meta property="og:type" content="website"/>
+  {canonical&&<><link rel="canonical" href={canonical}/><meta property="og:url" content={canonical}/></>}
+  {shareImage&&<meta property="og:image" content={shareImage}/>}
+  <link rel="preload" href="/fonts/vanitas-bold.woff2" as="font" type="font/woff2" crossorigin/>
+  <link rel="preload" href="/fonts/caslon540-italic.woff2" as="font" type="font/woff2" crossorigin/>
+  <link rel="icon" href="data:,"/>
+ </head>
+ <body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <slot/>
+  <Enquiry/><Lightbox/>
+  <script>import '../scripts/site';</script>
+ </body>
+</html>

@@ -1,0 +1,45 @@
+---
+import assets from '../data/assets.json';
+import Button from './Button.astro';
+import Emblem from './Emblem.astro';
+const a=(key:string)=>(assets as Record<string,string>)[key];
+const collage=[
+ {slot:'top',image:'imgImage',alt:'A swimmer overlooking The Palm from an infinity pool'},
+ {slot:'left-one',image:'imgRectangle7',alt:'Light-filled lounge opening to the terrace'},
+ {slot:'right-one',image:'imgRectangle9',alt:'Contemporary architecture of Atlantis The Royal'},
+ {slot:'left-two',image:'imgRectangle13',alt:'A private pool with views of the Dubai skyline'},
+ {slot:'right-two',image:'imgImage1',alt:'A sun terrace above the Arabian Gulf'},
+ {slot:'left-three',image:'imgRectangle11',alt:'The landscaped entrance to the residences'},
+ {slot:'right-three',image:'imgRectangle12',alt:'An evening terrace at the residences'},
+ {slot:'bottom',image:'imgRectangle5',alt:'Poolside cabanas and cascading terraces'},
+];
+---
+<section id="about" class="origin section-anchor" aria-labelledby="origin-title">
+ <div class="origin-opening">
+  <h2 id="origin-title" class="display" data-reveal>With inspiration<br/>from an ancient<br/>civilisation</h2>
+  <div class="origin-explanation" data-reveal><Emblem/><p class="copy">In mythology, Atlantis was a utopian society, a pinnacle of grace and grandeur. In reality, Atlantis, The Royal also reaches new heights, with Residences and Resort suites soaring skywards. Designed by internationally acclaimed architects Kohn Pedersen Fox, this new icon features lofty gardens and sky-high infinity pools. The Atlantis legend continues to stir the emotions.</p></div>
+  <div class="architecture" style={`--cutout:url('${a('originArt.imgTheAtlantisRoyalResidence1')}');--fade:url('${a('originArt.imgTheAtlantisRoyalResidence3')}')`} data-parallax="-5">
+   <img class="architecture-base" src={a('originArt.imgTheAtlantisRoyalResidence2')} alt="Atlantis The Royal's sculptural towers, terraces and landscaped pools" width="1677" height="1218" loading="lazy"/>
+   <img class="architecture-warmth" src={a('originArt.imgTheAtlantisRoyalResidence4')} alt="" width="1677" height="1218" loading="lazy"/>
+  </div>
+ </div>
+ <div class="reside-composition">
+  {collage.map(item=><figure class={`collage-image collage-image--${item.slot}`} data-collage><img src={a(`originCollage.${item.image}`)} alt={item.alt} loading="lazy" width="626" height="350"/></figure>)}
+  <div class="reside-copy">
+   <p class="editorial" data-reveal>Reside in style</p>
+   <h2 class="display" data-reveal>Within a great<br/>and wonderful<br/>edifice</h2>
+   <p class="copy" data-reveal>A worthy successor to the mythical lost city, Atlantis, The Royal Resort &amp; Residences on The Palm in Dubai is destined to become an iconic, world-renowned address. The building is a breathtaking design featuring contemporary living spaces cantilevered into the Arabian sky. All Residences offer uninterrupted views towards the sea or across the waters of The Palm towards the Dubai skyline.</p>
+   <Button label="Register your interest" context="The residences"/>
+  </div>
+ </div>
+ <figure class="water-gallery" data-reveal>
+  <button type="button" data-lightbox={a('originCollage.imgRectangle4')} data-caption="A different perspective on life at Atlantis The Royal" aria-label="View the underwater photograph full screen"><img src={a('originCollage.imgRectangle4')} width="1290" height="707" loading="lazy" alt="A swimmer moving through clear sunlit water"/></button>
+  <figcaption><span aria-hidden="true">i</span>A worthy successor to the mythical lost city,<br/>Atlantis, The Royal Resort &amp; Residences</figcaption>
+ </figure>
+</section>
+<style>
+.origin{position:relative;overflow:hidden;background:var(--cream);padding-bottom:11.32vw}.origin-opening{height:115.3472vw;position:relative;background:radial-gradient(ellipse at 32% 91%,#5599bd 0%,#114467 28%,var(--navy) 65%);color:white}.origin-opening h2{position:absolute;top:18.8889vw;left:50%;transform:translateX(-50%);font-size:6.9444vw;width:59.0278%;text-align:center;color:var(--gold);line-height:.958}.origin-explanation{position:absolute;top:40.65vw;left:50%;transform:translateX(-50%);width:27.6389%;text-align:center;z-index:2}.origin-explanation :global(.emblem){margin:0 auto 22px}.origin-explanation .copy{font-size:.9722vw;line-height:1.888}.architecture{position:absolute;top:47.7778vw;left:-12.3611vw;width:116.4861vw;height:67.5694vw;overflow:hidden;will-change:transform}.architecture img{position:absolute;inset:0;width:100%;height:84.5833vw;max-width:none;object-fit:cover;mask-image:var(--cutout);mask-size:100% 100%}.architecture .architecture-warmth{mask-image:var(--fade),var(--cutout);mask-size:89.334% 81.84%,100% 100%;mask-position:9.482% 18.16%,0 0;mask-repeat:no-repeat;mask-composite:intersect}.reside-composition{position:relative;height:68.0556vw;margin-top:-14.8611vw;z-index:3}.collage-image{position:absolute;overflow:hidden}.collage-image img{width:100%;height:100%;object-fit:cover}.collage-image--top{top:0;left:28.2639%;width:43.4722%;height:14.8611vw}.collage-image--top img{height:164.22%;position:absolute;top:-39.41%}.collage-image--left-one,.collage-image--right-one,.collage-image--left-three,.collage-image--right-three{width:23.0556%;height:11.9892vw}.collage-image--left-one{left:5.2278%;top:16.2035vw}.collage-image--right-one{right:5.2278%;top:16.2035vw}.collage-image--left-two,.collage-image--right-two{width:20.8333%;height:14.8611vw;top:29.5139vw}.collage-image--left-two{left:10.7639%}.collage-image--right-two{right:10.7639%}.collage-image--left-three{left:5.2278%;top:45.6944vw}.collage-image--right-three{right:5.2278%;top:45.6944vw}.collage-image--right-three img{width:116.57%;height:126.1%;max-width:none;position:absolute;left:-8.29%;top:-24.73%}.collage-image--bottom{left:28.2437%;top:58.9965vw;width:43.5122%;height:14.8924vw;z-index:4}.reside-copy{position:absolute;left:50%;top:14.375vw;transform:translateX(-50%);width:38.0556%;height:47.0139vw;padding:3.4722vw 0 0;text-align:center}.reside-copy::before{content:'';position:absolute;top:0;left:50%;transform:translateX(-50%);width:74.82%;height:100%;background:var(--cream);z-index:-1}.reside-copy>.editorial{font-size:1.3889vw}.reside-copy h2{color:var(--gold);font-size:4.1667vw;line-height:.958;margin-top:2.2222vw}.reside-copy .copy{width:64.23%;font-size:.9722vw;line-height:1.888;margin:2.5vw auto}.reside-copy :global(.pill){min-width:216px}.water-gallery{position:relative;width:89.5833%;margin:0 auto;height:49.0972vw}.water-gallery button{padding:0;width:100%;height:100%;display:block}.water-gallery img{width:100%;height:100%;object-fit:cover}.water-gallery::after{content:'';position:absolute;top:0;left:0;width:49%;height:69%;background:linear-gradient(142deg,rgba(4,25,39,.52),transparent 60%);pointer-events:none}.water-gallery figcaption{position:absolute;z-index:1;top:2.7778vw;left:2.8472vw;color:white;font-size:12px;line-height:1.6;pointer-events:none}.water-gallery figcaption span{width:22px;height:22px;display:grid;place-items:center;border:1px solid white;border-radius:50%;margin-bottom:12px}
+@media(max-width:1100px) and (min-width:801px){.reside-copy .copy{font-size:12px;line-height:1.65}.reside-copy :global(.pill){min-height:46px;padding:10px 16px;font-size:10px;min-width:190px}.origin-explanation .copy{font-size:12px}}
+@media(max-width:800px){.origin{padding-bottom:80px}.origin-opening{height:1070px;background:radial-gradient(ellipse at 35% 85%,#5599bd 0%,#114467 24%,var(--navy) 62%)}.origin-opening h2{top:68px;font-size:44px;width:calc(100% - 40px);max-width:520px;line-height:1.02}.origin-explanation{top:278px;width:calc(100% - 48px);max-width:420px}.origin-explanation .copy{font-size:14px;line-height:1.85}.origin-explanation :global(.emblem){margin-bottom:24px}.architecture{width:980px;height:570px;left:calc(50% - 500px);top:525px;transform:none!important}.architecture img{height:711.5px}.reside-composition{height:auto;margin-top:0;display:grid;grid-template-columns:1fr 1fr;gap:12px;padding:24px;align-items:start}.collage-image{position:relative;top:auto;left:auto;right:auto;width:auto;height:140px}.collage-image--top{grid-column:1/-1;height:160px;order:0}.reside-copy{position:relative;left:auto;top:auto;transform:none;grid-column:1/-1;width:auto;height:auto;padding:32px 0 35px;order:1}.reside-copy::before{display:none}.reside-copy>.editorial{font-size:22px}.reside-copy h2{font-size:42px;margin:26px 0}.reside-copy .copy{font-size:14px;line-height:1.85;width:100%;max-width:420px;margin:24px auto 30px}.reside-copy :global(.pill){width:100%;max-width:284px}.collage-image--left-one,.collage-image--right-one{order:2}.collage-image--left-two,.collage-image--right-two{order:3}.collage-image--left-three,.collage-image--right-three{order:4}.collage-image--bottom{grid-column:1/-1;order:5;height:180px}.water-gallery{width:calc(100% - 48px);height:300px;margin-top:12px}.water-gallery figcaption{top:20px;left:20px;font-size:10px;max-width:230px}}
+</style>
+<style>.origin-opening h2{color:#d3b496;line-height:.968}.origin-explanation .copy{font-weight:300}</style>

@@ -1,0 +1,8 @@
+---
+import assets from '../data/assets.json';
+interface Props { label:string; href?:string; context?:string; variant?:'primary'|'outline'|'light'; class?:string; type?:'button'|'submit'; }
+const {label,href,context,variant='primary',class:className='',type='button'}=Astro.props;
+const star=variant==='outline'?assets['unit.imgBrandStar1']:assets['unit.imgBrandStar'];
+const classes=`pill pill--${variant} ${className}`;
+---
+{href ? <a class={classes} href={href}>{label}<img class="star" src={star} alt="" width="14" height="15" /></a> : <button class={classes} type={type} data-enquire={context}>{label}<img class="star" src={star} alt="" width="14" height="15" /></button>}
