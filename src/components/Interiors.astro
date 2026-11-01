@@ -1,6 +1,7 @@
 ---
 import Icon from './Icon.astro';
 import ResponsiveImage from './ResponsiveImage.astro';
+import GalleryStatus from './GalleryStatus.astro';
 import assets from '../data/assets.json';
 const a=assets as Record<string,string>;
 const group=(prefix:string)=>Object.entries(a).find(([key])=>key.startsWith(prefix+'.'))?.[1];
@@ -11,6 +12,7 @@ const images=[{src:a['interiors.imgRectangle4'],alt:'An open-air pavilion with s
  <div class="interiors-heading"><p class="editorial">Bold yet elegant design</p><h2 id="interiors-title" class="display">Luxurious show<br/>interiors, <em>unlike any<br/>other in the world</em></h2></div>
  <div class="interior-controls"><button class="round-control" type="button" data-prev aria-label="Previous interior"><Icon name="arrow-left" size={20}/></button><output data-slider-count aria-live="polite">1 / 3</output><button class="round-control" type="button" data-next aria-label="Next interior"><Icon name="arrow-right" size={20}/></button></div>
  <p class="gallery-hint">Select image to explore</p>
+ <GalleryStatus placement="interiors"/>
 </section>
 <style>
 .interiors{position:relative;height:59.0278vw;min-height:500px;background:var(--cream);color:white;overflow:hidden;padding:5vw var(--page-gutter)}.interior-slides{isolation:isolate;touch-action:pan-y;position:relative;width:100%;height:100%}.interior-slide{position:absolute;inset:0}.interior-slide button{position:relative;display:block;width:100%;height:100%;padding:0}.interior-slide button::after{content:'';position:absolute;inset:0;background:rgba(4,25,39,.18);pointer-events:none}.interior-slide img{width:100%;height:100%;object-fit:cover}.interiors-heading{position:absolute;top:35.5%;left:50%;transform:translateX(-50%);text-align:center;width:42%;pointer-events:none}.interiors-heading>.editorial{font-size:1.6667vw;margin-bottom:2.5vw}.interiors-heading h2{font-size:3.8194vw;line-height:1.058;letter-spacing:-.01em}.interiors-heading h2 em{font-size:1.036em;text-transform:none}.interior-controls{position:absolute;right:8.3333%;bottom:7.2222vw;display:flex;gap:18px;align-items:center;font-size:12px;z-index:2}.interior-controls .round-control{border-color:rgba(255,255,255,.7)}.interior-controls .round-control:hover{background:white;color:var(--navy)}.interior-controls output{white-space:nowrap}.gallery-hint{position:absolute;left:8.3333%;bottom:8.0556vw;font-size:10px;text-transform:uppercase;letter-spacing:.05em;pointer-events:none}

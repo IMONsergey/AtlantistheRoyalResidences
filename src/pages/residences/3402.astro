@@ -22,7 +22,7 @@ const photos=[{src:a['unit.imgOpenInterior1'],alt:'Bedroom and sitting area with
     <table class="room-table"><caption class="sr-only">Room dimensions, metric and imperial</caption><thead class="sr-only"><tr><th scope="col">Room</th><th scope="col">Metric dimensions</th><th scope="col">Imperial dimensions</th></tr></thead><tbody>{residence.rooms.map(([room,metric,imperial])=><tr><th scope="row">{room}</th><td>{metric}</td><td>{imperial}</td></tr>)}</tbody></table>
     <div class="unit-actions"><Button label="Register your interest" context="Unit 3402 interest"/><Button label="Request payment plan" context="Unit 3402 payment plan request" variant="outline"/></div>
    </section>
-   <section class="plan-information" aria-label="Floor plan and orientation">
+   <section id="floor-plan" class="plan-information" aria-label="Floor plan and orientation">
     <p class="plan-orientation">View towards the ocean</p>
     <button class="unit-plan" type="button" data-lightbox={a['unit.imgOpenPlanZoom']} data-caption="Unit 3402 • Four-bedroom Signature Residence Type 2 • Level 34" data-plan aria-label="Open the floor plan viewer"><img src={a['unit.imgOpenPlanZoom']} width="1832" height="1466" alt="Unit 3402 floor plan showing four bedrooms, living and dining rooms, kitchen, study and balcony"/></button>
     <div class="plan-bottom"><p class="plan-orientation">View towards The Palm</p><button type="button" class="link-line" data-lightbox={a['unit.imgOpenPlanZoom']} data-caption="Unit 3402 • Four-bedroom Signature Residence Type 2 • Level 34" data-plan>Enlarge floor plan <Icon name="arrow-up-right" size={14}/></button></div>

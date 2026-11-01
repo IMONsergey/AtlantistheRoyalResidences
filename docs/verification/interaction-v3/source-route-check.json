@@ -1,0 +1,18 @@
+{
+  "pages": [
+    "/",
+    "/404.html",
+    "/privacy/",
+    "/residences/3402/"
+  ],
+  "anchorInstances": 58,
+  "localDestinationIssues": [],
+  "externalLinks": [
+    {
+      "route": "/",
+      "href": "https://www.google.com/maps/search/?api=1&query=Atlantis+The+Royal+Residences+Dubai"
+    }
+  ],
+  "textArrowSourceMatches": [],
+  "scope": "Static route/fragment/file existence and source text-arrow scan. Not a substitute for browser journeys or an external destination availability check."
+}

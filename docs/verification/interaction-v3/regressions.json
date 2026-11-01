@@ -1,0 +1,1022 @@
+{
+  "auditLabel": "2026-11-01 V3",
+  "baseline": "a94c16da3a602832484fce0a2c6b05958658cbc9",
+  "project": "atlantis",
+  "afterScenariosPerEngine": 6,
+  "afterPasses": 12,
+  "engines": {
+    "chromium": "145.0.7632.6",
+    "webkit": "26.0"
+  },
+  "method": "Isolated local baseline/fixed static builds; real UI input and downloaded bytes; delayed/failed assets injected; every form POST intercepted before network; static server rejects non-GET. Main regression contexts use reduced motion; normal motion is covered separately by the visual probe.",
+  "results": [
+    {
+      "engine": "chromium",
+      "name": "enquiry-pending-edit-reopen-error-retry",
+      "viewport": {
+        "width": 390,
+        "height": 600
+      },
+      "touchContext": true,
+      "baselineOutcome": "BASELINE_DEFECT_OBSERVED",
+      "fixedOutcome": "PASS",
+      "baseline": {
+        "viewport": {
+          "width": 390,
+          "height": 600
+        },
+        "mobile": true,
+        "ok": false,
+        "pendingDisabled": false,
+        "pendingName": "Changed During Sending",
+        "sentName": "Audit Fixture User",
+        "pendingContext": "Unit 3402 interest",
+        "sentContext": "Unit 3402 interest",
+        "contextStable": true,
+        "errorView": {
+          "visible": false,
+          "rect": {
+            "top": 644.984375,
+            "bottom": 717.765625,
+            "left": 36,
+            "right": 354
+          },
+          "clip": {
+            "top": 70,
+            "bottom": 588,
+            "left": 12,
+            "right": 378
+          },
+          "focused": false
+        },
+        "fieldErrorView": {
+          "visible": true,
+          "rect": {
+            "top": 116.984375,
+            "bottom": 158.984375,
+            "left": 36,
+            "right": 354
+          },
+          "clip": {
+            "top": 70,
+            "bottom": 588,
+            "left": 12,
+            "right": 378
+          },
+          "focused": true
+        },
+        "returnedValues": {
+          "name": "Changed During Sending",
+          "email": "audit-fixture@example.invalid",
+          "phone": "+971 50 000 0000",
+          "website": "",
+          "consent": true
+        },
+        "retryIdStable": true,
+        "revisedIdChanged": true,
+        "newFormEmpty": true,
+        "mockedRequests": [
+          {
+            "project": "atlantis",
+            "context": "Unit 3402 interest",
+            "name": "Audit Fixture User",
+            "email": "audit-fixture@example.invalid",
+            "phone": "+971 50 000 0000",
+            "consent": true,
+            "website": "",
+            "startedAt": 1793561052774,
+            "submissionId": "49c8482e-c640-4f3c-9002-1e64183a88dd"
+          },
+          {
+            "project": "atlantis",
+            "context": "Unit 3402 interest",
+            "name": "Audit Fixture User",
+            "email": "audit-fixture@example.invalid",
+            "phone": "+971 50 000 0000",
+            "consent": true,
+            "website": "",
+            "startedAt": 1793561052774,
+            "submissionId": "49c8482e-c640-4f3c-9002-1e64183a88dd"
+          },
+          {
+            "project": "atlantis",
+            "context": "Unit 3402 interest",
+            "name": "Audit Fixture Revised",
+            "email": "audit-revised@example.invalid",
+            "phone": "+971 50 000 0000",
+            "consent": true,
+            "website": "",
+            "startedAt": 1793561052774,
+            "submissionId": "a036e3a1-6838-42a3-988b-cb6d6795967e"
+          }
+        ],
+        "pendingScreenshot": "before-chromium-enquiry-pending-reopened.png",
+        "errorScreenshot": "before-chromium-enquiry-error-after-reopen.png"
+      },
+      "fixed": {
+        "viewport": {
+          "width": 390,
+          "height": 600
+        },
+        "mobile": true,
+        "ok": true,
+        "pendingDisabled": true,
+        "pendingName": "Audit Fixture User",
+        "sentName": "Audit Fixture User",
+        "pendingContext": "Unit 3402 interest",
+        "sentContext": "Unit 3402 interest",
+        "contextStable": true,
+        "errorView": {
+          "visible": true,
+          "rect": {
+            "top": 405.984375,
+            "bottom": 478.765625,
+            "left": 36,
+            "right": 354
+          },
+          "clip": {
+            "top": 70,
+            "bottom": 588,
+            "left": 12,
+            "right": 378
+          },
+          "focused": true
+        },
+        "fieldErrorView": {
+          "visible": true,
+          "rect": {
+            "top": 116.984375,
+            "bottom": 158.984375,
+            "left": 36,
+            "right": 354
+          },
+          "clip": {
+            "top": 70,
+            "bottom": 588,
+            "left": 12,
+            "right": 378
+          },
+          "focused": true
+        },
+        "returnedValues": {
+          "name": "Audit Fixture User",
+          "email": "audit-fixture@example.invalid",
+          "phone": "+971 50 000 0000",
+          "website": "",
+          "consent": true
+        },
+        "retryIdStable": true,
+        "revisedIdChanged": true,
+        "newFormEmpty": true,
+        "mockedRequests": [
+          {
+            "project": "atlantis",
+            "context": "Unit 3402 interest",
+            "name": "Audit Fixture User",
+            "email": "audit-fixture@example.invalid",
+            "phone": "+971 50 000 0000",
+            "consent": true,
+            "website": "",
+            "startedAt": 1793561506115,
+            "submissionId": "67c8ac22-02a1-4c78-a2b9-00bb087f2486"
+          },
+          {
+            "project": "atlantis",
+            "context": "Unit 3402 interest",
+            "name": "Audit Fixture User",
+            "email": "audit-fixture@example.invalid",
+            "phone": "+971 50 000 0000",
+            "consent": true,
+            "website": "",
+            "startedAt": 1793561506115,
+            "submissionId": "67c8ac22-02a1-4c78-a2b9-00bb087f2486"
+          },
+          {
+            "project": "atlantis",
+            "context": "Unit 3402 interest",
+            "name": "Audit Fixture Revised",
+            "email": "audit-revised@example.invalid",
+            "phone": "+971 50 000 0000",
+            "consent": true,
+            "website": "",
+            "startedAt": 1793561506115,
+            "submissionId": "5bc9abb2-345b-4f60-84b3-0356d2c0fb90"
+          }
+        ],
+        "pendingScreenshot": "after-chromium-enquiry-pending-reopened.png",
+        "errorScreenshot": "after-chromium-enquiry-error-after-reopen.png"
+      },
+      "blockedExternalOrUnmockedRequests": 0,
+      "pageErrors": []
+    },
+    {
+      "engine": "chromium",
+      "name": "menus-anchor-history-and-context",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "touchContext": true,
+      "baselineOutcome": "PASS",
+      "fixedOutcome": "PASS",
+      "baseline": {
+        "screenshots": []
+      },
+      "fixed": {
+        "screenshots": []
+      },
+      "blockedExternalOrUnmockedRequests": 0,
+      "pageErrors": []
+    },
+    {
+      "engine": "chromium",
+      "name": "catalogue-back-forward-restores-all-url-state",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "touchContext": true,
+      "baselineOutcome": "BASELINE_DEFECT_OBSERVED",
+      "fixedOutcome": "PASS",
+      "baseline": {
+        "defaultsRestored": false,
+        "selectionRestored": true,
+        "screenshots": [
+          "before-chromium-catalogue-back-state.png"
+        ]
+      },
+      "fixed": {
+        "defaultsRestored": true,
+        "selectionRestored": true,
+        "screenshots": [
+          "after-chromium-catalogue-back-state.png"
+        ]
+      },
+      "blockedExternalOrUnmockedRequests": 0,
+      "pageErrors": []
+    },
+    {
+      "engine": "chromium",
+      "name": "floor-plan-labelled-link-reaches-plan",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "touchContext": true,
+      "baselineOutcome": "BASELINE_DEFECT_OBSERVED",
+      "fixedOutcome": "PASS",
+      "baseline": {
+        "href": "/residences/3402/?bedrooms=4&area=300-plus&view=interior",
+        "destination": "http://127.0.0.1:14344/residences/3402/?bedrooms=4&area=300-plus&view=interior",
+        "planTop": 972.5,
+        "screenshots": [
+          "before-chromium-floor-plan-link-destination.png"
+        ]
+      },
+      "fixed": {
+        "href": "/residences/3402/?bedrooms=4&area=300-plus&view=interior#floor-plan",
+        "destination": "http://127.0.0.1:14345/residences/3402/?bedrooms=4&area=300-plus&view=interior#floor-plan",
+        "planTop": 140.5,
+        "planView": {
+          "visible": true,
+          "rect": {
+            "top": 178.5,
+            "bottom": 452.171875,
+            "left": 24,
+            "right": 366
+          },
+          "clip": {
+            "top": 0,
+            "bottom": 844,
+            "left": 0,
+            "right": 390
+          },
+          "focused": false
+        },
+        "enlargeView": {
+          "visible": true,
+          "rect": {
+            "top": 470.171875,
+            "bottom": 493.171875,
+            "left": 209.234375,
+            "right": 350.234375
+          },
+          "clip": {
+            "top": 0,
+            "bottom": 844,
+            "left": 0,
+            "right": 390
+          },
+          "focused": false
+        },
+        "scroll": {
+          "y": 832,
+          "max": 832
+        },
+        "screenshots": [
+          "after-chromium-floor-plan-link-destination.png"
+        ]
+      },
+      "blockedExternalOrUnmockedRequests": 0,
+      "pageErrors": []
+    },
+    {
+      "engine": "chromium",
+      "name": "gallery-failure-retry-latest-interiors",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "touchContext": false,
+      "baselineOutcome": "BASELINE_DEFECT_OBSERVED",
+      "fixedOutcome": "PASS",
+      "baseline": {
+        "retryVisible": false,
+        "recovered": {
+          "index": 1,
+          "counter": "2 / 3",
+          "src": "http://127.0.0.1:14344/assets/interiorMiddle-imgRectangle5.webp",
+          "width": 1290
+        },
+        "failed": {
+          "index": 0,
+          "counter": "1 / 3",
+          "src": "http://127.0.0.1:14344/assets/responsive/9c178e4120291bb64572-w1440.webp",
+          "width": 1290
+        },
+        "message": null,
+        "final": {
+          "index": 1,
+          "counter": "2 / 3",
+          "src": "http://127.0.0.1:14344/assets/interiorMiddle-imgRectangle5.webp",
+          "width": 1290
+        },
+        "screenshots": [
+          "before-chromium-gallery-failure-interiors.png",
+          "before-chromium-gallery-recovered-interiors.png"
+        ]
+      },
+      "fixed": {
+        "retryVisible": true,
+        "recovered": {
+          "index": 1,
+          "counter": "2 / 3",
+          "src": "http://127.0.0.1:14345/assets/interiorMiddle-imgRectangle5.webp",
+          "width": 1290
+        },
+        "failed": {
+          "index": 0,
+          "counter": "1 / 3",
+          "src": "http://127.0.0.1:14345/assets/responsive/9c178e4120291bb64572-w1440.webp",
+          "width": 1290
+        },
+        "statusView": {
+          "visible": true,
+          "rect": {
+            "top": 696.328125,
+            "bottom": 766.328125,
+            "left": 118.734375,
+            "right": 538.734375
+          },
+          "clip": {
+            "top": 90.3125,
+            "bottom": 900,
+            "left": 0,
+            "right": 1425
+          },
+          "focused": false
+        },
+        "retryView": {
+          "visible": true,
+          "rect": {
+            "top": 709.328125,
+            "bottom": 753.328125,
+            "left": 351.734375,
+            "right": 437.734375
+          },
+          "clip": {
+            "top": 90.3125,
+            "bottom": 900,
+            "left": 0,
+            "right": 1425
+          },
+          "focused": false
+        },
+        "message": "The image could not be loaded.",
+        "final": {
+          "index": 1,
+          "counter": "2 / 3",
+          "src": "http://127.0.0.1:14345/assets/interiorMiddle-imgRectangle5.webp",
+          "width": 1290
+        },
+        "screenshots": [
+          "after-chromium-gallery-failure-interiors.png",
+          "after-chromium-gallery-recovered-interiors.png"
+        ]
+      },
+      "blockedExternalOrUnmockedRequests": 0,
+      "pageErrors": []
+    },
+    {
+      "engine": "chromium",
+      "name": "gallery-failure-retry-latest-highlights",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "touchContext": false,
+      "baselineOutcome": "BASELINE_DEFECT_OBSERVED",
+      "fixedOutcome": "PASS",
+      "baseline": {
+        "retryVisible": false,
+        "recovered": {
+          "index": 1,
+          "counter": "2 / 3",
+          "src": "http://127.0.0.1:14344/assets/highlightPool-imgImage.webp",
+          "width": 1074
+        },
+        "failed": {
+          "index": 0,
+          "counter": "1 / 3",
+          "src": "http://127.0.0.1:14344/assets/responsive/9c178e4120291bb64572-w960.webp",
+          "width": 881
+        },
+        "message": null,
+        "final": {
+          "index": 1,
+          "counter": "2 / 3",
+          "src": "http://127.0.0.1:14344/assets/highlightPool-imgImage.webp",
+          "width": 1074
+        },
+        "screenshots": [
+          "before-chromium-gallery-failure-highlights.png",
+          "before-chromium-gallery-recovered-highlights.png"
+        ]
+      },
+      "fixed": {
+        "retryVisible": true,
+        "recovered": {
+          "index": 1,
+          "counter": "2 / 3",
+          "src": "http://127.0.0.1:14345/assets/highlightPool-imgImage.webp",
+          "width": 1074
+        },
+        "failed": {
+          "index": 0,
+          "counter": "1 / 3",
+          "src": "http://127.0.0.1:14345/assets/responsive/9c178e4120291bb64572-w960.webp",
+          "width": 881
+        },
+        "statusView": {
+          "visible": true,
+          "rect": {
+            "top": 756.75,
+            "bottom": 826.75,
+            "left": 502.5,
+            "right": 922.5
+          },
+          "clip": {
+            "top": 89.9375,
+            "bottom": 900,
+            "left": 0,
+            "right": 1425
+          },
+          "focused": false
+        },
+        "retryView": {
+          "visible": true,
+          "rect": {
+            "top": 769.75,
+            "bottom": 813.75,
+            "left": 735.5,
+            "right": 821.5
+          },
+          "clip": {
+            "top": 89.9375,
+            "bottom": 900,
+            "left": 0,
+            "right": 1425
+          },
+          "focused": false
+        },
+        "message": "The image could not be loaded.",
+        "final": {
+          "index": 1,
+          "counter": "2 / 3",
+          "src": "http://127.0.0.1:14345/assets/highlightPool-imgImage.webp",
+          "width": 1074
+        },
+        "screenshots": [
+          "after-chromium-gallery-failure-highlights.png",
+          "after-chromium-gallery-recovered-highlights.png"
+        ]
+      },
+      "blockedExternalOrUnmockedRequests": 0,
+      "pageErrors": []
+    },
+    {
+      "engine": "webkit",
+      "name": "enquiry-pending-edit-reopen-error-retry",
+      "viewport": {
+        "width": 390,
+        "height": 600
+      },
+      "touchContext": true,
+      "baselineOutcome": "BASELINE_DEFECT_OBSERVED",
+      "fixedOutcome": "PASS",
+      "baseline": {
+        "viewport": {
+          "width": 390,
+          "height": 600
+        },
+        "mobile": true,
+        "ok": false,
+        "pendingDisabled": false,
+        "pendingName": "Changed During Sending",
+        "sentName": "Audit Fixture User",
+        "pendingContext": "Unit 3402 interest",
+        "sentContext": "Unit 3402 interest",
+        "contextStable": true,
+        "errorView": {
+          "visible": false,
+          "rect": {
+            "top": 643,
+            "bottom": 715,
+            "left": 36,
+            "right": 354
+          },
+          "clip": {
+            "top": 70,
+            "bottom": 588,
+            "left": 12,
+            "right": 378
+          },
+          "focused": false
+        },
+        "fieldErrorView": {
+          "visible": true,
+          "rect": {
+            "top": 211,
+            "bottom": 253,
+            "left": 36,
+            "right": 354
+          },
+          "clip": {
+            "top": 70,
+            "bottom": 588,
+            "left": 12,
+            "right": 378
+          },
+          "focused": true
+        },
+        "returnedValues": {
+          "name": "Changed During Sending",
+          "email": "audit-fixture@example.invalid",
+          "phone": "+971 50 000 0000",
+          "website": "",
+          "consent": true
+        },
+        "retryIdStable": true,
+        "revisedIdChanged": true,
+        "newFormEmpty": true,
+        "mockedRequests": [
+          {
+            "project": "atlantis",
+            "context": "Unit 3402 interest",
+            "name": "Audit Fixture User",
+            "email": "audit-fixture@example.invalid",
+            "phone": "+971 50 000 0000",
+            "consent": true,
+            "website": "",
+            "startedAt": 1793560962617,
+            "submissionId": "5f9601ed-5372-4992-a359-e68c2356c7da"
+          },
+          {
+            "project": "atlantis",
+            "context": "Unit 3402 interest",
+            "name": "Audit Fixture User",
+            "email": "audit-fixture@example.invalid",
+            "phone": "+971 50 000 0000",
+            "consent": true,
+            "website": "",
+            "startedAt": 1793560962617,
+            "submissionId": "5f9601ed-5372-4992-a359-e68c2356c7da"
+          },
+          {
+            "project": "atlantis",
+            "context": "Unit 3402 interest",
+            "name": "Audit Fixture Revised",
+            "email": "audit-revised@example.invalid",
+            "phone": "+971 50 000 0000",
+            "consent": true,
+            "website": "",
+            "startedAt": 1793560962617,
+            "submissionId": "d8e16030-53c9-4c00-bc3d-a44cc327ad0b"
+          }
+        ],
+        "pendingScreenshot": "before-webkit-enquiry-pending-reopened.png",
+        "errorScreenshot": "before-webkit-enquiry-error-after-reopen.png"
+      },
+      "fixed": {
+        "viewport": {
+          "width": 390,
+          "height": 600
+        },
+        "mobile": true,
+        "ok": true,
+        "pendingDisabled": true,
+        "pendingName": "Audit Fixture User",
+        "sentName": "Audit Fixture User",
+        "pendingContext": "Unit 3402 interest",
+        "sentContext": "Unit 3402 interest",
+        "contextStable": true,
+        "errorView": {
+          "visible": true,
+          "rect": {
+            "top": 407,
+            "bottom": 479,
+            "left": 36,
+            "right": 354
+          },
+          "clip": {
+            "top": 70,
+            "bottom": 588,
+            "left": 12,
+            "right": 378
+          },
+          "focused": true
+        },
+        "fieldErrorView": {
+          "visible": true,
+          "rect": {
+            "top": 211,
+            "bottom": 253,
+            "left": 36,
+            "right": 354
+          },
+          "clip": {
+            "top": 70,
+            "bottom": 588,
+            "left": 12,
+            "right": 378
+          },
+          "focused": true
+        },
+        "returnedValues": {
+          "name": "Audit Fixture User",
+          "email": "audit-fixture@example.invalid",
+          "phone": "+971 50 000 0000",
+          "website": "",
+          "consent": true
+        },
+        "retryIdStable": true,
+        "revisedIdChanged": true,
+        "newFormEmpty": true,
+        "mockedRequests": [
+          {
+            "project": "atlantis",
+            "context": "Unit 3402 interest",
+            "name": "Audit Fixture User",
+            "email": "audit-fixture@example.invalid",
+            "phone": "+971 50 000 0000",
+            "consent": true,
+            "website": "",
+            "startedAt": 1793562214654,
+            "submissionId": "c78b8b85-c706-4d31-a85f-dc11da8e6f78"
+          },
+          {
+            "project": "atlantis",
+            "context": "Unit 3402 interest",
+            "name": "Audit Fixture User",
+            "email": "audit-fixture@example.invalid",
+            "phone": "+971 50 000 0000",
+            "consent": true,
+            "website": "",
+            "startedAt": 1793562214654,
+            "submissionId": "c78b8b85-c706-4d31-a85f-dc11da8e6f78"
+          },
+          {
+            "project": "atlantis",
+            "context": "Unit 3402 interest",
+            "name": "Audit Fixture Revised",
+            "email": "audit-revised@example.invalid",
+            "phone": "+971 50 000 0000",
+            "consent": true,
+            "website": "",
+            "startedAt": 1793562214654,
+            "submissionId": "3402573d-52c1-41ab-9f30-147923703609"
+          }
+        ],
+        "pendingScreenshot": "after-webkit-enquiry-pending-reopened.png",
+        "errorScreenshot": "after-webkit-enquiry-error-after-reopen.png"
+      },
+      "blockedExternalOrUnmockedRequests": 0,
+      "pageErrors": []
+    },
+    {
+      "engine": "webkit",
+      "name": "menus-anchor-history-and-context",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "touchContext": true,
+      "baselineOutcome": "PASS",
+      "fixedOutcome": "PASS",
+      "baseline": {
+        "screenshots": []
+      },
+      "fixed": {
+        "screenshots": []
+      },
+      "blockedExternalOrUnmockedRequests": 0,
+      "pageErrors": []
+    },
+    {
+      "engine": "webkit",
+      "name": "catalogue-back-forward-restores-all-url-state",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "touchContext": true,
+      "baselineOutcome": "BASELINE_DEFECT_OBSERVED",
+      "fixedOutcome": "PASS",
+      "baseline": {
+        "defaultsRestored": false,
+        "selectionRestored": true,
+        "screenshots": [
+          "before-webkit-catalogue-back-state.png"
+        ]
+      },
+      "fixed": {
+        "defaultsRestored": true,
+        "selectionRestored": true,
+        "screenshots": [
+          "after-webkit-catalogue-back-state.png"
+        ]
+      },
+      "blockedExternalOrUnmockedRequests": 0,
+      "pageErrors": []
+    },
+    {
+      "engine": "webkit",
+      "name": "floor-plan-labelled-link-reaches-plan",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "touchContext": true,
+      "baselineOutcome": "BASELINE_DEFECT_OBSERVED",
+      "fixedOutcome": "PASS",
+      "baseline": {
+        "href": "/residences/3402/?bedrooms=4&area=300-plus&view=interior",
+        "destination": "http://127.0.0.1:14344/residences/3402/?bedrooms=4&area=300-plus&view=interior",
+        "planTop": 973,
+        "screenshots": [
+          "before-webkit-floor-plan-link-destination.png"
+        ]
+      },
+      "fixed": {
+        "href": "/residences/3402/?bedrooms=4&area=300-plus&view=interior#floor-plan",
+        "destination": "http://127.0.0.1:14345/residences/3402/?bedrooms=4&area=300-plus&view=interior#floor-plan",
+        "planTop": 140,
+        "planView": {
+          "visible": true,
+          "rect": {
+            "top": 178,
+            "bottom": 451.671875,
+            "left": 24,
+            "right": 366
+          },
+          "clip": {
+            "top": 0,
+            "bottom": 844,
+            "left": 0,
+            "right": 390
+          },
+          "focused": false
+        },
+        "enlargeView": {
+          "visible": true,
+          "rect": {
+            "top": 469.671875,
+            "bottom": 492.671875,
+            "left": 212.40625,
+            "right": 346.328125
+          },
+          "clip": {
+            "top": 0,
+            "bottom": 844,
+            "left": 0,
+            "right": 390
+          },
+          "focused": false
+        },
+        "scroll": {
+          "y": 833,
+          "max": 833
+        },
+        "screenshots": [
+          "after-webkit-floor-plan-link-destination.png"
+        ]
+      },
+      "blockedExternalOrUnmockedRequests": 0,
+      "pageErrors": []
+    },
+    {
+      "engine": "webkit",
+      "name": "gallery-failure-retry-latest-interiors",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "touchContext": true,
+      "baselineOutcome": "BASELINE_DEFECT_OBSERVED",
+      "fixedOutcome": "PASS",
+      "baseline": {
+        "retryVisible": false,
+        "recovered": {
+          "index": 1,
+          "counter": "2 / 3",
+          "src": "http://127.0.0.1:14344/assets/interiorMiddle-imgRectangle5.webp",
+          "width": 949
+        },
+        "failed": {
+          "index": 0,
+          "counter": "1 / 3",
+          "src": "http://127.0.0.1:14344/assets/responsive/9c178e4120291bb64572-w960.webp",
+          "width": 948
+        },
+        "message": null,
+        "final": {
+          "index": 1,
+          "counter": "2 / 3",
+          "src": "http://127.0.0.1:14344/assets/interiorMiddle-imgRectangle5.webp",
+          "width": 949
+        },
+        "screenshots": [
+          "before-webkit-gallery-failure-interiors.png",
+          "before-webkit-gallery-recovered-interiors.png"
+        ]
+      },
+      "fixed": {
+        "retryVisible": true,
+        "recovered": {
+          "index": 1,
+          "counter": "2 / 3",
+          "src": "http://127.0.0.1:14345/assets/interiorMiddle-imgRectangle5.webp",
+          "width": 949
+        },
+        "failed": {
+          "index": 0,
+          "counter": "1 / 3",
+          "src": "http://127.0.0.1:14345/assets/responsive/9c178e4120291bb64572-w960.webp",
+          "width": 948
+        },
+        "statusView": {
+          "visible": true,
+          "rect": {
+            "top": 619.109375,
+            "bottom": 685.109375,
+            "left": 44,
+            "right": 346
+          },
+          "clip": {
+            "top": 155.109375,
+            "bottom": 835.109375,
+            "left": 0,
+            "right": 390
+          },
+          "focused": false
+        },
+        "retryView": {
+          "visible": true,
+          "rect": {
+            "top": 630.109375,
+            "bottom": 674.109375,
+            "left": 248.296875,
+            "right": 332.78125
+          },
+          "clip": {
+            "top": 155.109375,
+            "bottom": 835.109375,
+            "left": 0,
+            "right": 390
+          },
+          "focused": false
+        },
+        "message": "The image could not be loaded.",
+        "final": {
+          "index": 1,
+          "counter": "2 / 3",
+          "src": "http://127.0.0.1:14345/assets/interiorMiddle-imgRectangle5.webp",
+          "width": 949
+        },
+        "screenshots": [
+          "after-webkit-gallery-failure-interiors.png",
+          "after-webkit-gallery-recovered-interiors.png"
+        ]
+      },
+      "blockedExternalOrUnmockedRequests": 0,
+      "pageErrors": []
+    },
+    {
+      "engine": "webkit",
+      "name": "gallery-failure-retry-latest-highlights",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "touchContext": true,
+      "baselineOutcome": "BASELINE_DEFECT_OBSERVED",
+      "fixedOutcome": "PASS",
+      "baseline": {
+        "retryVisible": false,
+        "recovered": {
+          "index": 1,
+          "counter": "2 / 3",
+          "src": "http://127.0.0.1:14344/assets/responsive/d8967e38a22655f768f0-w640.webp",
+          "width": 582
+        },
+        "failed": {
+          "index": 0,
+          "counter": "1 / 3",
+          "src": "http://127.0.0.1:14344/assets/responsive/9c178e4120291bb64572-w640.webp",
+          "width": 478
+        },
+        "message": null,
+        "final": {
+          "index": 1,
+          "counter": "2 / 3",
+          "src": "http://127.0.0.1:14344/assets/responsive/d8967e38a22655f768f0-w640.webp",
+          "width": 582
+        },
+        "screenshots": [
+          "before-webkit-gallery-failure-highlights.png",
+          "before-webkit-gallery-recovered-highlights.png"
+        ]
+      },
+      "fixed": {
+        "retryVisible": true,
+        "recovered": {
+          "index": 1,
+          "counter": "2 / 3",
+          "src": "http://127.0.0.1:14345/assets/responsive/d8967e38a22655f768f0-w640.webp",
+          "width": 582
+        },
+        "failed": {
+          "index": 0,
+          "counter": "1 / 3",
+          "src": "http://127.0.0.1:14345/assets/responsive/9c178e4120291bb64572-w640.webp",
+          "width": 478
+        },
+        "statusView": {
+          "visible": true,
+          "rect": {
+            "top": 366.109375,
+            "bottom": 432.109375,
+            "left": 24,
+            "right": 366
+          },
+          "clip": {
+            "top": 56.109375,
+            "bottom": 844,
+            "left": 0,
+            "right": 390
+          },
+          "focused": false
+        },
+        "retryView": {
+          "visible": true,
+          "rect": {
+            "top": 377.109375,
+            "bottom": 421.109375,
+            "left": 228.296875,
+            "right": 312.78125
+          },
+          "clip": {
+            "top": 56.109375,
+            "bottom": 844,
+            "left": 0,
+            "right": 390
+          },
+          "focused": false
+        },
+        "message": "The image could not be loaded.",
+        "final": {
+          "index": 1,
+          "counter": "2 / 3",
+          "src": "http://127.0.0.1:14345/assets/responsive/d8967e38a22655f768f0-w640.webp",
+          "width": 582
+        },
+        "screenshots": [
+          "after-webkit-gallery-failure-highlights.png",
+          "after-webkit-gallery-recovered-highlights.png"
+        ]
+      },
+      "blockedExternalOrUnmockedRequests": 0,
+      "pageErrors": []
+    }
+  ]
+}

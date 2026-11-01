@@ -1,0 +1,73 @@
+[
+  {
+    "id": "ATL-V3-01",
+    "finding": "Pending enquiry fields can diverge from submitted data",
+    "repro": "Submit the intercepted fixture and edit the name while the request is held.",
+    "baseline": "The visible form accepts a different name while the captured request contains the previous name. Reopening can display the edited values for an already-sending request.",
+    "change": "Every form control is frozen with its context until completion. Previous disabled states and all entered data are restored after failure.",
+    "journeys": [
+      "enquiry-pending-edit-reopen-error-retry"
+    ]
+  },
+  {
+    "id": "ATL-V3-02",
+    "finding": "Pending close/reopen leaves the error below view",
+    "repro": "At 390\u00d7600 close/reopen an intercepted pending enquiry, then return 503 or 422.",
+    "baseline": "The failed request preserves data but its error is not fully visible in the current scroll position.",
+    "change": "After restoring controls the dialog focuses/scrolls the first server-invalid field or the live message.",
+    "journeys": [
+      "enquiry-pending-edit-reopen-error-retry"
+    ]
+  },
+  {
+    "id": "ATL-V3-03",
+    "finding": "Catalogue state disagrees with browser history",
+    "repro": "Home \u2192 Plans \u2192 bedrooms 2, area under 300, Interior \u2192 Back \u2192 Forward; reload the explicit query URL.",
+    "baseline": "Back changes the URL to / but leaves the previous selects, preview and empty result.",
+    "change": "Initial load, popstate and pageshow restore recognized query values, count, empty state, preview and residence links without rewriting history.",
+    "journeys": [
+      "catalogue-back-forward-restores-all-url-state"
+    ]
+  },
+  {
+    "id": "ATL-V3-04",
+    "finding": "View floor plan does not target the floor plan",
+    "repro": "Select Interior in the homepage collection, then activate View floor plan.",
+    "baseline": "The detail opens at its top with photographs; the requested plan is below the mobile fold.",
+    "change": "The CTA preserves the collection query and targets #floor-plan on the detail page. The plan and Enlarge control are visible on arrival.",
+    "journeys": [
+      "floor-plan-labelled-link-reaches-plan"
+    ]
+  },
+  {
+    "id": "ATL-V3-05",
+    "finding": "Failed gallery navigation gives no explanation or retry",
+    "repro": "Fail the next image in Highlights or Interiors and activate Next.",
+    "baseline": "The previous frame/counter remain with no explanation or retry.",
+    "change": "Both galleries retain the good frame, provide loading/error/retry feedback and preserve latest intent through failure/recovery.",
+    "journeys": [
+      "gallery-failure-retry-latest-highlights",
+      "gallery-failure-retry-latest-interiors"
+    ]
+  },
+  {
+    "id": "ATL-V3-06",
+    "finding": "Small header emblem differs from the primary source",
+    "repro": "Compare the eight-bar emblem with Figma 2029:881.",
+    "baseline": "Rounded dimensions and offsets make a 25\u00d720 shape instead of the authored 25\u00d719.2857 geometry.",
+    "change": "The original eight rectangles use the source dimensions, offsets and currentColor. Header/footer wordmark assets remain the original source masks.",
+    "journeys": [
+      "figma-emblem-and-logo-frames"
+    ]
+  },
+  {
+    "id": "ATL-V3-07",
+    "finding": "Hover reduces close/menu contrast below 3:1",
+    "repro": "Open the enquiry or navigation dialog and hover its Close icon or a navigation label.",
+    "baseline": "The shared light gold #b39985 on cream #fef8f4 measures 2.553:1.",
+    "change": "Only these interactive hover colors use the existing darker brown #72614f, measuring 5.638:1. Decorative gold remains unchanged.",
+    "journeys": [
+      "before/after-hover-contrast"
+    ]
+  }
+]

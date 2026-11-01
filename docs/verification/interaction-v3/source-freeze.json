@@ -1,0 +1,61 @@
+{
+  "baseline": "a94c16da3a602832484fce0a2c6b05958658cbc9",
+  "workingTreeSourceFrozen": true,
+  "sourceFiles": [
+    {
+      "path": "src/components/Emblem.astro",
+      "sha256": "1ac9e35eca67f7e24e2d5e51a39d7a6b71947b5fbdb7892bb5f4e0e030d7103a"
+    },
+    {
+      "path": "src/components/Enquiry.astro",
+      "sha256": "12bfc95323f1c91fe37affffc54f2a06688b287e04f1ef806623a37de8541d1c"
+    },
+    {
+      "path": "src/components/Highlights.astro",
+      "sha256": "06f6e84da5e2a1f808fec2627215d6aed55cda4d2e05d5e054b2a134a09b96fd"
+    },
+    {
+      "path": "src/components/Interiors.astro",
+      "sha256": "c50103131de2cd9284d37b8c2d319c3faeec26bd75683b69bb152f649f314a2d"
+    },
+    {
+      "path": "src/components/Residences.astro",
+      "sha256": "c972e1b4da66ba4d47de09da107179875fe03cd497af8b785b6c71d2e38f67cb"
+    },
+    {
+      "path": "src/pages/residences/3402.astro",
+      "sha256": "2a891ed112df1e67f96c6b74f94043d4cd1ce7eb931500c82f4a63c98c084473"
+    },
+    {
+      "path": "src/scripts/site.ts",
+      "sha256": "9e2fa5fd0248bd8ff3403abd8080059d1ccae4bc85e62047659ad6b658d4f48a"
+    },
+    {
+      "path": "src/components/GalleryStatus.astro",
+      "sha256": "d2de4875a999bc87cd68f28c04b1fd9f5b2a2bb26afb7d59eb39d54288687e12"
+    },
+    {
+      "path": "src/styles/global.css",
+      "sha256": "1b95c9a50c57e095754cbe0a1194f95450cfc1f6d35d125ad93c08b1eec09df1"
+    },
+    {
+      "path": "src/components/Header.astro",
+      "sha256": "bcf91dc7c24f70873365bf1f1e6729141cc064a7012b13c3aff1504f75d4c86d"
+    }
+  ],
+  "buildFlags": {
+    "finalProduction": "No film configuration; normal npm run build"
+  },
+  "verificationScope": "Primary fixed journeys plus focused final visual/contrast changes. Atlantis final Header/global.css change is hover-color only, verified by focused baseline/fixed hover measurements and final build.",
+  "logs": [
+    {
+      "path": "artifacts/logic-audit-20261101-v3/typecheck.log",
+      "sha256": "9a9c2ce694fc51207ee71e5b73d405ec36d0203ad8b5380ab08a9f547b82803a"
+    },
+    {
+      "path": "artifacts/logic-audit-20261101-v3/after-build.log",
+      "sha256": "7bf5547f104fbdf1b46fc67874b33d4cce985f7bbe187ef5929721c8d7405915"
+    }
+  ],
+  "committedOrPushedByThisTask": false
+}

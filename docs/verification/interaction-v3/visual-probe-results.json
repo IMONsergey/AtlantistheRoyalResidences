@@ -1,0 +1,301 @@
+{
+  "browser": "145.0.7632.6",
+  "date": "2026-11-01T19:47:58.835Z",
+  "method": "One local Chromium context; all non-GET and all external network requests blocked. No form submissions.",
+  "cases": [
+    {
+      "project": "atlantis",
+      "name": "brand-responsive-900",
+      "ok": true,
+      "header": "visual-header-900.png",
+      "footer": "visual-footer-decoded-900.png",
+      "partners": null,
+      "horizontalOverflow": false
+    },
+    {
+      "project": "atlantis",
+      "name": "brand-responsive-390",
+      "ok": true,
+      "header": "visual-header-390.png",
+      "footer": "visual-footer-decoded-390.png",
+      "partners": null,
+      "horizontalOverflow": false
+    },
+    {
+      "project": "atlantis",
+      "name": "brand-responsive-320",
+      "ok": true,
+      "header": "visual-header-320.png",
+      "footer": "visual-footer-decoded-320.png",
+      "partners": null,
+      "horizontalOverflow": false
+    },
+    {
+      "project": "atlantis",
+      "name": "normal-motion-decoded-gallery-transition",
+      "ok": true,
+      "mid": {
+        "transform": null,
+        "slides": [
+          {
+            "hidden": false,
+            "ariaHidden": "true",
+            "opacity": "1"
+          },
+          {
+            "hidden": false,
+            "ariaHidden": "false",
+            "opacity": "0.3385"
+          },
+          {
+            "hidden": true,
+            "ariaHidden": "true",
+            "opacity": "1"
+          }
+        ],
+        "counter": "2 / 3"
+      },
+      "settled": {
+        "index": 1,
+        "decoded": true,
+        "counter": "2 / 3"
+      },
+      "reduced": {
+        "index": 0,
+        "counter": "1 / 3",
+        "transform": null
+      },
+      "middle": "visual-gallery-normal-transition-mobile.png",
+      "limitation": "Real transition and preference-switch behavior are exercised; this is not a frame-rate benchmark or a claim about every physical device."
+    },
+    {
+      "project": "atlantis",
+      "name": "figma-emblem-and-logo-frames",
+      "ok": true,
+      "labels": [
+        {
+          "label": "Atlantis The Royal Residences, Dubai",
+          "foreground": "rgb(255, 255, 255)",
+          "background": "rgb(4, 25, 39)",
+          "ratio": 17.89501204213323,
+          "disabled": false,
+          "opacity": "1",
+          "visibleInViewport": true,
+          "rect": {
+            "x": 74.984375,
+            "y": 800.703125,
+            "width": 200,
+            "height": 15.765625,
+            "top": 800.703125,
+            "right": 274.984375,
+            "bottom": 816.46875,
+            "left": 74.984375
+          }
+        },
+        {
+          "label": "Privacy notice",
+          "foreground": "rgb(255, 255, 255)",
+          "background": "rgb(4, 25, 39)",
+          "ratio": 17.89501204213323,
+          "disabled": false,
+          "opacity": "1",
+          "visibleInViewport": true,
+          "rect": {
+            "x": 301.984375,
+            "y": 800.703125,
+            "width": 79,
+            "height": 15.765625,
+            "top": 800.703125,
+            "right": 380.984375,
+            "bottom": 816.46875,
+            "left": 301.984375
+          }
+        }
+      ],
+      "frames": [
+        "visual-figma-emblem.png",
+        "visual-figma-header-logo.png",
+        "visual-figma-footer-logo.png"
+      ],
+      "footer": "visual-footer-decoded-1440.png"
+    },
+    {
+      "project": "atlantis",
+      "name": "enquiry-submit-and-close-colors",
+      "ok": true,
+      "close": [
+        {
+          "label": "Close enquiry",
+          "foreground": "rgb(114, 97, 79)",
+          "background": "rgb(254, 248, 244)",
+          "ratio": 5.6376431809004455,
+          "disabled": false,
+          "opacity": "1",
+          "visibleInViewport": true,
+          "rect": {
+            "x": 310.5,
+            "y": 28,
+            "width": 44,
+            "height": 44,
+            "top": 28,
+            "right": 354.5,
+            "bottom": 72,
+            "left": 310.5
+          }
+        }
+      ],
+      "labels": [
+        {
+          "label": "Send enquiry",
+          "foreground": "rgb(255, 255, 255)",
+          "background": "rgb(4, 25, 39)",
+          "ratio": 17.89501204213323,
+          "disabled": false,
+          "opacity": "1",
+          "visibleInViewport": true,
+          "rect": {
+            "x": 28.5,
+            "y": 498.984375,
+            "width": 318,
+            "height": 57,
+            "top": 498.984375,
+            "right": 346.5,
+            "bottom": 555.984375,
+            "left": 28.5
+          }
+        }
+      ],
+      "screenshot": "visual-enquiry-submit-colors-mobile.png"
+    },
+    {
+      "project": "atlantis",
+      "name": "lightbox-plan-and-interior-controls",
+      "ok": true,
+      "zoom": "150%",
+      "fit": "100%",
+      "unlocked": true,
+      "planColors": [
+        {
+          "label": "Close image",
+          "foreground": "rgb(4, 25, 39)",
+          "background": "rgb(254, 248, 244)",
+          "ratio": 16.99809487610024,
+          "disabled": false,
+          "opacity": "1",
+          "visibleInViewport": true,
+          "rect": {
+            "x": 310.5,
+            "y": 28,
+            "width": 44,
+            "height": 44,
+            "top": 28,
+            "right": 354.5,
+            "bottom": 72,
+            "left": 310.5
+          }
+        },
+        {
+          "label": "Zoom in",
+          "foreground": "rgb(254, 248, 244)",
+          "background": "rgb(4, 25, 39)",
+          "ratio": 16.99809487610024,
+          "disabled": false,
+          "opacity": "1",
+          "visibleInViewport": true,
+          "rect": {
+            "x": 110.5,
+            "y": 24,
+            "width": 40,
+            "height": 40,
+            "top": 24,
+            "right": 150.5,
+            "bottom": 64,
+            "left": 110.5
+          }
+        },
+        {
+          "label": "Fit plan",
+          "foreground": "rgb(4, 25, 39)",
+          "background": "rgb(254, 248, 244)",
+          "ratio": 16.99809487610024,
+          "disabled": false,
+          "opacity": "1",
+          "visibleInViewport": true,
+          "rect": {
+            "x": 166.5,
+            "y": 26.5,
+            "width": 46,
+            "height": 35,
+            "top": 26.5,
+            "right": 212.5,
+            "bottom": 61.5,
+            "left": 166.5
+          }
+        }
+      ],
+      "imageColors": [
+        {
+          "label": "Close image",
+          "foreground": "rgb(4, 25, 39)",
+          "background": "rgb(254, 248, 244)",
+          "ratio": 16.99809487610024,
+          "disabled": false,
+          "opacity": "1",
+          "visibleInViewport": true,
+          "rect": {
+            "x": 310.5,
+            "y": 28,
+            "width": 44,
+            "height": 44,
+            "top": 28,
+            "right": 354.5,
+            "bottom": 72,
+            "left": 310.5
+          }
+        },
+        {
+          "label": "Previous image",
+          "foreground": "rgb(4, 25, 39)",
+          "background": "rgb(254, 248, 244)",
+          "ratio": 16.99809487610024,
+          "disabled": false,
+          "opacity": "1",
+          "visibleInViewport": true,
+          "rect": {
+            "x": 121,
+            "y": 783.25,
+            "width": 36,
+            "height": 36,
+            "top": 783.25,
+            "right": 157,
+            "bottom": 819.25,
+            "left": 121
+          }
+        },
+        {
+          "label": "Next image",
+          "foreground": "rgb(254, 248, 244)",
+          "background": "rgb(4, 25, 39)",
+          "ratio": 16.99809487610024,
+          "disabled": false,
+          "opacity": "1",
+          "visibleInViewport": true,
+          "rect": {
+            "x": 218,
+            "y": 783.25,
+            "width": 36,
+            "height": 36,
+            "top": 783.25,
+            "right": 254,
+            "bottom": 819.25,
+            "left": 218
+          }
+        }
+      ],
+      "plan": "visual-media-plan-colors-mobile.png",
+      "image": "visual-media-interior-colors-mobile.png"
+    }
+  ],
+  "blocked": [],
+  "errors": []
+}

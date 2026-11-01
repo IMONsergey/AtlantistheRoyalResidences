@@ -1,0 +1,68 @@
+{
+  "method": "Actual browser DOM clones, original production styles/assets, canonical source export canvas and background. No image resize or color correction. Foreground threshold is analytical and does not guarantee visual equivalence by itself. Native rendering/anti-aliasing differs between Figma and Chromium. Visual assessment required.",
+  "results": [
+    {
+      "project": "atlantis",
+      "node": "emblem",
+      "reference": "figma/emblem-reference.png",
+      "actual": "visual-figma-emblem.png",
+      "size": [
+        25,
+        20
+      ],
+      "background": [
+        4,
+        25,
+        39
+      ],
+      "rgbMAE": 15.808666666666667,
+      "rgbRMSE": 34.28287230284728,
+      "foregroundMaskIoU_threshold2": 0.8035087719298246,
+      "actualInkPixels": 229,
+      "referenceInkPixels": 285,
+      "exactPixels": 375
+    },
+    {
+      "project": "atlantis",
+      "node": "header-logo",
+      "reference": "figma/header-logo-reference.png",
+      "actual": "visual-figma-header-logo.png",
+      "size": [
+        116,
+        69
+      ],
+      "background": [
+        4,
+        25,
+        39
+      ],
+      "rgbMAE": 5.78023488255872,
+      "rgbRMSE": 17.994091104470805,
+      "foregroundMaskIoU_threshold2": 0.8416565164433617,
+      "actualInkPixels": 1615,
+      "referenceInkPixels": 1409,
+      "exactPixels": 6334
+    },
+    {
+      "project": "atlantis",
+      "node": "footer-logo",
+      "reference": "figma/footer-logo-reference.png",
+      "actual": "visual-figma-footer-logo.png",
+      "size": [
+        136,
+        87
+      ],
+      "background": [
+        254,
+        248,
+        244
+      ],
+      "rgbMAE": 0.14559386973180077,
+      "rgbRMSE": 0.5760312796705498,
+      "foregroundMaskIoU_threshold2": 0.7423423423423423,
+      "actualInkPixels": 1466,
+      "referenceInkPixels": 1435,
+      "exactPixels": 10144
+    }
+  ]
+}

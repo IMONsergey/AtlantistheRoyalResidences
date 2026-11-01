@@ -16,7 +16,7 @@ import Button from './Button.astro';
    <div class="honeypot" aria-hidden="true"><label for="enquiry-website">Leave this field empty</label><input id="enquiry-website" type="text" name="website" tabindex="-1" autocomplete="off"/></div>
    <div class="consent"><label><input type="checkbox" name="consent" required aria-describedby="consent-error"/><span>I agree to be contacted about this enquiry.</span></label><p class="form-error" id="consent-error" data-error="consent" hidden></p></div>
    <p class="privacy-copy">Your details are used to respond to this request. <a href="/privacy/" target="_blank" rel="noopener">Privacy notice</a>.</p>
-   <div class="submission-message" role="status" aria-live="polite" data-form-message hidden></div>
+   <div class="submission-message" role="status" aria-live="polite" tabindex="-1" data-form-message hidden></div>
    <Button label="Send enquiry" type="submit"/>
   </form>
  </div>

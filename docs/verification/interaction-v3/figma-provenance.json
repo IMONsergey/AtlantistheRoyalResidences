@@ -1,0 +1,35 @@
+{
+  "file": "m3N3lJCoutaziEm4nt4CwO",
+  "session": "bcbc9432-ff5d-4e7e-acca-8bd2487dbf82",
+  "nodes": [
+    {
+      "id": "2029:881",
+      "name": "Eight-rectangle emblem",
+      "size": [
+        25,
+        19.28571319580078
+      ],
+      "rendering": "Exact source rectangle geometry represented in CSS; browser pixel snapping/antialiasing differs from Figma raster export."
+    },
+    {
+      "id": "2029:875",
+      "name": "Header wordmark",
+      "size": [
+        115.31818181818181,
+        69
+      ],
+      "rendering": "Existing original source mask retained; contain sizing preserves artwork proportions."
+    },
+    {
+      "id": "2029:1221",
+      "name": "Footer wordmark",
+      "size": [
+        136,
+        86.6031
+      ],
+      "rendering": "Existing original SVG mask retained; contain sizing preserves artwork proportions."
+    }
+  ],
+  "method": "Primary get_design_context and rendered-node screenshots/exports. Runtime uses local original transparent artwork with authored fill transforms. Opaque cream export canvases are references only. No expiring URL is a runtime source.",
+  "comparison": "Canonical native-size browser DOM captures and source exports share the original background; no pixel rescaling or recoloring. Visual shape/color inspection accompanies RGB errors. Neither unequal antialiasing nor low RGB MAE is treated as an automatic whole-site design verdict."
+}

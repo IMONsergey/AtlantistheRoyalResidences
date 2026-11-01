@@ -1,0 +1,22 @@
+{
+  "phase": "before",
+  "results": [
+    {
+      "name": "close",
+      "foreground": "rgb(179, 153, 133)",
+      "background": "rgb(254, 248, 244)",
+      "ratio": 2.55346239722681,
+      "screenshot": "before-hover-close.png",
+      "meetsIconOrLargeText3": false
+    },
+    {
+      "name": "navigation",
+      "foreground": "rgb(179, 153, 133)",
+      "background": "rgb(254, 248, 244)",
+      "ratio": 2.55346239722681,
+      "screenshot": "before-hover-navigation.png",
+      "meetsIconOrLargeText3": false
+    }
+  ],
+  "blocked": []
+}

@@ -1,0 +1,12 @@
+---
+interface Props { placement: 'highlights' | 'interiors'; }
+const { placement } = Astro.props;
+---
+<div class:list={['gallery-status', `gallery-status--${placement}`]} data-gallery-status role="status" aria-live="polite" hidden>
+ <p data-gallery-message></p>
+ <button type="button" data-gallery-retry>Try again</button>
+</div>
+<style>
+.gallery-status{position:absolute;z-index:5;display:flex;align-items:center;gap:16px;width:min(420px,calc(100% - 48px));padding:12px 16px;border:1px solid #ffffff60;background:var(--navy);color:white;font-size:13px;line-height:1.5}.gallery-status p{margin:0}.gallery-status button{flex:none;min-height:44px;padding:8px 12px;border:1px solid currentColor;background:transparent;color:inherit;font-size:11px;text-transform:uppercase;white-space:nowrap}.gallery-status button:hover{background:var(--cream);color:var(--navy)}.gallery-status--highlights{left:50%;bottom:calc(3vw + 70px);transform:translateX(-50%)}.gallery-status--interiors{left:8.3333%;bottom:calc(7.2222vw + 70px)}
+@media(max-width:800px){.gallery-status{font-size:12px;gap:12px;padding:10px 12px}.gallery-status--highlights{top:310px;bottom:auto}.gallery-status--interiors{left:44px;bottom:150px;width:calc(100% - 88px)}}
+</style>

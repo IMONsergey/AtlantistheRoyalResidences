@@ -94,6 +94,9 @@ form.addEventListener('submit',async event=>{
   if(attemptedBody&&attemptedBody!==fingerprint)submissionId=crypto.randomUUID();
   attemptedBody=fingerprint;
   const payload={project:'atlantis',context:enquiryContext,name,email,phone,consent,website:String(values.get('website')||''),startedAt,submissionId};
+  const controls=$$<HTMLInputElement|HTMLTextAreaElement|HTMLSelectElement|HTMLButtonElement>('input,textarea,select,button',form);
+  const disabledStates=controls.map(control=>control.disabled);
+  controls.forEach(control=>{control.disabled=true;});
   inFlight=true;submit.disabled=true;form.setAttribute('aria-busy','true');setSubmissionLabel('Sending enquiry…');
   const controller=new AbortController();const timeout=window.setTimeout(()=>controller.abort(),25000);
   try{
@@ -111,7 +114,12 @@ form.addEventListener('submit',async event=>{
     formMessage.textContent=message==='Failed to fetch'?'Connection unavailable. Your details are still here. Please try again.':message;
     formMessage.hidden=false;
     $<HTMLInputElement>('[aria-invalid="true"]',form)?.focus();
-  }finally{window.clearTimeout(timeout);inFlight=false;submit.disabled=false;form.removeAttribute('aria-busy');setSubmissionLabel('Send enquiry');}
+  }finally{
+    window.clearTimeout(timeout);inFlight=false;
+    controls.forEach((control,index)=>{control.disabled=disabledStates[index];});
+    form.removeAttribute('aria-busy');setSubmissionLabel('Send enquiry');
+    if(enquiry.open&&!submitted)($<HTMLInputElement>('[aria-invalid="true"]',form)||formMessage).focus();
+  }
 });
 
 type GalleryItem={src:string;caption:string};
@@ -208,6 +216,9 @@ $$<HTMLElement>('[data-slider]').forEach(slider=>{
   if(slides.length<2)return;
   const dots=$$<HTMLButtonElement>('[data-slide-to]',slider);
   const counter=$('[data-slider-count]',slider);
+  const status=$<HTMLElement>('[data-gallery-status]',slider)!;
+  const message=$<HTMLElement>('[data-gallery-message]',slider)!;
+  const retry=$<HTMLButtonElement>('[data-gallery-retry]',slider)!;
   let current=0;let displayed=0;let requestId=0;
   let gesture:{id:number;x:number;y:number}|null=null;
   let suppressClick=false;
@@ -225,14 +236,20 @@ $$<HTMLElement>('[data-slider]').forEach(slider=>{
   async function show(index:number){
     current=(index+slides.length)%slides.length;
     const next=current;const id=++requestId;
+    if(status.contains(document.activeElement))slider.focus({preventScroll:true});
+    status.hidden=true;retry.hidden=true;slider.setAttribute('aria-busy','true');
+    const noticeTimer=window.setTimeout(()=>{if(id===requestId){message.textContent='Loading image...';status.hidden=false;}},400);
     const originalImage=$<HTMLImageElement>('img',slides[next]);
     // A fresh element retries a failed request without changing srcset or its crop.
     // Attach it only when the latest request has decoded successfully.
     const image=originalImage?.complete&&!originalImage.naturalWidth&&originalImage.currentSrc
       ? originalImage.cloneNode(false) as HTMLImageElement : originalImage;
     if(image){image.loading='eager';await image.decode().catch(()=>undefined);}
+    window.clearTimeout(noticeTimer);
     if(id!==requestId)return;
-    if(image&&!image.naturalWidth){settle(displayed);return;}
+    slider.removeAttribute('aria-busy');
+    if(image&&!image.naturalWidth){settle(displayed);message.textContent='The image could not be loaded.';status.hidden=false;retry.hidden=false;return;}
+    status.hidden=true;
     if(image&&originalImage&&image!==originalImage)originalImage.replaceWith(image);
     settle(displayed);
     dots.forEach((dot,i)=>dot.setAttribute('aria-current',String(i===next)));
@@ -250,6 +267,7 @@ $$<HTMLElement>('[data-slider]').forEach(slider=>{
   }
   $('[data-prev]',slider)?.addEventListener('click',()=>{void show(current-1);});
   $('[data-next]',slider)?.addEventListener('click',()=>{void show(current+1);});
+  retry.addEventListener('click',()=>{void show(current);});
   dots.forEach(dot=>dot.addEventListener('click',()=>{void show(Number(dot.dataset.slideTo));}));
   slider.addEventListener('keydown',event=>{
     if(event.target instanceof HTMLSelectElement||event.target instanceof HTMLInputElement||event.target instanceof HTMLTextAreaElement)return;
@@ -282,15 +300,21 @@ $$<HTMLElement>('[data-slider]').forEach(slider=>{
 const filters=$<HTMLFormElement>('#residence-filters');
 const catalogueKeys=['bedrooms','area','view'] as const;
 const catalogueOptions={bedrooms:['2','3','4','5'],area:['under-300','300-plus'],view:['interior']} as const;
-const catalogueParams=new URLSearchParams();
-const currentParams=new URLSearchParams(location.search);
-catalogueKeys.forEach(key=>{const value=currentParams.get(key);if(value&&(catalogueOptions[key] as readonly string[]).includes(value))catalogueParams.set(key,value);});
+function readCatalogueParams(){
+  const parameters=new URLSearchParams();const current=new URLSearchParams(location.search);
+  catalogueKeys.forEach(key=>{const value=current.get(key);if(value&&(catalogueOptions[key] as readonly string[]).includes(value))parameters.set(key,value);});
+  return parameters;
+}
+const catalogueParams=readCatalogueParams();
 // Only known catalogue parameters may be carried back from a residence page.
 $$<HTMLAnchorElement>('a[href="/#plans"]').forEach(link=>link.href=`/${catalogueParams.size?'?'+catalogueParams:''}#plans`);
 if(filters){
   const row=$<HTMLElement>('[data-unit-result]')!;const empty=$<HTMLElement>('[data-no-results]')!;const result=$<HTMLElement>('[data-result-count]')!;
   const residenceLinks=$$<HTMLAnchorElement>('.unit-row,.catalogue-action a');
   const views=$$<HTMLButtonElement>('[data-unit-view]');
+  function updateResidenceLinks(parameters:URLSearchParams){
+    residenceLinks.forEach(link=>{const target=new URL(link.href);target.search=parameters.toString();link.href=target.pathname+target.search+target.hash;});
+  }
   function persistCatalogue(){
     const data=new FormData(filters!);const url=new URL(location.href);
     ['bedrooms','area'].forEach(key=>{const value=String(data.get(key)||'');if(value)url.searchParams.set(key,value);else url.searchParams.delete(key);});
@@ -298,16 +322,25 @@ if(filters){
     if(interior)url.searchParams.set('view','interior');else url.searchParams.delete('view');
     history.replaceState(history.state,'',url.pathname+url.search+url.hash);
     const parameters=new URLSearchParams();catalogueKeys.forEach(key=>{const value=url.searchParams.get(key);if(value)parameters.set(key,value);});
-    residenceLinks.forEach(link=>link.href=`/residences/3402/${parameters.size?'?'+parameters:''}`);
+    updateResidenceLinks(parameters);
   }
-  function applyFilters(){const data=new FormData(filters!);const bedrooms=data.get('bedrooms');const area=data.get('area');const matches=(!bedrooms||bedrooms==='4')&&(!area||area==='300-plus');row.hidden=!matches;empty.hidden=matches;result.textContent=matches?'1 residence in this collection':'No matching residences';persistCatalogue();}
-  ['bedrooms','area'].forEach(key=>{const field=$<HTMLSelectElement>(`[name="${key}"]`,filters);if(field)field.value=catalogueParams.get(key)||'';});
-  filters.addEventListener('change',applyFilters);filters.addEventListener('reset',()=>requestAnimationFrame(applyFilters));
+  function applyFilters(persist=true){const data=new FormData(filters!);const bedrooms=data.get('bedrooms');const area=data.get('area');const matches=(!bedrooms||bedrooms==='4')&&(!area||area==='300-plus');row.hidden=!matches;empty.hidden=matches;result.textContent=matches?'1 residence in this collection':'No matching residences';if(persist)persistCatalogue();}
+  filters.addEventListener('change',()=>applyFilters());filters.addEventListener('reset',()=>requestAnimationFrame(()=>applyFilters()));
   $('[data-reset-filters]')?.addEventListener('click',()=>filters.reset());
-  function setPreview(button:HTMLButtonElement){views.forEach(b=>b.setAttribute('aria-pressed',String(b===button)));const plan=$<HTMLElement>('[data-plan-preview]')!,interior=$<HTMLElement>('[data-interior-preview]')!;plan.hidden=button.dataset.unitView!=='plan';interior.hidden=button.dataset.unitView!=='interior';persistCatalogue();}
+  function setPreview(button:HTMLButtonElement,persist=true){views.forEach(b=>b.setAttribute('aria-pressed',String(b===button)));const plan=$<HTMLElement>('[data-plan-preview]')!,interior=$<HTMLElement>('[data-interior-preview]')!;plan.hidden=button.dataset.unitView!=='plan';interior.hidden=button.dataset.unitView!=='interior';if(persist)persistCatalogue();}
   views.forEach(button=>button.addEventListener('click',()=>setPreview(button)));
-  const restoredView=views.find(button=>button.dataset.unitView===(catalogueParams.get('view')||'plan'));if(restoredView)setPreview(restoredView);
-  applyFilters();
+  function restoreCatalogue(){
+    const parameters=readCatalogueParams();
+    ['bedrooms','area'].forEach(key=>{const field=$<HTMLSelectElement>(`[name="${key}"]`,filters!);if(field)field.value=parameters.get(key)||'';});
+    const restoredView=views.find(button=>button.dataset.unitView===(parameters.get('view')||'plan'));
+    if(restoredView)setPreview(restoredView,false);
+    applyFilters(false);updateResidenceLinks(parameters);
+  }
+  // Browser history and the back-forward cache must restore the URL's collection.
+  // Restoration does not create or replace a history entry.
+  window.addEventListener('popstate',restoreCatalogue);
+  window.addEventListener('pageshow',restoreCatalogue);
+  restoreCatalogue();
 }
 
 // ScrollTrigger clears its recorded scroll when the last trigger is removed.
