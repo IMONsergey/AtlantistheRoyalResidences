@@ -114,15 +114,47 @@ const media=$<HTMLDialogElement>('#media-dialog')!;
 const mediaImage=$<HTMLImageElement>('[data-media-image]',media)!;
 const viewport=$<HTMLElement>('.media-viewport',media)!;
 const caption=$<HTMLElement>('#media-caption',media)!;
+const mediaStatus=$<HTMLElement>('[data-media-status]',media)!;
 const zoomToolbar=$<HTMLElement>('[data-zoom-toolbar]',media)!;
 const galleryControls=$<HTMLElement>('[data-media-gallery]',media)!;
 let gallery:GalleryItem[]=[];let galleryIndex=0;let scale=1;let fitWidth=0;let isPlan=false;
+let mediaRequest=0;let mediaReady=false;
+const mediaCache=new Map<string,Promise<HTMLImageElement>>();
+function loadMediaImage(src:string){
+  const cached=mediaCache.get(src);if(cached)return cached;
+  const pending=new Promise<HTMLImageElement>((resolve,reject)=>{
+    const image=new Image();image.decoding='async';
+    image.onload=()=>{void image.decode().then(()=>resolve(image),reject);};
+    image.onerror=()=>reject(new Error('Image could not be loaded.'));
+    image.src=src;
+  });
+  mediaCache.set(src,pending);
+  while(mediaCache.size>3)mediaCache.delete(mediaCache.keys().next().value!);
+  void pending.catch(()=>{if(mediaCache.get(src)===pending)mediaCache.delete(src);});
+  return pending;
+}
 function resetZoom(){scale=1;fitWidth=0;media.classList.remove('is-zoomed');mediaImage.style.width='';mediaImage.style.height='';viewport.scrollTo(0,0);$('[data-zoom-value]',media)!.textContent='100%';updateZoomControls();}
-function updateZoomControls(){const minus=$<HTMLButtonElement>('[data-zoom-out]',media),plus=$<HTMLButtonElement>('[data-zoom-in]',media);if(minus)minus.disabled=scale<=1;if(plus)plus.disabled=scale>=4;}
+function updateZoomControls(){const minus=$<HTMLButtonElement>('[data-zoom-out]',media),plus=$<HTMLButtonElement>('[data-zoom-in]',media);if(minus)minus.disabled=!mediaReady||scale<=1;if(plus)plus.disabled=!mediaReady||scale>=4;}
 function fittedWidth(){return Math.min(mediaImage.naturalWidth||viewport.clientWidth,viewport.clientWidth,viewport.clientHeight*(mediaImage.naturalWidth/(mediaImage.naturalHeight||1)));}
-function renderImage(){resetZoom();fitWidth=0;const item=gallery[galleryIndex];mediaImage.src=item.src;mediaImage.alt=item.caption;caption.textContent=item.caption;$('[data-media-count]',media)!.textContent=`${galleryIndex+1} / ${gallery.length}`;}
+async function renderImage(){
+  const index=galleryIndex,item=gallery[index],request=++mediaRequest;
+  if(!item)return;
+  viewport.setAttribute('aria-busy','true');mediaStatus.textContent='Loading image…';mediaStatus.hidden=false;
+  try{
+    const loaded=await loadMediaImage(item.src);
+    if(request!==mediaRequest||!media.open)return;
+    // Commit the photograph and its metadata together only after decoding.
+    mediaImage.src=loaded.src;mediaImage.alt=item.caption;mediaImage.hidden=false;
+    caption.textContent=item.caption;$('[data-media-count]',media)!.textContent=`${index+1} / ${gallery.length}`;
+    mediaReady=true;resetZoom();stopDrag();mediaStatus.hidden=true;
+  }catch{
+    if(request!==mediaRequest||!media.open)return;
+    // Keep the requested index so Next can skip an unavailable photograph.
+    mediaStatus.textContent='This image could not be loaded. Try another image or close and reopen the viewer.';
+  }finally{if(request===mediaRequest)viewport.removeAttribute('aria-busy');}
+}
 function zoomTo(next:number){
-  if(!isPlan||!mediaImage.naturalWidth)return;
+  if(!isPlan||!mediaReady||!mediaImage.naturalWidth)return;
   const previous=scale;scale=Math.min(4,Math.max(1,next));
   if(!fitWidth)fitWidth=fittedWidth();
   if(scale===1){resetZoom();return;}
@@ -145,12 +177,14 @@ $$<HTMLElement>('[data-lightbox]').forEach(trigger=>trigger.addEventListener('cl
   const members=group?$$<HTMLElement>(`[data-lightbox][data-gallery="${group}"]`):[trigger];
   gallery=members.map(item=>({src:item.dataset.lightbox!,caption:item.dataset.caption||$('img',item)?.getAttribute('alt')||''}));
   galleryIndex=Math.max(0,members.indexOf(trigger));isPlan=trigger.hasAttribute('data-plan');zoomToolbar.hidden=!isPlan;galleryControls.hidden=gallery.length<2;
-  openDialog(media,trigger);renderImage();
+  mediaReady=false;mediaImage.hidden=true;mediaImage.removeAttribute('src');mediaImage.alt='';
+  caption.textContent=isPlan?'Floor plan viewer':'Image viewer';$('[data-media-count]',media)!.textContent='';resetZoom();
+  openDialog(media,trigger);void renderImage();
 }));
 $('[data-zoom-in]',media)?.addEventListener('click',()=>zoomTo(scale+.5));
 $('[data-zoom-out]',media)?.addEventListener('click',()=>zoomTo(scale-.5));
 $('[data-zoom-fit]',media)?.addEventListener('click',resetZoom);
-function nextImage(direction:number){if(gallery.length<2)return;galleryIndex=(galleryIndex+direction+gallery.length)%gallery.length;renderImage();}
+function nextImage(direction:number){if(gallery.length<2)return;galleryIndex=(galleryIndex+direction+gallery.length)%gallery.length;void renderImage();}
 $('[data-media-prev]',media)?.addEventListener('click',()=>nextImage(-1));
 $('[data-media-next]',media)?.addEventListener('click',()=>nextImage(1));
 media.addEventListener('keydown',event=>{if(isPlan){if(event.key==='+'||event.key==='='){event.preventDefault();zoomTo(scale+.5);}if(event.key==='-'){event.preventDefault();zoomTo(scale-.5);}if(event.key==='0')resetZoom();}else if(event.key==='ArrowRight'){event.preventDefault();nextImage(1);}else if(event.key==='ArrowLeft'){event.preventDefault();nextImage(-1);}});
@@ -159,7 +193,10 @@ viewport.addEventListener('pointerdown',event=>{if(scale<=1||event.pointerType!=
 viewport.addEventListener('pointermove',event=>{if(!dragStart)return;viewport.scrollLeft=dragStart.left-(event.clientX-dragStart.x);viewport.scrollTop=dragStart.top-(event.clientY-dragStart.y);});
 function stopDrag(){dragStart=null;viewport.classList.remove('is-dragging');}
 viewport.addEventListener('pointerup',stopDrag);viewport.addEventListener('pointercancel',stopDrag);
-media.addEventListener('close',()=>{resetZoom();stopDrag();});
+media.addEventListener('close',()=>{
+  mediaRequest++;mediaReady=false;viewport.removeAttribute('aria-busy');mediaStatus.hidden=true;
+  mediaImage.hidden=true;mediaImage.removeAttribute('src');resetZoom();stopDrag();
+});
 
 $$<HTMLElement>('[data-slider]').forEach(slider=>{
   const slides=$$<HTMLElement>('[data-slide]',slider);
