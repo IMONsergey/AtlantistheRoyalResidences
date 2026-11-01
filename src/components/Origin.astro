@@ -44,3 +44,12 @@ const collage=[
 @media(max-width:800px){.origin{padding-bottom:80px}.origin-opening{height:1070px;background:radial-gradient(ellipse at 35% 85%,#5599bd 0%,#114467 24%,var(--navy) 62%)}.origin-opening h2{top:68px;font-size:44px;width:calc(100% - 40px);max-width:520px;line-height:1.02}.origin-explanation{top:278px;width:calc(100% - 48px);max-width:420px}.origin-explanation .copy{font-size:14px;line-height:1.85}.origin-explanation :global(.emblem){margin-bottom:24px}.architecture{width:980px;height:570px;left:calc(50% - 500px);top:525px;transform:none!important}.architecture img{height:711.5px}.reside-composition{height:auto;margin-top:0;display:grid;grid-template-columns:1fr 1fr;gap:12px;padding:24px;align-items:start}.collage-image{position:relative;top:auto;left:auto;right:auto;width:auto;height:140px}.collage-image--top{grid-column:1/-1;height:160px;order:0}.reside-copy{position:relative;left:auto;top:auto;transform:none;grid-column:1/-1;width:auto;height:auto;padding:32px 0 35px;order:1}.reside-copy::before{display:none}.reside-copy>.editorial{font-size:22px}.reside-copy h2{font-size:42px;margin:26px 0}.reside-copy .copy{font-size:14px;line-height:1.85;width:100%;max-width:420px;margin:24px auto 30px}.reside-copy :global(.pill){width:100%;max-width:284px}.collage-image--left-one,.collage-image--right-one{order:2}.collage-image--left-two,.collage-image--right-two{order:3}.collage-image--left-three,.collage-image--right-three{order:4}.collage-image--bottom{grid-column:1/-1;order:5;height:180px}.water-gallery{width:calc(100% - 48px);height:300px;margin-top:12px}.water-gallery figcaption{top:20px;left:20px;font-size:10px;max-width:230px}}
 </style>
 <style>.origin-opening h2{color:#d3b496;line-height:.968}.origin-explanation .copy{font-weight:300}</style>
+<style>
+/* Let narrow desktop copy determine the collage height so its CTA stays clear.
+   Side artwork, source widths and the bottom-photo overlap remain in place. */
+@media(min-width:801px) and (max-width:1100px){
+ .reside-composition{display:grid;grid-template-columns:100%;height:auto;padding-top:14.375vw}
+ .reside-copy{position:relative;grid-row:1;justify-self:center;left:auto;top:auto;transform:none;height:auto;min-height:47.0139vw;padding-bottom:4.1667vw}
+ .collage-image--bottom{position:relative;grid-row:2;justify-self:center;left:auto;top:auto;margin-top:-2.3924vw;margin-bottom:-5.8333vw}
+}
+</style>

@@ -1,8 +1,11 @@
+---
+import Icon from './Icon.astro';
+---
 <dialog id="media-dialog" class="media-dialog" aria-labelledby="media-caption">
- <button class="dialog-close" type="button" data-close aria-label="Close image">×</button>
- <div class="media-toolbar" data-zoom-toolbar hidden><button class="round-control" type="button" data-zoom-out aria-label="Zoom out">−</button><output data-zoom-value aria-live="polite">100%</output><button class="round-control" type="button" data-zoom-in aria-label="Zoom in">+</button><button class="link-line" type="button" data-zoom-fit>Fit plan</button></div>
+ <button class="dialog-close" type="button" data-close aria-label="Close image"><Icon name="close" size={22}/></button>
+ <div class="media-toolbar" data-zoom-toolbar hidden><button class="round-control" type="button" data-zoom-out aria-label="Zoom out"><Icon name="minus" size={20}/></button><output data-zoom-value aria-live="polite">100%</output><button class="round-control" type="button" data-zoom-in aria-label="Zoom in"><Icon name="plus" size={20}/></button><button class="link-line" type="button" data-zoom-fit>Fit plan</button></div>
  <div class="media-viewport" tabindex="0" aria-label="Image viewer"><p class="media-status" data-media-status role="status" hidden></p><div class="media-surface"><img data-media-image alt="" hidden/></div></div>
- <div class="media-footer"><p id="media-caption"></p><div class="media-gallery-controls" data-media-gallery hidden><button class="round-control" type="button" data-media-prev aria-label="Previous image">←</button><output data-media-count></output><button class="round-control" type="button" data-media-next aria-label="Next image">→</button></div></div>
+ <div class="media-footer"><p id="media-caption"></p><div class="media-gallery-controls" data-media-gallery hidden><button class="round-control" type="button" data-media-prev aria-label="Previous image"><Icon name="arrow-left" size={20}/></button><output data-media-count></output><button class="round-control" type="button" data-media-next aria-label="Next image"><Icon name="arrow-right" size={20}/></button></div></div>
 </dialog>
 <style>
 .media-viewport{position:relative}.media-viewport[aria-busy=true]{cursor:progress}.media-status{position:absolute;z-index:1;left:50%;bottom:12px;transform:translateX(-50%);max-width:calc(100% - 24px);padding:8px 14px;background:var(--cream);border:1px solid var(--line);font-size:12px;line-height:1.5;text-align:center}

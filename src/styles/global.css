@@ -11,3 +11,7 @@
 @media(prefers-reduced-motion:no-preference){dialog[open]{animation:dialog-enter .22s var(--ease) both}dialog[open]::backdrop{animation:backdrop-enter .22s ease-out both}}
 @keyframes dialog-enter{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
 @keyframes backdrop-enter{from{opacity:0}to{opacity:1}}
+
+/* Decorative controls reuse source vector geometry, independent of font metrics. */
+.dialog-close{display:grid;place-items:center}
+.link-line .ui-icon{margin-inline:3px;vertical-align:-.15em}

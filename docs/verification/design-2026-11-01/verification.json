@@ -1,0 +1,2084 @@
+{
+  "project": "Atlantis The Royal Residences",
+  "audit": "2026-11-01 v2",
+  "generatedAt": "2026-11-01T15:46:46.089978+00:00",
+  "result": "PASS",
+  "errors": [],
+  "baseHead": "6de8339639929976e7a22d9f892c89a64b54b099",
+  "sourceFingerprint": {
+    "algorithm": "sha256 of sorted path + NUL + file sha256 + newline; src/** and package manifests",
+    "sha256": "c9c660d957e3a4ab0fcf491a8f25a1e51f9dab55cb26de74985ef1019fb0959b",
+    "files": {
+      "package-lock.json": "87a246a52983e655cb65541f2141db47faa73a8f2f1f90a94cafee14601e490b",
+      "package.json": "68d157c89b356065268aa759d267f883756c59fffc5ff83fa73e5fffb150c530",
+      "src/components/Button.astro": "7ef64a729750923a05d7027eb2ae2984b5e59dbcd8a624b2f6d587827194e7e2",
+      "src/components/Closing.astro": "e015c63d105c703662ff615630be4d9281c74ab9f25b7d9aa9290fa976cf24cc",
+      "src/components/Emblem.astro": "508f37672c68ca5a41b82acd9da18e1d750bbe64703acb24d3c3dd7a15553f6c",
+      "src/components/Enquiry.astro": "e0baca388476f364a86cc53ba973050b298f31c89106fc0e99e4206e37dae2af",
+      "src/components/Header.astro": "22a36e1662e41bf4099dd121d5c6083ad35825263e4fff2cc0ecf257637d0e13",
+      "src/components/Hero.astro": "74ee39daa73a3ae388f2f49178fc361c6bbe969496f835c77e33eed5934f3522",
+      "src/components/Highlights.astro": "04256127a25be71a8a2c8ff7b05aa3c07c734d7c105f05e16ee34b51851030cd",
+      "src/components/Icon.astro": "a866c7ac7938f4d02490b6a729b8eda1e716754e552da52f9964789104e203b2",
+      "src/components/Interiors.astro": "7b3e4928014ca79f94ebaa346c9df5aaef401a414e52adf0e25468e0f64438ae",
+      "src/components/Lightbox.astro": "72f8d1bedc89073c948045372fe93bcd3463261abe1dbf9149b129b00ef955fa",
+      "src/components/Location.astro": "2b4e58bae2f6f0b47047b572faa754c0fc42e619580fa096a45ebe206a0fdba7",
+      "src/components/Origin.astro": "efc71a65983fad5df415f25f526972d56d5d66a202b1c1d7ed599ed858cfd34e",
+      "src/components/Residences.astro": "cc7030116a7ca1b4ba718e55396c25fbbf47de46a29a3a9f4a4dc69ca27e4b50",
+      "src/components/ResponsiveImage.astro": "f48a19aac8ec95574b45f17238bb227c823e3b4e0ab05567d32bc0aa18fba308",
+      "src/data/assets.json": "377392438d23051969e4c13a1dc594e96a857038d0b3d6631b0f78b1bd522acb",
+      "src/data/residence.ts": "6f65dadbf53ad6ff34d35ee137d08a62b9b70d1a7820700e1f0afa48cb731515",
+      "src/data/responsive-images.json": "c045ca3584feed2e76746fddf11b027059909b6a8000a2dc3ae8f9c629c24222",
+      "src/data/responsive-images.ts": "0f54fd932b77ec5538eea59ae3c56ec76c284d897061dcda41bf54c5ae2bf401",
+      "src/layouts/Layout.astro": "7a9adcc587b8436688802a2cdb288c55ef2c53bfe29bcaae29ad4b246f5e88cd",
+      "src/pages/404.astro": "ef77ab819995a21c8732f4bff730217433ddcfae527a0d52e7f15e226d9cfc37",
+      "src/pages/api/enquiry.ts": "05a24458ad55471a9fbb118782b9f009965a871ed5210827efd03cfae5ce3463",
+      "src/pages/index.astro": "869901a712972c511c45909d12bbe9a39dfcefecf25197645973c4094f716fdb",
+      "src/pages/privacy.astro": "ad1e04f5bf9b82ed16fb5304880abd3860fa00066e0d7d3dda83cbba8e7a018b",
+      "src/pages/residences/3402.astro": "15f20ea8ab166677d85b65ac78af903673e403ce1b1f632781030960c32d706b",
+      "src/scripts/site.ts": "8704715010f12ee654c6ecb8e7ecb0a8b284d89a382166854d963a3f20243139",
+      "src/server/enquiry.ts": "8efd0161e0449716997f711b21d4091070dc6daf887028ad64859268d82bfc41",
+      "src/styles/global.css": "65c649f0dc56dbc330fa57866df763c627ae6984767fb10f0364038f82c1460b"
+    }
+  },
+  "runtime": {
+    "node": "24.22.1",
+    "playwrightUsed": "1.58.2",
+    "playwrightDeclared": "1.62.1",
+    "chromium": "145.0.7632.6",
+    "webkit": "26.0",
+    "astro": "7.4.4",
+    "gsap": "3.15.0",
+    "typescript": "5.9.3",
+    "environment": "Linux local static Vercel build; actual custom404 status; no remote desktop or physical Safari"
+  },
+  "checks": {
+    "checkBuild": {
+      "startedAt": "2026-11-01T15:39:42.959467+00:00",
+      "commands": [
+        {
+          "name": "check",
+          "command": "npm run check",
+          "exitCode": 0,
+          "log": "final-check.log"
+        },
+        {
+          "name": "build",
+          "command": "npm run build",
+          "exitCode": 0,
+          "log": "final-build.log"
+        }
+      ],
+      "passed": true,
+      "finishedAt": "2026-11-01T15:39:50.396061+00:00"
+    },
+    "existingE2E": {
+      "passed": true,
+      "results": [
+        "Desktop: source images, sections, filters, three-slide galleries, unit navigation, plan zoom and real request state handling passed.",
+        "Mobile 390px: navigation, anchors, layouts without overflow, carousel controls, filters, full detail, plan zoom and form validation passed.",
+        "Normal-motion short-desktop pin entry, desktop/mobile resize, keyboard gallery, inert states, live reduced-motion changes with preserved reading position and unclipped 320/360/390px catalogue values passed without page errors."
+      ],
+      "faults": [],
+      "viewports": [
+        {
+          "width": 1440,
+          "height": 900
+        },
+        {
+          "width": 390,
+          "height": 844
+        }
+      ],
+      "notes": [
+        "Enquiry responses are deliberately mocked only in this automated test; production UI requires an actual successful API response.",
+        "No real enquiry was sent by these tests."
+      ]
+    },
+    "existingLightbox": {
+      "base": "http://127.0.0.1:14322",
+      "passed": true,
+      "engines": [
+        {
+          "name": "chromium",
+          "checks": [
+            "Cold image loading retains the complete old frame; rapid navigation keeps the latest decoded image.",
+            "Mobile close/reopen rejects stale results; the newly loaded plan still zooms and fits.",
+            "Initial and replacement failures show recovery guidance, retain valid content, and allow skipping or retrying the failed image."
+          ]
+        },
+        {
+          "name": "webkit",
+          "checks": [
+            "Cold image loading retains the complete old frame; rapid navigation keeps the latest decoded image.",
+            "Mobile close/reopen rejects stale results; the newly loaded plan still zooms and fits.",
+            "Initial and replacement failures show recovery guidance, retain valid content, and allow skipping or retrying the failed image."
+          ]
+        }
+      ],
+      "apiRequests": 0,
+      "pageErrors": []
+    },
+    "routeMatrix": {
+      "passed": true,
+      "cases": 28,
+      "viewportCaptures": 214,
+      "casesDetail": [
+        {
+          "size": "desktop1440",
+          "route": "/",
+          "status": 200,
+          "captures": 24,
+          "textArrows": 0
+        },
+        {
+          "size": "desktop1440",
+          "route": "/residences/3402/",
+          "status": 200,
+          "captures": 2,
+          "textArrows": 0
+        },
+        {
+          "size": "desktop1440",
+          "route": "/privacy/",
+          "status": 200,
+          "captures": 2,
+          "textArrows": 0
+        },
+        {
+          "size": "desktop1440",
+          "route": "/audit-missing-route/",
+          "status": 404,
+          "captures": 1,
+          "textArrows": 0
+        },
+        {
+          "size": "desktop1920",
+          "route": "/",
+          "status": 200,
+          "captures": 24,
+          "textArrows": 0
+        },
+        {
+          "size": "desktop1920",
+          "route": "/residences/3402/",
+          "status": 200,
+          "captures": 2,
+          "textArrows": 0
+        },
+        {
+          "size": "desktop1920",
+          "route": "/privacy/",
+          "status": 200,
+          "captures": 2,
+          "textArrows": 0
+        },
+        {
+          "size": "desktop1920",
+          "route": "/audit-missing-route/",
+          "status": 404,
+          "captures": 1,
+          "textArrows": 0
+        },
+        {
+          "size": "tablet1024",
+          "route": "/",
+          "status": 200,
+          "captures": 24,
+          "textArrows": 0
+        },
+        {
+          "size": "tablet1024",
+          "route": "/residences/3402/",
+          "status": 200,
+          "captures": 2,
+          "textArrows": 0
+        },
+        {
+          "size": "tablet1024",
+          "route": "/privacy/",
+          "status": 200,
+          "captures": 2,
+          "textArrows": 0
+        },
+        {
+          "size": "tablet1024",
+          "route": "/audit-missing-route/",
+          "status": 404,
+          "captures": 1,
+          "textArrows": 0
+        },
+        {
+          "size": "tablet768",
+          "route": "/",
+          "status": 200,
+          "captures": 25,
+          "textArrows": 0
+        },
+        {
+          "size": "tablet768",
+          "route": "/residences/3402/",
+          "status": 200,
+          "captures": 2,
+          "textArrows": 0
+        },
+        {
+          "size": "tablet768",
+          "route": "/privacy/",
+          "status": 200,
+          "captures": 2,
+          "textArrows": 0
+        },
+        {
+          "size": "tablet768",
+          "route": "/audit-missing-route/",
+          "status": 404,
+          "captures": 1,
+          "textArrows": 0
+        },
+        {
+          "size": "mobile390",
+          "route": "/",
+          "status": 200,
+          "captures": 25,
+          "textArrows": 0
+        },
+        {
+          "size": "mobile390",
+          "route": "/residences/3402/",
+          "status": 200,
+          "captures": 3,
+          "textArrows": 0
+        },
+        {
+          "size": "mobile390",
+          "route": "/privacy/",
+          "status": 200,
+          "captures": 3,
+          "textArrows": 0
+        },
+        {
+          "size": "mobile390",
+          "route": "/audit-missing-route/",
+          "status": 404,
+          "captures": 1,
+          "textArrows": 0
+        },
+        {
+          "size": "mobile320",
+          "route": "/",
+          "status": 200,
+          "captures": 25,
+          "textArrows": 0
+        },
+        {
+          "size": "mobile320",
+          "route": "/residences/3402/",
+          "status": 200,
+          "captures": 3,
+          "textArrows": 0
+        },
+        {
+          "size": "mobile320",
+          "route": "/privacy/",
+          "status": 200,
+          "captures": 3,
+          "textArrows": 0
+        },
+        {
+          "size": "mobile320",
+          "route": "/audit-missing-route/",
+          "status": 404,
+          "captures": 1,
+          "textArrows": 0
+        },
+        {
+          "size": "landscape",
+          "route": "/",
+          "status": 200,
+          "captures": 24,
+          "textArrows": 0
+        },
+        {
+          "size": "landscape",
+          "route": "/residences/3402/",
+          "status": 200,
+          "captures": 3,
+          "textArrows": 0
+        },
+        {
+          "size": "landscape",
+          "route": "/privacy/",
+          "status": 200,
+          "captures": 4,
+          "textArrows": 0
+        },
+        {
+          "size": "landscape",
+          "route": "/audit-missing-route/",
+          "status": 404,
+          "captures": 2,
+          "textArrows": 0
+        }
+      ],
+      "errors": [],
+      "violations": [],
+      "apiRequests": 0,
+      "rawReport": "after/report.json"
+    },
+    "interactionMatrix": {
+      "passed": true,
+      "uniqueStateGroups": 63,
+      "groups": [
+        {
+          "engine": "chromium",
+          "size": "desktop1440",
+          "name": "menu and anchor landings",
+          "passed": true,
+          "sourceReport": "anchors-settled-states/report.json"
+        },
+        {
+          "engine": "chromium",
+          "size": "desktop1440",
+          "name": "enquiry invalid pending error success",
+          "passed": true,
+          "sourceReport": "final-delta-states/report.json"
+        },
+        {
+          "engine": "chromium",
+          "size": "desktop1440",
+          "name": "gallery states and controls",
+          "passed": true,
+          "sourceReport": "after-states/report.json"
+        },
+        {
+          "engine": "chromium",
+          "size": "desktop1440",
+          "name": "detail plan zoom resize cancellation and focus",
+          "passed": true,
+          "sourceReport": "after-states/report.json"
+        },
+        {
+          "engine": "chromium",
+          "size": "desktop1440",
+          "name": "privacy enquiry state",
+          "passed": true,
+          "sourceReport": "after-states/report.json"
+        },
+        {
+          "engine": "chromium",
+          "size": "desktop1440",
+          "name": "catalogue states",
+          "passed": true,
+          "sourceReport": "final-delta-states/report.json"
+        },
+        {
+          "engine": "chromium",
+          "size": "desktop1440",
+          "name": "highlight variants and photo viewer",
+          "passed": true,
+          "sourceReport": "after-states/report.json"
+        },
+        {
+          "engine": "chromium",
+          "size": "desktop1920",
+          "name": "menu and anchor landings",
+          "passed": true,
+          "sourceReport": "anchors-settled-states/report.json"
+        },
+        {
+          "engine": "chromium",
+          "size": "desktop1920",
+          "name": "enquiry invalid pending error success",
+          "passed": true,
+          "sourceReport": "final-delta-states/report.json"
+        },
+        {
+          "engine": "chromium",
+          "size": "desktop1920",
+          "name": "gallery states and controls",
+          "passed": true,
+          "sourceReport": "after-states/report.json"
+        },
+        {
+          "engine": "chromium",
+          "size": "desktop1920",
+          "name": "detail plan zoom resize cancellation and focus",
+          "passed": true,
+          "sourceReport": "after-states/report.json"
+        },
+        {
+          "engine": "chromium",
+          "size": "desktop1920",
+          "name": "privacy enquiry state",
+          "passed": true,
+          "sourceReport": "after-states/report.json"
+        },
+        {
+          "engine": "chromium",
+          "size": "desktop1920",
+          "name": "catalogue states",
+          "passed": true,
+          "sourceReport": "final-delta-states/report.json"
+        },
+        {
+          "engine": "chromium",
+          "size": "desktop1920",
+          "name": "highlight variants and photo viewer",
+          "passed": true,
+          "sourceReport": "after-states/report.json"
+        },
+        {
+          "engine": "chromium",
+          "size": "tablet1024",
+          "name": "menu and anchor landings",
+          "passed": true,
+          "sourceReport": "anchors-settled-states/report.json"
+        },
+        {
+          "engine": "chromium",
+          "size": "tablet1024",
+          "name": "enquiry invalid pending error success",
+          "passed": true,
+          "sourceReport": "final-delta-states/report.json"
+        },
+        {
+          "engine": "chromium",
+          "size": "tablet1024",
+          "name": "gallery states and controls",
+          "passed": true,
+          "sourceReport": "after-states/report.json"
+        },
+        {
+          "engine": "chromium",
+          "size": "tablet1024",
+          "name": "detail plan zoom resize cancellation and focus",
+          "passed": true,
+          "sourceReport": "after-states/report.json"
+        },
+        {
+          "engine": "chromium",
+          "size": "tablet1024",
+          "name": "privacy enquiry state",
+          "passed": true,
+          "sourceReport": "after-states/report.json"
+        },
+        {
+          "engine": "chromium",
+          "size": "tablet1024",
+          "name": "catalogue states",
+          "passed": true,
+          "sourceReport": "final-delta-states/report.json"
+        },
+        {
+          "engine": "chromium",
+          "size": "tablet1024",
+          "name": "highlight variants and photo viewer",
+          "passed": true,
+          "sourceReport": "after-states/report.json"
+        },
+        {
+          "engine": "chromium",
+          "size": "tablet768",
+          "name": "menu and anchor landings",
+          "passed": true,
+          "sourceReport": "anchors-settled-states/report.json"
+        },
+        {
+          "engine": "chromium",
+          "size": "tablet768",
+          "name": "enquiry invalid pending error success",
+          "passed": true,
+          "sourceReport": "final-delta-states/report.json"
+        },
+        {
+          "engine": "chromium",
+          "size": "tablet768",
+          "name": "gallery states and controls",
+          "passed": true,
+          "sourceReport": "after-states/report.json"
+        },
+        {
+          "engine": "chromium",
+          "size": "tablet768",
+          "name": "detail plan zoom resize cancellation and focus",
+          "passed": true,
+          "sourceReport": "after-states/report.json"
+        },
+        {
+          "engine": "chromium",
+          "size": "tablet768",
+          "name": "privacy enquiry state",
+          "passed": true,
+          "sourceReport": "after-states/report.json"
+        },
+        {
+          "engine": "chromium",
+          "size": "tablet768",
+          "name": "catalogue states",
+          "passed": true,
+          "sourceReport": "final-delta-states/report.json"
+        },
+        {
+          "engine": "chromium",
+          "size": "tablet768",
+          "name": "highlight variants and photo viewer",
+          "passed": true,
+          "sourceReport": "after-states/report.json"
+        },
+        {
+          "engine": "chromium",
+          "size": "mobile390",
+          "name": "menu and anchor landings",
+          "passed": true,
+          "sourceReport": "anchors-settled-states/report.json"
+        },
+        {
+          "engine": "chromium",
+          "size": "mobile390",
+          "name": "enquiry invalid pending error success",
+          "passed": true,
+          "sourceReport": "final-delta-states/report.json"
+        },
+        {
+          "engine": "chromium",
+          "size": "mobile390",
+          "name": "gallery states and controls",
+          "passed": true,
+          "sourceReport": "after-states/report.json"
+        },
+        {
+          "engine": "chromium",
+          "size": "mobile390",
+          "name": "detail plan zoom resize cancellation and focus",
+          "passed": true,
+          "sourceReport": "after-states/report.json"
+        },
+        {
+          "engine": "chromium",
+          "size": "mobile390",
+          "name": "privacy enquiry state",
+          "passed": true,
+          "sourceReport": "after-states/report.json"
+        },
+        {
+          "engine": "chromium",
+          "size": "mobile390",
+          "name": "catalogue states",
+          "passed": true,
+          "sourceReport": "final-delta-states/report.json"
+        },
+        {
+          "engine": "chromium",
+          "size": "mobile390",
+          "name": "highlight variants and photo viewer",
+          "passed": true,
+          "sourceReport": "after-states/report.json"
+        },
+        {
+          "engine": "chromium",
+          "size": "mobile320",
+          "name": "menu and anchor landings",
+          "passed": true,
+          "sourceReport": "anchors-settled-states/report.json"
+        },
+        {
+          "engine": "chromium",
+          "size": "mobile320",
+          "name": "enquiry invalid pending error success",
+          "passed": true,
+          "sourceReport": "final-delta-states/report.json"
+        },
+        {
+          "engine": "chromium",
+          "size": "mobile320",
+          "name": "gallery states and controls",
+          "passed": true,
+          "sourceReport": "after-states/report.json"
+        },
+        {
+          "engine": "chromium",
+          "size": "mobile320",
+          "name": "detail plan zoom resize cancellation and focus",
+          "passed": true,
+          "sourceReport": "after-states/report.json"
+        },
+        {
+          "engine": "chromium",
+          "size": "mobile320",
+          "name": "privacy enquiry state",
+          "passed": true,
+          "sourceReport": "after-states/report.json"
+        },
+        {
+          "engine": "chromium",
+          "size": "mobile320",
+          "name": "catalogue states",
+          "passed": true,
+          "sourceReport": "final-delta-states/report.json"
+        },
+        {
+          "engine": "chromium",
+          "size": "mobile320",
+          "name": "highlight variants and photo viewer",
+          "passed": true,
+          "sourceReport": "after-states/report.json"
+        },
+        {
+          "engine": "chromium",
+          "size": "landscape",
+          "name": "menu and anchor landings",
+          "passed": true,
+          "sourceReport": "anchors-settled-states/report.json"
+        },
+        {
+          "engine": "chromium",
+          "size": "landscape",
+          "name": "enquiry invalid pending error success",
+          "passed": true,
+          "sourceReport": "final-delta-states/report.json"
+        },
+        {
+          "engine": "chromium",
+          "size": "landscape",
+          "name": "gallery states and controls",
+          "passed": true,
+          "sourceReport": "after-states/report.json"
+        },
+        {
+          "engine": "chromium",
+          "size": "landscape",
+          "name": "detail plan zoom resize cancellation and focus",
+          "passed": true,
+          "sourceReport": "after-states/report.json"
+        },
+        {
+          "engine": "chromium",
+          "size": "landscape",
+          "name": "privacy enquiry state",
+          "passed": true,
+          "sourceReport": "after-states/report.json"
+        },
+        {
+          "engine": "chromium",
+          "size": "landscape",
+          "name": "catalogue states",
+          "passed": true,
+          "sourceReport": "final-delta-states/report.json"
+        },
+        {
+          "engine": "chromium",
+          "size": "landscape",
+          "name": "highlight variants and photo viewer",
+          "passed": true,
+          "sourceReport": "after-states/report.json"
+        },
+        {
+          "engine": "webkit",
+          "size": "mobile390",
+          "name": "menu and anchor landings",
+          "passed": true,
+          "sourceReport": "after-webkit-states/report.json"
+        },
+        {
+          "engine": "webkit",
+          "size": "mobile390",
+          "name": "enquiry invalid pending error success",
+          "passed": true,
+          "sourceReport": "after-webkit-states/report.json"
+        },
+        {
+          "engine": "webkit",
+          "size": "mobile390",
+          "name": "gallery states and controls",
+          "passed": true,
+          "sourceReport": "after-webkit-states/report.json"
+        },
+        {
+          "engine": "webkit",
+          "size": "mobile390",
+          "name": "detail plan zoom resize cancellation and focus",
+          "passed": true,
+          "sourceReport": "after-webkit-states/report.json"
+        },
+        {
+          "engine": "webkit",
+          "size": "mobile390",
+          "name": "privacy enquiry state",
+          "passed": true,
+          "sourceReport": "after-webkit-states/report.json"
+        },
+        {
+          "engine": "webkit",
+          "size": "mobile390",
+          "name": "catalogue states",
+          "passed": true,
+          "sourceReport": "after-webkit-states/report.json"
+        },
+        {
+          "engine": "webkit",
+          "size": "mobile390",
+          "name": "highlight variants and photo viewer",
+          "passed": true,
+          "sourceReport": "after-webkit-states/report.json"
+        },
+        {
+          "engine": "webkit",
+          "size": "landscape",
+          "name": "menu and anchor landings",
+          "passed": true,
+          "sourceReport": "after-webkit-states/report.json"
+        },
+        {
+          "engine": "webkit",
+          "size": "landscape",
+          "name": "enquiry invalid pending error success",
+          "passed": true,
+          "sourceReport": "final-delta-webkit-states/report.json"
+        },
+        {
+          "engine": "webkit",
+          "size": "landscape",
+          "name": "gallery states and controls",
+          "passed": true,
+          "sourceReport": "after-webkit-states/report.json"
+        },
+        {
+          "engine": "webkit",
+          "size": "landscape",
+          "name": "detail plan zoom resize cancellation and focus",
+          "passed": true,
+          "sourceReport": "after-webkit-states/report.json"
+        },
+        {
+          "engine": "webkit",
+          "size": "landscape",
+          "name": "privacy enquiry state",
+          "passed": true,
+          "sourceReport": "after-webkit-states/report.json"
+        },
+        {
+          "engine": "webkit",
+          "size": "landscape",
+          "name": "catalogue states",
+          "passed": true,
+          "sourceReport": "final-delta-webkit-states/report.json"
+        },
+        {
+          "engine": "webkit",
+          "size": "landscape",
+          "name": "highlight variants and photo viewer",
+          "passed": true,
+          "sourceReport": "after-webkit-states/report.json"
+        }
+      ],
+      "rawReports": [
+        "after-states/report.json",
+        "anchors-settled-states/report.json",
+        "final-delta-states/report.json",
+        "after-webkit-states/report.json",
+        "final-delta-webkit-states/report.json"
+      ]
+    },
+    "gallery": {
+      "passed": true,
+      "engines": [
+        {
+          "engine": "chromium",
+          "browserVersion": "145.0.7632.6",
+          "checks": [
+            {
+              "name": "delayed-last-request",
+              "passed": true,
+              "lastMotionSample": null
+            },
+            {
+              "name": "failed-image-skip-and-retry",
+              "passed": true,
+              "lastMotionSample": null
+            },
+            {
+              "name": "motion-switch-and-pointer-cancel",
+              "passed": true,
+              "lastMotionSample": [
+                {
+                  "reduced": {
+                    "counter": "1 / 3",
+                    "selected": 1,
+                    "index": 0,
+                    "naturalWidth": 948,
+                    "src": "http://127.0.0.1:14322/assets/responsive/9c178e4120291bb64572-w960.webp",
+                    "alt": "An open-air pavilion with sculptural pendant lights and lush gardens",
+                    "opacity": 1,
+                    "image": {
+                      "x": 24,
+                      "y": 23.703125,
+                      "width": 327,
+                      "height": 632,
+                      "right": 351,
+                      "bottom": 655.703125
+                    },
+                    "slide": {
+                      "x": 24,
+                      "y": 23.703125,
+                      "width": 327,
+                      "height": 632,
+                      "right": 351,
+                      "bottom": 655.703125
+                    },
+                    "frame": {
+                      "x": 24,
+                      "y": 23.703125,
+                      "width": 327,
+                      "height": 632,
+                      "right": 351,
+                      "bottom": 655.703125
+                    },
+                    "gallery": {
+                      "x": 0,
+                      "y": -0.296875,
+                      "width": 375,
+                      "height": 680,
+                      "right": 375,
+                      "bottom": 679.703125
+                    },
+                    "scrollY": 10160,
+                    "bodyLock": false,
+                    "bodyOverflow": "visible",
+                    "htmlOverflow": "visible",
+                    "dialogs": 0,
+                    "inactive": true
+                  },
+                  "normal": {
+                    "counter": "1 / 3",
+                    "selected": 1,
+                    "index": 0,
+                    "naturalWidth": 948,
+                    "src": "http://127.0.0.1:14322/assets/responsive/9c178e4120291bb64572-w960.webp",
+                    "alt": "An open-air pavilion with sculptural pendant lights and lush gardens",
+                    "opacity": 1,
+                    "image": {
+                      "x": 24,
+                      "y": 23.703125,
+                      "width": 327,
+                      "height": 632,
+                      "right": 351,
+                      "bottom": 655.703125
+                    },
+                    "slide": {
+                      "x": 24,
+                      "y": 23.703125,
+                      "width": 327,
+                      "height": 632,
+                      "right": 351,
+                      "bottom": 655.703125
+                    },
+                    "frame": {
+                      "x": 24,
+                      "y": 23.703125,
+                      "width": 327,
+                      "height": 632,
+                      "right": 351,
+                      "bottom": 655.703125
+                    },
+                    "gallery": {
+                      "x": 0,
+                      "y": -0.296875,
+                      "width": 375,
+                      "height": 680,
+                      "right": 375,
+                      "bottom": 679.703125
+                    },
+                    "scrollY": 10160,
+                    "bodyLock": false,
+                    "bodyOverflow": "visible",
+                    "htmlOverflow": "visible",
+                    "dialogs": 0,
+                    "inactive": true
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "engine": "webkit",
+          "browserVersion": "26.0",
+          "checks": [
+            {
+              "name": "delayed-last-request",
+              "passed": true,
+              "lastMotionSample": null
+            },
+            {
+              "name": "failed-image-skip-and-retry",
+              "passed": true,
+              "lastMotionSample": null
+            },
+            {
+              "name": "motion-switch-and-pointer-cancel",
+              "passed": true,
+              "lastMotionSample": [
+                {
+                  "reduced": {
+                    "counter": "1 / 3",
+                    "selected": 1,
+                    "index": 0,
+                    "naturalWidth": 948,
+                    "src": "http://127.0.0.1:14322/assets/responsive/9c178e4120291bb64572-w960.webp",
+                    "alt": "An open-air pavilion with sculptural pendant lights and lush gardens",
+                    "opacity": 1,
+                    "image": {
+                      "x": 24,
+                      "y": 24.109375,
+                      "width": 342,
+                      "height": 632,
+                      "right": 366,
+                      "bottom": 656.109375
+                    },
+                    "slide": {
+                      "x": 24,
+                      "y": 24.109375,
+                      "width": 342,
+                      "height": 632,
+                      "right": 366,
+                      "bottom": 656.109375
+                    },
+                    "frame": {
+                      "x": 24,
+                      "y": 24.109375,
+                      "width": 342,
+                      "height": 632,
+                      "right": 366,
+                      "bottom": 656.109375
+                    },
+                    "gallery": {
+                      "x": 0,
+                      "y": 0.109375,
+                      "width": 390,
+                      "height": 680,
+                      "right": 390,
+                      "bottom": 680.109375
+                    },
+                    "scrollY": 10105,
+                    "bodyLock": false,
+                    "bodyOverflow": "visible",
+                    "htmlOverflow": "visible",
+                    "dialogs": 0,
+                    "inactive": true
+                  },
+                  "normal": {
+                    "counter": "1 / 3",
+                    "selected": 1,
+                    "index": 0,
+                    "naturalWidth": 948,
+                    "src": "http://127.0.0.1:14322/assets/responsive/9c178e4120291bb64572-w960.webp",
+                    "alt": "An open-air pavilion with sculptural pendant lights and lush gardens",
+                    "opacity": 1,
+                    "image": {
+                      "x": 24,
+                      "y": 24.109375,
+                      "width": 342,
+                      "height": 632,
+                      "right": 366,
+                      "bottom": 656.109375
+                    },
+                    "slide": {
+                      "x": 24,
+                      "y": 24.109375,
+                      "width": 342,
+                      "height": 632,
+                      "right": 366,
+                      "bottom": 656.109375
+                    },
+                    "frame": {
+                      "x": 24,
+                      "y": 24.109375,
+                      "width": 342,
+                      "height": 632,
+                      "right": 366,
+                      "bottom": 656.109375
+                    },
+                    "gallery": {
+                      "x": 0,
+                      "y": 0.109375,
+                      "width": 390,
+                      "height": 680,
+                      "right": 390,
+                      "bottom": 680.109375
+                    },
+                    "scrollY": 10105,
+                    "bodyLock": false,
+                    "bodyOverflow": "visible",
+                    "htmlOverflow": "visible",
+                    "dialogs": 0,
+                    "inactive": true
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "apiRequests": 0,
+      "pageErrors": [],
+      "rawReport": "gallery/report.json"
+    },
+    "nativeDialogs": {
+      "passed": true,
+      "cases": [
+        {
+          "engine": "chromium",
+          "kind": "enquiry",
+          "viewport": {
+            "width": 320,
+            "height": 740
+          },
+          "beforeCloseTop": 28,
+          "afterCloseTop": 28,
+          "closeHit": true,
+          "focusRestored": true,
+          "reopenedScroll": [
+            0
+          ],
+          "locksAfterClose": {
+            "open": 0,
+            "bodyClass": false,
+            "body": "visible",
+            "html": "visible"
+          },
+          "passed": true
+        },
+        {
+          "engine": "chromium",
+          "kind": "menu",
+          "viewport": {
+            "width": 320,
+            "height": 740
+          },
+          "beforeCloseTop": 54.625,
+          "afterCloseTop": 54.625,
+          "closeHit": true,
+          "focusRestored": true,
+          "reopenedScroll": [
+            0
+          ],
+          "locksAfterClose": {
+            "open": 0,
+            "bodyClass": false,
+            "body": "visible",
+            "html": "visible"
+          },
+          "passed": true
+        },
+        {
+          "engine": "chromium",
+          "kind": "enquiry",
+          "viewport": {
+            "width": 844,
+            "height": 390
+          },
+          "beforeCloseTop": 32,
+          "afterCloseTop": 32,
+          "closeHit": true,
+          "focusRestored": true,
+          "reopenedScroll": [
+            0
+          ],
+          "locksAfterClose": {
+            "open": 0,
+            "bodyClass": false,
+            "body": "visible",
+            "html": "visible"
+          },
+          "passed": true
+        },
+        {
+          "engine": "chromium",
+          "kind": "menu",
+          "viewport": {
+            "width": 844,
+            "height": 390
+          },
+          "beforeCloseTop": 32,
+          "afterCloseTop": 32,
+          "closeHit": true,
+          "focusRestored": true,
+          "reopenedScroll": [
+            0
+          ],
+          "locksAfterClose": {
+            "open": 0,
+            "bodyClass": false,
+            "body": "visible",
+            "html": "visible"
+          },
+          "passed": true
+        },
+        {
+          "engine": "webkit",
+          "kind": "enquiry",
+          "viewport": {
+            "width": 320,
+            "height": 740
+          },
+          "beforeCloseTop": 28,
+          "afterCloseTop": 28,
+          "closeHit": true,
+          "focusRestored": true,
+          "reopenedScroll": [
+            0
+          ],
+          "locksAfterClose": {
+            "open": 0,
+            "bodyClass": false,
+            "body": "visible",
+            "html": "visible"
+          },
+          "passed": true
+        },
+        {
+          "engine": "webkit",
+          "kind": "menu",
+          "viewport": {
+            "width": 320,
+            "height": 740
+          },
+          "beforeCloseTop": 58.5,
+          "afterCloseTop": 58.5,
+          "closeHit": true,
+          "focusRestored": true,
+          "reopenedScroll": [
+            0
+          ],
+          "locksAfterClose": {
+            "open": 0,
+            "bodyClass": false,
+            "body": "visible",
+            "html": "visible"
+          },
+          "passed": true
+        },
+        {
+          "engine": "webkit",
+          "kind": "enquiry",
+          "viewport": {
+            "width": 844,
+            "height": 390
+          },
+          "beforeCloseTop": 32,
+          "afterCloseTop": 32,
+          "closeHit": true,
+          "focusRestored": true,
+          "reopenedScroll": [
+            0
+          ],
+          "locksAfterClose": {
+            "open": 0,
+            "bodyClass": false,
+            "body": "visible",
+            "html": "visible"
+          },
+          "passed": true
+        },
+        {
+          "engine": "webkit",
+          "kind": "menu",
+          "viewport": {
+            "width": 844,
+            "height": 390
+          },
+          "beforeCloseTop": 32,
+          "afterCloseTop": 32,
+          "closeHit": true,
+          "focusRestored": true,
+          "reopenedScroll": [
+            0
+          ],
+          "locksAfterClose": {
+            "open": 0,
+            "bodyClass": false,
+            "body": "visible",
+            "html": "visible"
+          },
+          "passed": true
+        }
+      ],
+      "apiRequests": 0,
+      "pageErrors": [],
+      "rawReport": "dialogs/report.json"
+    },
+    "readingContinuity": [
+      {
+        "engine": "chromium",
+        "passed": true,
+        "cases": [
+          {
+            "name": "normal-to-reduced",
+            "beforeTop": -228.6875,
+            "afterTop": -228.6875,
+            "beforeY": 14526,
+            "afterY": 13626,
+            "passed": true,
+            "dialogDuring": null,
+            "dialogReturned": null,
+            "afterBodyOverflow": "visible",
+            "afterHtmlOverflow": "visible"
+          },
+          {
+            "name": "reduced-to-normal",
+            "beforeTop": -228.6875,
+            "afterTop": -228.6875,
+            "beforeY": 13626,
+            "afterY": 14526,
+            "passed": true,
+            "dialogDuring": null,
+            "dialogReturned": null,
+            "afterBodyOverflow": "visible",
+            "afterHtmlOverflow": "visible"
+          },
+          {
+            "name": "desktop-to-mobile-before-pinned-section",
+            "beforeTop": -228.6875,
+            "afterTop": -228.296875,
+            "beforeY": 14526,
+            "afterY": 10388,
+            "passed": true,
+            "dialogDuring": null,
+            "dialogReturned": null,
+            "afterBodyOverflow": "visible",
+            "afterHtmlOverflow": "visible"
+          },
+          {
+            "name": "mobile-to-desktop",
+            "beforeTop": -228.296875,
+            "afterTop": -228.6875,
+            "beforeY": 10388,
+            "afterY": 14526,
+            "passed": true,
+            "dialogDuring": null,
+            "dialogReturned": null,
+            "afterBodyOverflow": "visible",
+            "afterHtmlOverflow": "visible"
+          },
+          {
+            "name": "motion-change-with-dialog-and-close",
+            "beforeTop": 18.3125,
+            "afterTop": 18.3125,
+            "beforeY": 14279,
+            "afterY": 14279,
+            "passed": true,
+            "dialogDuring": {
+              "y": 13379,
+              "top": 18.3125,
+              "bottom": 868.3125,
+              "height": 850,
+              "viewport": 900,
+              "pins": 0,
+              "dialogs": 1,
+              "locked": true,
+              "bodyOverflow": "hidden",
+              "htmlOverflow": "hidden"
+            },
+            "dialogReturned": {
+              "y": 14279,
+              "top": 18.3125,
+              "bottom": 868.3125,
+              "height": 850,
+              "viewport": 900,
+              "pins": 1,
+              "dialogs": 1,
+              "locked": true,
+              "bodyOverflow": "hidden",
+              "htmlOverflow": "hidden"
+            },
+            "afterBodyOverflow": "visible",
+            "afterHtmlOverflow": "visible"
+          }
+        ]
+      },
+      {
+        "engine": "webkit",
+        "passed": true,
+        "cases": [
+          {
+            "name": "normal-to-reduced",
+            "beforeTop": -229.0625,
+            "afterTop": -229.0625,
+            "beforeY": 14533,
+            "afterY": 13633,
+            "passed": true,
+            "dialogDuring": null,
+            "dialogReturned": null,
+            "afterBodyOverflow": "visible",
+            "afterHtmlOverflow": "visible"
+          },
+          {
+            "name": "reduced-to-normal",
+            "beforeTop": -229.0625,
+            "afterTop": -229.0625,
+            "beforeY": 13633,
+            "afterY": 14533,
+            "passed": true,
+            "dialogDuring": null,
+            "dialogReturned": null,
+            "afterBodyOverflow": "visible",
+            "afterHtmlOverflow": "visible"
+          },
+          {
+            "name": "desktop-to-mobile-before-pinned-section",
+            "beforeTop": -229.0625,
+            "afterTop": -228.890625,
+            "beforeY": 14533,
+            "afterY": 10334,
+            "passed": true,
+            "dialogDuring": null,
+            "dialogReturned": null,
+            "afterBodyOverflow": "visible",
+            "afterHtmlOverflow": "visible"
+          },
+          {
+            "name": "mobile-to-desktop",
+            "beforeTop": -228.890625,
+            "afterTop": -228.0625,
+            "beforeY": 10334,
+            "afterY": 14532,
+            "passed": true,
+            "dialogDuring": null,
+            "dialogReturned": null,
+            "afterBodyOverflow": "visible",
+            "afterHtmlOverflow": "visible"
+          },
+          {
+            "name": "motion-change-with-dialog-and-close",
+            "beforeTop": 18.9375,
+            "afterTop": 18.9375,
+            "beforeY": 14285,
+            "afterY": 14285,
+            "passed": true,
+            "dialogDuring": {
+              "y": 13385,
+              "top": 18.9375,
+              "bottom": 868.9375,
+              "height": 850,
+              "viewport": 900,
+              "pins": 0,
+              "dialogs": 1,
+              "locked": true,
+              "bodyOverflow": "hidden",
+              "htmlOverflow": "hidden"
+            },
+            "dialogReturned": {
+              "y": 14285,
+              "top": 18.9375,
+              "bottom": 868.9375,
+              "height": 850,
+              "viewport": 900,
+              "pins": 1,
+              "dialogs": 1,
+              "locked": true,
+              "bodyOverflow": "hidden",
+              "htmlOverflow": "hidden"
+            },
+            "afterBodyOverflow": "visible",
+            "afterHtmlOverflow": "visible"
+          }
+        ]
+      }
+    ],
+    "catalogueText": {
+      "passed": true,
+      "cases": [
+        {
+          "engine": "chromium",
+          "width": 320,
+          "dl": {
+            "left": 25,
+            "right": 280,
+            "clientWidth": 255,
+            "scrollWidth": 255,
+            "padding": "8px"
+          },
+          "values": [
+            {
+              "text": "Total area",
+              "left": 33,
+              "right": 104,
+              "width": 71
+            },
+            {
+              "text": "340.43 sq m",
+              "left": 115.5,
+              "right": 189.5,
+              "width": 74
+            },
+            {
+              "text": "3,664 sq ft",
+              "left": 201,
+              "right": 272,
+              "width": 71
+            },
+            {
+              "text": "Balcony",
+              "left": 33,
+              "right": 87,
+              "width": 54
+            },
+            {
+              "text": "60.94 sq m",
+              "left": 115.5,
+              "right": 183.5,
+              "width": 68
+            },
+            {
+              "text": "656 sq ft",
+              "left": 212,
+              "right": 272,
+              "width": 60
+            }
+          ],
+          "passed": true
+        },
+        {
+          "engine": "chromium",
+          "width": 360,
+          "dl": {
+            "left": 25,
+            "right": 320,
+            "clientWidth": 295,
+            "scrollWidth": 295,
+            "padding": "24px"
+          },
+          "values": [
+            {
+              "text": "Total area",
+              "left": 49,
+              "right": 120,
+              "width": 71
+            },
+            {
+              "text": "340.43 sq m",
+              "left": 135.5,
+              "right": 209.5,
+              "width": 74
+            },
+            {
+              "text": "3,664 sq ft",
+              "left": 225,
+              "right": 296,
+              "width": 71
+            },
+            {
+              "text": "Balcony",
+              "left": 49,
+              "right": 103,
+              "width": 54
+            },
+            {
+              "text": "60.94 sq m",
+              "left": 135.5,
+              "right": 203.5,
+              "width": 68
+            },
+            {
+              "text": "656 sq ft",
+              "left": 236,
+              "right": 296,
+              "width": 60
+            }
+          ],
+          "passed": true
+        },
+        {
+          "engine": "chromium",
+          "width": 390,
+          "dl": {
+            "left": 25,
+            "right": 350,
+            "clientWidth": 325,
+            "scrollWidth": 325,
+            "padding": "24px"
+          },
+          "values": [
+            {
+              "text": "Total area",
+              "left": 49,
+              "right": 120,
+              "width": 71
+            },
+            {
+              "text": "340.43 sq m",
+              "left": 150.5,
+              "right": 224.5,
+              "width": 74
+            },
+            {
+              "text": "3,664 sq ft",
+              "left": 255,
+              "right": 326,
+              "width": 71
+            },
+            {
+              "text": "Balcony",
+              "left": 49,
+              "right": 103,
+              "width": 54
+            },
+            {
+              "text": "60.94 sq m",
+              "left": 150.5,
+              "right": 218.5,
+              "width": 68
+            },
+            {
+              "text": "656 sq ft",
+              "left": 266,
+              "right": 326,
+              "width": 60
+            }
+          ],
+          "passed": true
+        },
+        {
+          "engine": "webkit",
+          "width": 320,
+          "dl": {
+            "left": 25,
+            "right": 295,
+            "clientWidth": 270,
+            "scrollWidth": 270,
+            "padding": "8.000002px"
+          },
+          "values": [
+            {
+              "text": "Total area",
+              "left": 33,
+              "right": 100.5,
+              "width": 67.5
+            },
+            {
+              "text": "340.43 sq m",
+              "left": 125.890625,
+              "right": 195.734375,
+              "width": 69.84375
+            },
+            {
+              "text": "3,664 sq ft",
+              "left": 221.125,
+              "right": 287,
+              "width": 65.875
+            },
+            {
+              "text": "Balcony",
+              "left": 33,
+              "right": 86.421875,
+              "width": 53.421875
+            },
+            {
+              "text": "60.94 sq m",
+              "left": 127.609375,
+              "right": 190.203125,
+              "width": 62.59375
+            },
+            {
+              "text": "656 sq ft",
+              "left": 231.390625,
+              "right": 286.984375,
+              "width": 55.59375
+            }
+          ],
+          "passed": true
+        },
+        {
+          "engine": "webkit",
+          "width": 360,
+          "dl": {
+            "left": 25,
+            "right": 335,
+            "clientWidth": 310,
+            "scrollWidth": 310,
+            "padding": "24px"
+          },
+          "values": [
+            {
+              "text": "Total area",
+              "left": 49,
+              "right": 116.5,
+              "width": 67.5
+            },
+            {
+              "text": "340.43 sq m",
+              "left": 145.890625,
+              "right": 215.734375,
+              "width": 69.84375
+            },
+            {
+              "text": "3,664 sq ft",
+              "left": 245.125,
+              "right": 311,
+              "width": 65.875
+            },
+            {
+              "text": "Balcony",
+              "left": 49,
+              "right": 102.421875,
+              "width": 53.421875
+            },
+            {
+              "text": "60.94 sq m",
+              "left": 147.609375,
+              "right": 210.203125,
+              "width": 62.59375
+            },
+            {
+              "text": "656 sq ft",
+              "left": 255.390625,
+              "right": 310.984375,
+              "width": 55.59375
+            }
+          ],
+          "passed": true
+        },
+        {
+          "engine": "webkit",
+          "width": 390,
+          "dl": {
+            "left": 25,
+            "right": 365,
+            "clientWidth": 340,
+            "scrollWidth": 340,
+            "padding": "24px"
+          },
+          "values": [
+            {
+              "text": "Total area",
+              "left": 49,
+              "right": 116.5,
+              "width": 67.5
+            },
+            {
+              "text": "340.43 sq m",
+              "left": 160.890625,
+              "right": 230.734375,
+              "width": 69.84375
+            },
+            {
+              "text": "3,664 sq ft",
+              "left": 275.125,
+              "right": 341,
+              "width": 65.875
+            },
+            {
+              "text": "Balcony",
+              "left": 49,
+              "right": 102.421875,
+              "width": 53.421875
+            },
+            {
+              "text": "60.94 sq m",
+              "left": 162.609375,
+              "right": 225.203125,
+              "width": 62.59375
+            },
+            {
+              "text": "656 sq ft",
+              "left": 285.390625,
+              "right": 340.984375,
+              "width": 55.59375
+            }
+          ],
+          "passed": true
+        }
+      ],
+      "rawReport": "catalogue-width-after/report.json"
+    },
+    "collageClick": [
+      {
+        "width": 844,
+        "scrollY": 2556,
+        "button": {
+          "x": 314.09375,
+          "y": 406.328125,
+          "width": 200.8125,
+          "height": 46,
+          "right": 514.90625,
+          "bottom": 452.328125
+        },
+        "copy": {
+          "x": 256.765625,
+          "y": -36.59375,
+          "width": 315.46875,
+          "height": 524.078125,
+          "right": 572.234375,
+          "bottom": 487.484375
+        },
+        "text": {
+          "x": 313.1875,
+          "y": 147.671875,
+          "width": 202.625,
+          "height": 237.5625,
+          "right": 515.8125,
+          "bottom": 385.234375
+        },
+        "bottomPhoto": {
+          "x": 234.140625,
+          "y": 480.30865478515625,
+          "width": 360.703125,
+          "height": 125.6875,
+          "right": 594.84375,
+          "bottom": 605.9961547851562
+        },
+        "composition": {
+          "x": 0,
+          "y": -157.90625,
+          "width": 829,
+          "height": 701.671875,
+          "right": 829,
+          "bottom": 543.765625
+        },
+        "hit": true,
+        "receiver": "<button class=\"pill pill--primary \" type=\"button\" data-enquire=\"The residences\">Register your interest<img class=\"star\" src=\"/assets/catalogue-imgBrandStar.svg\" alt=\"\" width=\"14\" height=\"15\"></button>",
+        "nativeClick": true
+      },
+      {
+        "width": 960,
+        "scrollY": 2698,
+        "button": {
+          "x": 372.09375,
+          "y": 406.015625,
+          "width": 200.8125,
+          "height": 46,
+          "right": 572.90625,
+          "bottom": 452.015625
+        },
+        "copy": {
+          "x": 292.6875,
+          "y": -45.328125,
+          "width": 359.625,
+          "height": 537.34375,
+          "right": 652.3125,
+          "bottom": 492.015625
+        },
+        "text": {
+          "x": 357,
+          "y": 164.25,
+          "width": 230.984375,
+          "height": 217.765625,
+          "right": 587.984375,
+          "bottom": 382.015625
+        },
+        "bottomPhoto": {
+          "x": 266.90625,
+          "y": 482.66400146484375,
+          "width": 411.1875,
+          "height": 142.953125,
+          "right": 678.09375,
+          "bottom": 625.6171264648438
+        },
+        "composition": {
+          "x": 0,
+          "y": -183.328125,
+          "width": 945,
+          "height": 739.359375,
+          "right": 945,
+          "bottom": 556.03125
+        },
+        "hit": true,
+        "receiver": "<button class=\"pill pill--primary \" type=\"button\" data-enquire=\"The residences\">Register your interest<img class=\"star\" src=\"/assets/catalogue-imgBrandStar.svg\" alt=\"\" width=\"14\" height=\"15\"></button>",
+        "nativeClick": true
+      },
+      {
+        "width": 1024,
+        "scrollY": 2883,
+        "button": {
+          "x": 404.09375,
+          "y": 405.59375,
+          "width": 200.8125,
+          "height": 46,
+          "right": 604.90625,
+          "bottom": 451.59375
+        },
+        "copy": {
+          "x": 312.515625,
+          "y": -61.34375,
+          "width": 383.96875,
+          "height": 555.59375,
+          "right": 696.484375,
+          "bottom": 494.25
+        },
+        "text": {
+          "x": 381.1875,
+          "y": 162.234375,
+          "width": 246.609375,
+          "height": 217.765625,
+          "right": 627.796875,
+          "bottom": 380
+        },
+        "bottomPhoto": {
+          "x": 284.984375,
+          "y": 483.6611328125,
+          "width": 439.03125,
+          "height": 152.484375,
+          "right": 724.015625,
+          "bottom": 636.1455078125
+        },
+        "composition": {
+          "x": 0,
+          "y": -208.53125,
+          "width": 1009,
+          "height": 771.0625,
+          "right": 1009,
+          "bottom": 562.53125
+        },
+        "hit": true,
+        "receiver": "<button class=\"pill pill--primary \" type=\"button\" data-enquire=\"The residences\">Register your interest<img class=\"star\" src=\"/assets/catalogue-imgBrandStar.svg\" alt=\"\" width=\"14\" height=\"15\"></button>",
+        "nativeClick": true
+      },
+      {
+        "width": 1100,
+        "scrollY": 3091,
+        "button": {
+          "x": 442.078125,
+          "y": 405.6875,
+          "width": 200.8125,
+          "height": 46,
+          "right": 642.890625,
+          "bottom": 451.6875
+        },
+        "copy": {
+          "x": 336.046875,
+          "y": -59.90625,
+          "width": 412.890625,
+          "height": 557.421875,
+          "right": 748.9375,
+          "bottom": 497.515625
+        },
+        "text": {
+          "x": 409.890625,
+          "y": 180.21875,
+          "width": 265.1875,
+          "height": 197.96875,
+          "right": 675.078125,
+          "bottom": 378.1875
+        },
+        "bottomPhoto": {
+          "x": 306.453125,
+          "y": 485.4586181640625,
+          "width": 472.09375,
+          "height": 163.8125,
+          "right": 778.546875,
+          "bottom": 649.2711181640625
+        },
+        "composition": {
+          "x": 0,
+          "y": -218.03125,
+          "width": 1085,
+          "height": 788.890625,
+          "right": 1085,
+          "bottom": 570.859375
+        },
+        "hit": true,
+        "receiver": "<button class=\"pill pill--primary \" type=\"button\" data-enquire=\"The residences\">Register your interest<img class=\"star\" src=\"/assets/catalogue-imgBrandStar.svg\" alt=\"\" width=\"14\" height=\"15\"></button>",
+        "nativeClick": true
+      }
+    ],
+    "selectedCapture": {
+      "passed": true,
+      "apiRequests": 0,
+      "pageErrors": [],
+      "startedAt": "2026-11-01T15:44:20.313Z",
+      "finishedAt": "2026-11-01T15:44:42.574Z"
+    }
+  },
+  "adjudications": [
+    "Original broad menu assertion rejected native Tab focus to browser chrome. Corrected trace requires modal state, rejects background DOM focus and proves BODY occurs only with document.hasFocus=false. All seven menu/anchor cases rerun.",
+    "A fixed 1100ms wait observed landscape Contacts before native smooth scrolling finished. Settled-scroll polling passes all seven sizes; no product anchor patch.",
+    "Initial catalogue-empty screenshots showed the previous viewport because selectOption does not scroll the page. All catalogue states reshot with the actual result in view.",
+    "Final 320px catalogue padding and success-scroll reset were found by screenshot review after the broad matrix. Final source check/build, existing e2e, six width/engine checks, fourteen Chromium affected state groups, two WebKit affected groups and all six selected screenshots were rerun. Unaffected gallery/reading/native-close/route cases retain their explicitly named prior reports.",
+    "Resize geometry assertions wait two animation frames; immediate computed style can expose the old value during the existing .01ms reduced-motion CSS transition."
+  ],
+  "forms": "All current enquiry requests mocked or blocked; no real submission, Blob receipt, CRM or email test. Historical storage evidence belongs to prior releases.",
+  "limitations": [
+    "No physical Safari/iOS certification",
+    "No FPS or INP measurement",
+    "No promise of exact pixel equality for every animated frame",
+    "Source photography resolution and supplied inventory remain bounded by provided assets",
+    "Production deployment and live acceptance are owned by root release report"
+  ],
+  "screenshots": [
+    {
+      "name": "hero-desktop1440",
+      "engine": "chromium",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "route": "/",
+      "browserVersion": "145.0.7632.6",
+      "file": "hero-desktop1440.jpg",
+      "geometry": {
+        "width": 1440,
+        "height": 900,
+        "scrollY": 0,
+        "documentWidth": 1425,
+        "clientWidth": 1440
+      },
+      "sha256": "7f8ff63a970505dc25ef583fca7b628ad0c003e765c5622c14617474d0e9efc1",
+      "rawArtifact": "artifacts/pixel-audit-20261101-v2/selected-final/hero-desktop1440.png"
+    },
+    {
+      "name": "collage-tablet844",
+      "engine": "chromium",
+      "viewport": {
+        "width": 844,
+        "height": 900
+      },
+      "route": "/",
+      "selector": ".reside-copy",
+      "browserVersion": "145.0.7632.6",
+      "file": "collage-tablet844.jpg",
+      "geometry": {
+        "width": 844,
+        "height": 900,
+        "scrollY": 2499,
+        "documentWidth": 838,
+        "clientWidth": 844
+      },
+      "sha256": "a028140bc01411ea8c44a46eb8f983375f33f956262eb2a685caccf0a4d3ea6b",
+      "rawArtifact": "artifacts/pixel-audit-20261101-v2/selected-final/collage-tablet844.png"
+    },
+    {
+      "name": "catalogue-mobile320",
+      "engine": "chromium",
+      "viewport": {
+        "width": 320,
+        "height": 740
+      },
+      "route": "/",
+      "selector": ".unit-summary",
+      "browserVersion": "145.0.7632.6",
+      "file": "catalogue-mobile320.jpg",
+      "geometry": {
+        "width": 320,
+        "height": 740,
+        "scrollY": 9536,
+        "documentWidth": 305,
+        "clientWidth": 320
+      },
+      "sha256": "fb3b9ef5b674a8dfbada188bf52de1a41dffc5de8267e6569c256451a63233a7",
+      "rawArtifact": "artifacts/pixel-audit-20261101-v2/selected-final/catalogue-mobile320.png"
+    },
+    {
+      "name": "plan-desktop1440",
+      "engine": "chromium",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "route": "/residences/3402/",
+      "plan": true,
+      "browserVersion": "145.0.7632.6",
+      "file": "plan-desktop1440.jpg",
+      "geometry": {
+        "width": 1440,
+        "height": 900,
+        "scrollY": 0,
+        "documentWidth": 1425,
+        "clientWidth": 1440
+      },
+      "sha256": "49038f5dec666aa859dd442ee668651b7f09f587b94c317ee55ea198561ba398",
+      "rawArtifact": "artifacts/pixel-audit-20261101-v2/selected-final/plan-desktop1440.png"
+    },
+    {
+      "name": "gallery-motion-mobile390",
+      "engine": "webkit",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "route": "/",
+      "gallery": true,
+      "browserVersion": "26.0",
+      "before": {
+        "top": 0.109375,
+        "imageOpacity": 1,
+        "currentSrc": "http://127.0.0.1:14322/assets/interiorMiddle-imgRectangle5.webp",
+        "naturalWidth": 949,
+        "naturalHeight": 632,
+        "selected": "false",
+        "counter": "2 / 3",
+        "bodyOverflow": "visible",
+        "htmlOverflow": "visible"
+      },
+      "reduced": {
+        "top": 0.109375,
+        "imageOpacity": 1,
+        "currentSrc": "http://127.0.0.1:14322/assets/interiorMiddle-imgRectangle5.webp",
+        "naturalWidth": 949,
+        "naturalHeight": 632,
+        "selected": "false",
+        "counter": "2 / 3",
+        "bodyOverflow": "visible",
+        "htmlOverflow": "visible"
+      },
+      "after": {
+        "top": 0.109375,
+        "imageOpacity": 1,
+        "currentSrc": "http://127.0.0.1:14322/assets/interiorMiddle-imgRectangle5.webp",
+        "naturalWidth": 949,
+        "naturalHeight": 632,
+        "selected": "false",
+        "counter": "2 / 3",
+        "bodyOverflow": "visible",
+        "htmlOverflow": "visible"
+      },
+      "file": "gallery-motion-mobile390.jpg",
+      "geometry": {
+        "width": 390,
+        "height": 844,
+        "scrollY": 10105,
+        "documentWidth": 390,
+        "clientWidth": 390
+      },
+      "sha256": "48a3c1bb196288e0de20286e00bf5167f9f2184f28fc7d03b945672876d801e2",
+      "rawArtifact": "artifacts/pixel-audit-20261101-v2/selected-final/gallery-motion-mobile390.png"
+    },
+    {
+      "name": "enquiry-mobile320",
+      "engine": "webkit",
+      "viewport": {
+        "width": 320,
+        "height": 740
+      },
+      "route": "/",
+      "form": {
+        "context": "General enquiry",
+        "scroll": [
+          0
+        ],
+        "opacity": "1",
+        "close": {
+          "x": 248,
+          "y": 28,
+          "width": 44,
+          "height": 44,
+          "top": 28,
+          "right": 292,
+          "bottom": 72,
+          "left": 248
+        }
+      },
+      "browserVersion": "26.0",
+      "file": "enquiry-mobile320.jpg",
+      "geometry": {
+        "width": 320,
+        "height": 740,
+        "scrollY": 0,
+        "documentWidth": 320,
+        "clientWidth": 320
+      },
+      "sha256": "94932a4e22f66cbbe55710c243cfcbe3e09668b43fc9aaf8ba19d059d0769e94",
+      "rawArtifact": "artifacts/pixel-audit-20261101-v2/selected-final/enquiry-mobile320.png"
+    }
+  ],
+  "releaseReport": "https://github.com/IMONsergey/LuxuryRealty/blob/main/docs/MOTION-RELEASE-2026-11-01.md"
+}

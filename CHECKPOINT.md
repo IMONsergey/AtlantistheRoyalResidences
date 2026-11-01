@@ -75,3 +75,10 @@ The viewer now decodes a replacement before committing the image/alt/caption/cou
 This correction is locally verified source for the current continuation, not a publication claim. Typecheck, production build, the existing Chromium browser suite and the focused Chromium/WebKit lightbox suite passed on the final source. The focused suite made zero API requests and reported zero page errors. The existing suite used mocked enquiry responses. Validation used Node 24.22.1 and the available Playwright 1.58.2 runtime; the repository's Playwright 1.62.1 declaration and lockfile were not changed. Build dependencies matched the pinned Astro/GSAP/TypeScript versions.
 
 Exact scope and commands are appended to `docs/MOTION-QA-2026-11-01.md`. Final commit/deployment/live acceptance belongs in the [release report](https://github.com/IMONsergey/LuxuryRealty/blob/main/docs/MOTION-RELEASE-2026-11-01.md), which supersedes handoff status after publication.
+
+
+## 2026-11-01: второй визуальный проход
+
+Продолжение после UI `6de8339`: SVG вместо текстовых управляющих символов, reading continuity, gallery error/retry и WebKit opacity, native Close/reopen/success scroll, tablet collage CTA и узкие значения площади. Локальная проверка завершена и исходники заморожены для передачи владельцу релиза. Область, реальные before/after дефекты, результаты и ограничения находятся в [VISUAL-AUDIT-2026-11-01](docs/VISUAL-AUDIT-2026-11-01.md); fingerprint и шесть окончательных кадров в `docs/verification/design-2026-11-01/`.
+
+Окончательный commit/deployment и независимая production приемка: [общий MOTION-RELEASE-2026-11-01](https://github.com/IMONsergey/LuxuryRealty/blob/main/docs/MOTION-RELEASE-2026-11-01.md). Эта запись описывает локальную передачу, не заявляет самостоятельную публикацию. Исторические server/API проверки выше сохраняются; текущие enquiries только mocked/blocked.

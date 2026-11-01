@@ -1,0 +1,11 @@
+---
+// Arrow contour from public/assets/catalogue-imgVector384.svg.
+interface Props { name: 'arrow-left' | 'arrow-right' | 'arrow-up-right' | 'close' | 'plus' | 'minus' | 'menu'; size?: number; class?: string; }
+const {name,size=20,class:className=''}=Astro.props;
+const arrow=name.startsWith('arrow-');
+const rotation=name==='arrow-left'?-45:name==='arrow-right'?135:90;
+---
+<svg class:list={['ui-icon',className]} xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox={arrow?'-1.25 -1.25 9.01213 9.01213':'0 0 24 24'} fill="none" aria-hidden="true" focusable="false">
+ {arrow ? <g transform={`rotate(${rotation} 3.256065 3.256065)`}><path d="M6.3 6.3L0.3 0.3M5.8 0.3H0.3V5.8" stroke="currentColor" stroke-width=".6"/></g> : <path d={name==='close'?'M6 6l12 12M18 6 6 18':name==='plus'?'M5 12h14M12 5v14':name==='minus'?'M5 12h14':'M4 6h16M4 12h16M4 18h16'} stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>}
+</svg>
+<style>.ui-icon{display:inline-block;flex:none;vertical-align:middle;pointer-events:none}</style>

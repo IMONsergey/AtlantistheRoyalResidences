@@ -8,13 +8,18 @@ const dialogs = $$<HTMLDialogElement>('dialog');
 let lastFocus: HTMLElement|null = null;
 
 function syncScrollLock(){document.body.classList.toggle('has-dialog',dialogs.some(dialog=>dialog.open));}
+function resetDialogScroll(dialog:HTMLDialogElement){dialog.querySelectorAll<HTMLElement>('[data-dialog-scroll]').forEach(scroller=>{scroller.scrollTop=0;});}
 function openDialog(dialog:HTMLDialogElement,trigger?:HTMLElement){
   const origin=trigger||document.activeElement as HTMLElement;
   const parentDialog=origin?.closest('dialog[open]');
   // Menu-to-enquiry transitions return to the visible menu button, not a hidden menu item.
   if(!parentDialog||parentDialog===dialog)lastFocus=origin;
   dialogs.forEach(other=>{if(other!==dialog&&other.open)other.close();});
-  if(!dialog.open) dialog.showModal();
+  if(!dialog.open){
+    dialog.showModal();
+    // Begin a new dialog view at its heading without changing form or request state.
+    resetDialogScroll(dialog);
+  }
   syncScrollLock();
 }
 dialogs.forEach(dialog=>{
@@ -100,7 +105,7 @@ form.addEventListener('submit',async event=>{
       if(result.fields)Object.entries(result.fields).forEach(([field,message])=>setFieldError(field,message));
       throw new Error(result.error||'Your enquiry could not be sent. Please try again.');
     }
-    submitted=true;formContent.hidden=true;success.hidden=false;success.focus();
+    submitted=true;formContent.hidden=true;success.hidden=false;success.focus({preventScroll:true});resetDialogScroll(enquiry);
   }catch(error){
     const message=error instanceof Error?(error.name==='AbortError'?'The request took too long. Your details are still here. Please try again.':error.message):'Connection unavailable. Your details are still here. Please try again.';
     formMessage.textContent=message==='Failed to fetch'?'Connection unavailable. Your details are still here. Please try again.':message;
@@ -206,7 +211,10 @@ $$<HTMLElement>('[data-slider]').forEach(slider=>{
   let current=0;let displayed=0;let requestId=0;
   let gesture:{id:number;x:number;y:number}|null=null;
   let suppressClick=false;
+  let transition:gsap.core.Tween|null=null;
   function settle(index:number){
+    // Finish this exact fromTo before killing it, including its deferred start state.
+    transition?.progress(1,true).kill();transition=null;
     gsap.killTweensOf(slides);
     slides.forEach((slide,i)=>{
       slide.hidden=i!==index;slide.inert=i!==index;
@@ -217,10 +225,15 @@ $$<HTMLElement>('[data-slider]').forEach(slider=>{
   async function show(index:number){
     current=(index+slides.length)%slides.length;
     const next=current;const id=++requestId;
-    const image=$<HTMLImageElement>('img',slides[next]);
+    const originalImage=$<HTMLImageElement>('img',slides[next]);
+    // A fresh element retries a failed request without changing srcset or its crop.
+    // Attach it only when the latest request has decoded successfully.
+    const image=originalImage?.complete&&!originalImage.naturalWidth&&originalImage.currentSrc
+      ? originalImage.cloneNode(false) as HTMLImageElement : originalImage;
     if(image){image.loading='eager';await image.decode().catch(()=>undefined);}
     if(id!==requestId)return;
-    if(image&&!image.naturalWidth){current=displayed;settle(displayed);return;}
+    if(image&&!image.naturalWidth){settle(displayed);return;}
+    if(image&&originalImage&&image!==originalImage)originalImage.replaceWith(image);
     settle(displayed);
     dots.forEach((dot,i)=>dot.setAttribute('aria-current',String(i===next)));
     if(counter)counter.textContent=`${next+1} / ${slides.length}`;
@@ -233,7 +246,7 @@ $$<HTMLElement>('[data-slider]').forEach(slider=>{
     incoming.style.zIndex='1';
     // Fade the decoded image over an opaque previous frame, without a background flash.
     if(reduceMotion.matches){settle(next);return;}
-    gsap.fromTo(incoming,{opacity:0},{opacity:1,duration:.45,ease:'power1.out',overwrite:true,onComplete:()=>{if(id===requestId)settle(next);}});
+    transition=gsap.fromTo(incoming,{opacity:0},{opacity:1,duration:.45,ease:'power1.out',overwrite:true,onComplete:()=>{if(id===requestId)settle(next);}});
   }
   $('[data-prev]',slider)?.addEventListener('click',()=>{void show(current-1);});
   $('[data-next]',slider)?.addEventListener('click',()=>{void show(current+1);});
@@ -297,7 +310,66 @@ if(filters){
   applyFilters();
 }
 
+// ScrollTrigger clears its recorded scroll when the last trigger is removed.
+// Preserve a reading anchor around its matchMedia transaction, including pin cleanup.
+// These runtime hooks are used by ScrollTrigger but omitted from GSAP's bundled types.
+const motionLifecycle = gsap as typeof gsap & {
+  addEventListener(type: 'matchMediaInit' | 'matchMedia', listener: () => void): void;
+};
+type MotionPosition = { anchor: HTMLElement | null; top: number; y: number; width: number; height: number };
+function readMotionPosition(): MotionPosition {
+  const readingLine = window.innerHeight * .35;
+  const sections = [...document.querySelectorAll<HTMLElement>('main section')];
+  const anchor = sections.findLast(element => {
+    const rect = element.getBoundingClientRect();
+    return rect.top <= readingLine && rect.bottom > readingLine;
+  }) || null;
+  return { anchor, top: anchor?.getBoundingClientRect().top || 0, y: window.scrollY, width: innerWidth, height: innerHeight };
+}
+let stableMotionPosition = readMotionPosition();
+let motionPosition: MotionPosition | null = null;
+let positionFrame = 0;
+window.addEventListener('scroll', () => {
+  if (positionFrame || motionPosition) return;
+  positionFrame = requestAnimationFrame(() => {
+    positionFrame = 0;
+    // Resize can clamp scroll before its media-query event. Keep the old anchor.
+    if (!motionPosition && stableMotionPosition.width === innerWidth && stableMotionPosition.height === innerHeight) {
+      stableMotionPosition = readMotionPosition();
+    }
+  });
+}, { passive: true });
+window.addEventListener('resize', () => {
+  cancelAnimationFrame(positionFrame);
+  positionFrame = requestAnimationFrame(() => {
+    positionFrame = 0;
+    if (!motionPosition) stableMotionPosition = readMotionPosition();
+  });
+}, { passive: true });
+motionLifecycle.addEventListener('matchMediaInit', () => {
+  cancelAnimationFrame(positionFrame); positionFrame = 0;
+  motionPosition = stableMotionPosition.width !== innerWidth || stableMotionPosition.height !== innerHeight
+    ? stableMotionPosition : readMotionPosition();
+});
 gsap.registerPlugin(ScrollTrigger);
+// This listener follows ScrollTrigger's refresh. No delayed correction or smooth scroll.
+motionLifecycle.addEventListener('matchMedia', () => {
+  if (!motionPosition) return;
+  const { anchor, top, y, width, height } = motionPosition;
+  const resized = width !== innerWidth || height !== innerHeight;
+  let next = y;
+  if (y < 1) next = 0;
+  else if (anchor?.isConnected) {
+    const rect = anchor.getBoundingClientRect();
+    // Keep the reading probe inside this section after subpixel scroll rounding.
+    const readingTop = resized ? Math.max(top, Math.min(0, innerHeight * .35 + 2 - rect.height)) : top;
+    next = window.scrollY + rect.top - readingTop;
+  }
+  window.scrollTo({ top: Math.max(0, next), behavior: 'instant' });
+  ScrollTrigger.update();
+  motionPosition = null;
+  stableMotionPosition = readMotionPosition();
+});
 const motion=gsap.matchMedia();
 motion.add({desktop:'(min-width: 801px)',motion:'(prefers-reduced-motion: no-preference)',fine:'(pointer: fine)'},context=>{
   const conditions=context.conditions as Record<string,boolean>;
