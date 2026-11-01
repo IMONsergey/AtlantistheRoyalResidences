@@ -1,4 +1,5 @@
 ---
+import ResponsiveImage from './ResponsiveImage.astro';
 import assets from '../data/assets.json';
 import Button from './Button.astro';
 const a=(key:string)=>(assets as Record<string,string>)[`footer.${key}`];
@@ -14,9 +15,9 @@ const a=(key:string)=>(assets as Record<string,string>)[`footer.${key}`];
  </div>
  <div class="dream-heading"><p class="editorial" data-reveal>Live the dream</p><h2 class="display" id="dream-title" data-reveal>Today, tomorrow<br/>or forever</h2></div>
  <div id="contacts" class="contact-cards section-anchor">
-  <article class="resource-card" data-reveal><img class="resource-image" src={a('imgRectangle155')} alt="Atlantis The Royal Residences presentation cover" width="410" height="205" loading="lazy"/><div class="card-content"><h3 class="display">Presentation<br/>deck</h3><p>Explore the content about Dubai’s most luxurious residences.</p><Button label="Request presentation" context="Presentation deck request" variant="outline"/></div></article>
+  <article class="resource-card" data-reveal><ResponsiveImage class="resource-image" src={a('imgRectangle155')} alt="Atlantis The Royal Residences presentation cover" width="410" height="205" loading="lazy" sizes="(max-width: 800px) min(480px, calc(100vw - 48px)), (max-width: 1200px) calc((89.5833vw - 40px) / 3), calc((89.5833vw - 60px) / 3)"/><div class="card-content"><h3 class="display">Presentation<br/>deck</h3><p>Explore the content about Dubai’s most luxurious residences.</p><Button label="Request presentation" context="Presentation deck request" variant="outline"/></div></article>
   <article class="consultation-card" data-reveal><img class="portrait" src={a('imgEllipse20')} alt="Residence consultation" width="151" height="151" loading="lazy"/><h3 class="display">Get a<br/>consultation<br/>with an expert</h3><p>Tell us what you are looking for.<br/>Register your interest for more information.</p><Button label="Register your interest" context="Residence consultation"/></article>
-  <article class="resource-card" data-reveal><img class="resource-image" src={a('imgRectangle156')} alt="The residence floor plans catalogue" width="410" height="205" loading="lazy"/><div class="card-content"><h3 class="display">Floor plans<br/>catalogue</h3><p>Explore the layout options<br/>and residence details.</p><Button label="Request catalogue" context="Floor plans catalogue request" variant="outline"/></div></article>
+  <article class="resource-card" data-reveal><ResponsiveImage class="resource-image" src={a('imgRectangle156')} alt="The residence floor plans catalogue" width="410" height="205" loading="lazy" sizes="(max-width: 800px) min(480px, calc(100vw - 48px)), (max-width: 1200px) calc((89.5833vw - 40px) / 3), calc((89.5833vw - 60px) / 3)"/><div class="card-content"><h3 class="display">Floor plans<br/>catalogue</h3><p>Explore the layout options<br/>and residence details.</p><Button label="Request catalogue" context="Floor plans catalogue request" variant="outline"/></div></article>
  </div>
  <footer class="site-footer"><div class="footer-links"><a href="/">Atlantis The Royal Residences, Dubai</a><a href="/privacy/">Privacy notice</a></div><a class="footer-logo" style={`--mask:url('${a('imgRectangle145')}')`} href="/" aria-label="Atlantis The Royal Residences, home"></a><p>Copyright © {new Date().getFullYear()}. All rights reserved.</p></footer>
 </section>

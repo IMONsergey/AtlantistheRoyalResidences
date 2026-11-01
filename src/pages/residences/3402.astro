@@ -1,4 +1,5 @@
 ---
+import ResponsiveImage from '../../components/ResponsiveImage.astro';
 import Layout from '../../layouts/Layout.astro';
 import Header from '../../components/Header.astro';
 import Button from '../../components/Button.astro';
@@ -15,7 +16,7 @@ const photos=[{src:a['unit.imgOpenInterior1'],alt:'Bedroom and sitting area with
    <section class="unit-information" aria-labelledby="unit-title">
     <h1 id="unit-title" class="display">Unit: {residence.id}</h1>
     <p class="unit-type">{residence.bedrooms} bedroom {residence.type}</p>
-    <div class="unit-photos">{photos.map((photo,index)=><button type="button" data-lightbox={photo.src} data-gallery="unit-interiors" data-caption={photo.alt} class:list={['photo-thumb',{'photo-thumb--third':index===2}]} aria-label={`View interior photograph ${index+1} of 3`}><img src={photo.src} width="2880" height="1920" alt={photo.alt} loading={index===0?'eager':'lazy'}/>{index===1&&<span aria-hidden="true">3 photos ↗</span>}</button>)}</div>
+    <div class="unit-photos">{photos.map((photo,index)=><button type="button" data-lightbox={photo.src} data-gallery="unit-interiors" data-caption={photo.alt} class:list={['photo-thumb',{'photo-thumb--third':index===2}]} aria-label={`View interior photograph ${index+1} of 3`}>{index===2?<img src={photo.src} width="2880" height="1920" alt={photo.alt} loading={index===0?'eager':'lazy'}/>:<ResponsiveImage src={photo.src} width="2880" height="1920" alt={photo.alt} loading={index===0?'eager':'lazy'} sizes="(max-width: 800px) max(228px, min(295px, calc(50vw - 29px))), 260px"/>}{index===1&&<span aria-hidden="true">3 photos ↗</span>}</button>)}</div>
     <dl class="unit-areas"><div><dt>Total area</dt><dd>{residence.totalArea}</dd></div><div><dt>Balcony</dt><dd>{residence.balcony}</dd></div></dl>
     <table class="room-table"><caption class="sr-only">Room dimensions, metric and imperial</caption><thead class="sr-only"><tr><th scope="col">Room</th><th scope="col">Metric dimensions</th><th scope="col">Imperial dimensions</th></tr></thead><tbody>{residence.rooms.map(([room,metric,imperial])=><tr><th scope="row">{room}</th><td>{metric}</td><td>{imperial}</td></tr>)}</tbody></table>
     <div class="unit-actions"><Button label="Register your interest" context="Unit 3402 interest"/><Button label="Request payment plan" context="Unit 3402 payment plan request" variant="outline"/></div>

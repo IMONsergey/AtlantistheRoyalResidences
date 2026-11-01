@@ -1,4 +1,5 @@
 ---
+import ResponsiveImage from './ResponsiveImage.astro';
 import assets from '../data/assets.json';
 import Button from './Button.astro';
 const a=(key:string)=>(assets as Record<string,string>)[`location.${key}`];
@@ -11,23 +12,23 @@ const a=(key:string)=>(assets as Record<string,string>)[`location.${key}`];
   <div class="address" data-reveal><img class="address-marker" src={a('imgRectangle108')} width="21" height="21" alt="" loading="lazy"/><p>The address for Atlantis The Royal Residences is <span>Crescent Road, The Palm, Dubai, United Arab Emirates.</span> It is located on the crescent of The Palm Jumeirah, next to the existing Atlantis resort.</p><a class="link-line" href="https://www.google.com/maps/search/?api=1&query=Atlantis+The+Royal+Residences+Dubai" target="_blank" rel="noopener noreferrer">Open location ↗</a></div>
   <blockquote class="dubai-story" data-reveal><img src={a('imgQuoteRightSvgrepoCom1')} width="28" height="28" alt="" loading="lazy"/><p>When <em>Greek philosopher Plato</em> described the citizens of ancient Atlantis as great and prosperous people, he was also foretelling the story of modern Dubai. Today, the 200 nationalities living and working in the city confirm its status as a <em>vibrant global destination.</em> The arrival of Atlantis, The Royal Resort &amp; Residences will continue to grow the city’s enduring appeal to <em>discerning world citizens.</em></p></blockquote>
   <div class="map-composition"><div class="map-art" style={`--mask:url('${a('imgShutterstock20871900491')}')`}><img src={a('imgShutterstock20871900492')} alt="Illustrated aerial view of Palm Jumeirah and the Dubai coastline" loading="lazy" width="2116" height="1190"/></div>
-  <div class="map-marker map-marker--royal" aria-hidden="true"><img class="marker-shape" src={a('imgRectangle107')} width="128" height="128" alt="" loading="lazy"/><span><img src={a('img121')} alt="" loading="lazy" width="218" height="155"/></span></div>
-  <div class="map-marker map-marker--palm" aria-hidden="true"><img class="marker-palm" src={a('imgGroup1000003297')} width="116" height="116" alt="" loading="lazy"/><span><img src={a('imgImage4')} alt="" loading="lazy" width="97" height="61"/></span></div></div>
+  <div class="map-marker map-marker--royal" aria-hidden="true"><img class="marker-shape" src={a('imgRectangle107')} width="128" height="128" alt="" loading="lazy"/><span><ResponsiveImage src={a('img121')} alt="" loading="lazy" width="218" height="155" sizes="(max-width: 800px) 60px, 15.1322vw"/></span></div>
+  <div class="map-marker map-marker--palm" aria-hidden="true"><img class="marker-palm" src={a('imgGroup1000003297')} width="116" height="116" alt="" loading="lazy"/><span><ResponsiveImage src={a('imgImage4')} alt="" loading="lazy" width="97" height="61" sizes="(max-width: 800px) 27px, 6.7363vw"/></span></div></div>
  </div>
  <div class="ascent" data-scene="ascent">
   <div class="ascent-sky" aria-hidden="true"></div>
-  <img class="cloud cloud--one" src={a('imgImage7')} alt="" loading="lazy" width="1744" height="603"/>
-  <img class="cloud cloud--two" src={a('imgImage7')} alt="" loading="lazy" width="1744" height="603"/>
-  <img class="cloud cloud--three" src={a('imgImage7')} alt="" loading="lazy" width="1744" height="603"/>
-  <img class="cloud cloud--four" src={a('imgImage7')} alt="" loading="lazy" width="1442" height="498"/>
+  <ResponsiveImage class="cloud cloud--one" src={a('imgImage7')} alt="" loading="lazy" width="1744" height="603" sizes="(max-width: 800px) 920px, 121.14vw"/>
+  <ResponsiveImage class="cloud cloud--two" src={a('imgImage7')} alt="" loading="lazy" width="1744" height="603" sizes="(max-width: 800px) 920px, 121.14vw"/>
+  <ResponsiveImage class="cloud cloud--three" src={a('imgImage7')} alt="" loading="lazy" width="1744" height="603" sizes="(max-width: 800px) 920px, 121.14vw"/>
+  <ResponsiveImage class="cloud cloud--four" src={a('imgImage7')} alt="" loading="lazy" width="1442" height="498" sizes="(max-width: 800px) 920px, 100.13vw"/>
   <p class="ascent-kicker editorial" data-reveal>Residences soaring over</p>
   <h2 class="ascent-height display" data-reveal><span>150</span><span>metres</span></h2>
   <p class="ascent-caption" data-reveal>Above the sea<br/>An ideal society, likely<br/><em>to be most perfect</em></p>
-  <div class="building-elevation" data-parallax="-4"><img src={a('img31')} alt="The Royal Residences rising above the beachfront" width="1476" height="1656" loading="lazy"/></div>
+  <div class="building-elevation" data-parallax="-4"><ResponsiveImage src={a('img31')} alt="The Royal Residences rising above the beachfront" width="1476" height="1656" loading="lazy" sizes="(max-width: 800px) 779px, 102.5vw"/></div>
   <img class="building-emblem" src={a('imgGroup1000003337')} alt="" width="99" height="87" loading="lazy"/>
   <div class="ascent-ocean" style={`--mask:url('${a('imgShutterstock17915352412')}');--wave-mask:url('${a('imgShutterstock17915352413')}')`} aria-hidden="true"><img src={a('imgShutterstock17915352414')} alt="" loading="lazy" width="3615" height="1327"/></div>
   <div class="ocean-tint" style={`--mask:url('${a('imgShutterstock17915352412')}');--wave-mask:url('${a('imgRectangle137')}')`} aria-hidden="true"></div>
-  <div class="shore-overlay" style={`--mask:url('${a('img32')}')`} aria-hidden="true"><img src={a('img31')} alt="" loading="lazy" width="1476" height="1656"/></div>
+  <div class="shore-overlay" style={`--mask:url('${a('img32')}')`} aria-hidden="true"><ResponsiveImage src={a('img31')} alt="" loading="lazy" width="1476" height="1656" sizes="(max-width: 800px) 779px, 102.5vw"/></div>
   <div class="invitation" data-reveal>
    <img class="invitation-shape" src={a('imgExclude')} width="661" height="587" alt="" loading="lazy"/>
    <p class="eyebrow">The residences</p>

@@ -1,0 +1,118 @@
+[
+  {
+    "src": "/assets/beach-imgImage26.webp",
+    "kind": "photo"
+  },
+  {
+    "src": "/assets/footer-imgRectangle155.webp",
+    "kind": "photo"
+  },
+  {
+    "src": "/assets/footer-imgRectangle156.webp",
+    "kind": "photo"
+  },
+  {
+    "src": "/assets/hero-imgImage1.webp",
+    "kind": "photo"
+  },
+  {
+    "src": "/assets/hero-imgImage2.webp",
+    "kind": "photo"
+  },
+  {
+    "src": "/assets/hero-imgImage3.webp",
+    "kind": "photo"
+  },
+  {
+    "src": "/assets/hero-imgImage4.webp",
+    "kind": "photo"
+  },
+  {
+    "src": "/assets/highlightPool-imgImage.webp",
+    "kind": "photo"
+  },
+  {
+    "src": "/assets/highlightSpace-img4.webp",
+    "kind": "photo"
+  },
+  {
+    "src": "/assets/interiorLast-imgRectangle6.webp",
+    "kind": "photo"
+  },
+  {
+    "src": "/assets/interiorMiddle-imgRectangle5.webp",
+    "kind": "photo"
+  },
+  {
+    "src": "/assets/location-img121.webp",
+    "kind": "photo",
+    "widths": [
+      320,
+      640,
+      960
+    ]
+  },
+  {
+    "src": "/assets/location-img31.webp",
+    "kind": "photo"
+  },
+  {
+    "src": "/assets/location-imgImage4.webp",
+    "kind": "photo",
+    "widths": [
+      320,
+      640,
+      960
+    ]
+  },
+  {
+    "src": "/assets/location-imgImage7.webp",
+    "kind": "artwork"
+  },
+  {
+    "src": "/assets/originCollage-imgImage1.webp",
+    "kind": "photo"
+  },
+  {
+    "src": "/assets/originCollage-imgRectangle11.webp",
+    "kind": "photo"
+  },
+  {
+    "src": "/assets/originCollage-imgRectangle12.webp",
+    "kind": "photo"
+  },
+  {
+    "src": "/assets/originCollage-imgRectangle13.webp",
+    "kind": "photo"
+  },
+  {
+    "src": "/assets/originCollage-imgRectangle5.webp",
+    "kind": "photo"
+  },
+  {
+    "src": "/assets/originCollage-imgRectangle7.webp",
+    "kind": "photo"
+  },
+  {
+    "src": "/assets/originCollage-imgRectangle9.webp",
+    "kind": "photo"
+  },
+  {
+    "src": "/assets/unit-imgOpenInterior1.webp",
+    "kind": "photo",
+    "widths": [
+      320,
+      640,
+      960
+    ]
+  },
+  {
+    "src": "/assets/unit-imgOpenInterior2.webp",
+    "kind": "photo",
+    "widths": [
+      320,
+      640,
+      960
+    ]
+  }
+]

@@ -117,10 +117,29 @@ const caption=$<HTMLElement>('#media-caption',media)!;
 const zoomToolbar=$<HTMLElement>('[data-zoom-toolbar]',media)!;
 const galleryControls=$<HTMLElement>('[data-media-gallery]',media)!;
 let gallery:GalleryItem[]=[];let galleryIndex=0;let scale=1;let fitWidth=0;let isPlan=false;
-function resetZoom(){scale=1;media.classList.remove('is-zoomed');mediaImage.style.width='';mediaImage.style.height='';viewport.scrollTo(0,0);$('[data-zoom-value]',media)!.textContent='100%';}
+function resetZoom(){scale=1;fitWidth=0;media.classList.remove('is-zoomed');mediaImage.style.width='';mediaImage.style.height='';viewport.scrollTo(0,0);$('[data-zoom-value]',media)!.textContent='100%';updateZoomControls();}
+function updateZoomControls(){const minus=$<HTMLButtonElement>('[data-zoom-out]',media),plus=$<HTMLButtonElement>('[data-zoom-in]',media);if(minus)minus.disabled=scale<=1;if(plus)plus.disabled=scale>=4;}
+function fittedWidth(){return Math.min(mediaImage.naturalWidth||viewport.clientWidth,viewport.clientWidth,viewport.clientHeight*(mediaImage.naturalWidth/(mediaImage.naturalHeight||1)));}
 function renderImage(){resetZoom();fitWidth=0;const item=gallery[galleryIndex];mediaImage.src=item.src;mediaImage.alt=item.caption;caption.textContent=item.caption;$('[data-media-count]',media)!.textContent=`${galleryIndex+1} / ${gallery.length}`;}
-function zoomTo(next:number){if(!isPlan)return;const previous=scale;scale=Math.min(4,Math.max(1,next));if(!fitWidth)fitWidth=mediaImage.clientWidth;if(scale===1){resetZoom();return;}media.classList.add('is-zoomed');mediaImage.style.width=`${fitWidth*scale}px`;mediaImage.style.height='auto';$('[data-zoom-value]',media)!.textContent=`${Math.round(scale*100)}%`;viewport.scrollLeft=(viewport.scrollLeft+viewport.clientWidth/2)*scale/previous-viewport.clientWidth/2;viewport.scrollTop=(viewport.scrollTop+viewport.clientHeight/2)*scale/previous-viewport.clientHeight/2;}
-mediaImage.addEventListener('load',()=>{if(scale===1)fitWidth=mediaImage.clientWidth;});
+function zoomTo(next:number){
+  if(!isPlan||!mediaImage.naturalWidth)return;
+  const previous=scale;scale=Math.min(4,Math.max(1,next));
+  if(!fitWidth)fitWidth=fittedWidth();
+  if(scale===1){resetZoom();return;}
+  const ratio=mediaImage.naturalWidth/mediaImage.naturalHeight;
+  const previousWidth=fitWidth*previous,previousHeight=previousWidth/ratio;
+  const focusX=(viewport.scrollLeft+viewport.clientWidth/2-Math.max(0,(viewport.clientWidth-previousWidth)/2))/previousWidth;
+  const focusY=(viewport.scrollTop+viewport.clientHeight/2-Math.max(0,(viewport.clientHeight-previousHeight)/2))/previousHeight;
+  const width=fitWidth*scale,height=width/ratio;
+  media.classList.add('is-zoomed');mediaImage.style.width=`${width}px`;mediaImage.style.height='auto';
+  $('[data-zoom-value]',media)!.textContent=`${Math.round(scale*100)}%`;
+  viewport.scrollLeft=focusX*width+Math.max(0,(viewport.clientWidth-width)/2)-viewport.clientWidth/2;
+  viewport.scrollTop=focusY*height+Math.max(0,(viewport.clientHeight-height)/2)-viewport.clientHeight/2;
+  updateZoomControls();
+}
+mediaImage.addEventListener('load',()=>{if(scale===1)fitWidth=fittedWidth();});
+const mediaResize=new ResizeObserver(()=>{if(media.open){resetZoom();stopDrag();}});
+mediaResize.observe(viewport,{box:'border-box'});
 $$<HTMLElement>('[data-lightbox]').forEach(trigger=>trigger.addEventListener('click',()=>{
   const group=trigger.dataset.gallery;
   const members=group?$$<HTMLElement>(`[data-lightbox][data-gallery="${group}"]`):[trigger];
@@ -144,16 +163,70 @@ media.addEventListener('close',()=>{resetZoom();stopDrag();});
 
 $$<HTMLElement>('[data-slider]').forEach(slider=>{
   const slides=$$<HTMLElement>('[data-slide]',slider);
+  if(slides.length<2)return;
   const dots=$$<HTMLButtonElement>('[data-slide-to]',slider);
   const counter=$('[data-slider-count]',slider);
-  let current=0;let startX=0;let startY=0;
-  function show(index:number){current=(index+slides.length)%slides.length;slides.forEach((slide,i)=>{slide.hidden=i!==current;slide.setAttribute('aria-hidden',String(i!==current));});dots.forEach((dot,i)=>{dot.setAttribute('aria-current',String(i===current));});if(counter)counter.textContent=`${current+1} / ${slides.length}`;if(!reduceMotion.matches)gsap.fromTo(slides[current],{opacity:.5},{opacity:1,duration:.45,overwrite:true});}
-  $('[data-prev]',slider)?.addEventListener('click',()=>show(current-1));$('[data-next]',slider)?.addEventListener('click',()=>show(current+1));
-  dots.forEach(dot=>dot.addEventListener('click',()=>show(Number(dot.dataset.slideTo))));
-  slider.addEventListener('keydown',event=>{if(event.target instanceof HTMLSelectElement)return;if(event.key==='ArrowRight'){event.preventDefault();show(current+1);}if(event.key==='ArrowLeft'){event.preventDefault();show(current-1);}});
-  slider.addEventListener('pointerdown',event=>{startX=event.clientX;startY=event.clientY;});
-  slider.addEventListener('pointerup',event=>{if(event.pointerType==='mouse')return;const x=event.clientX-startX,y=event.clientY-startY;if(Math.abs(x)>55&&Math.abs(x)>Math.abs(y)*1.5)show(current+(x<0?1:-1));});
-  show(0);
+  let current=0;let displayed=0;let requestId=0;
+  let gesture:{id:number;x:number;y:number}|null=null;
+  let suppressClick=false;
+  function settle(index:number){
+    gsap.killTweensOf(slides);
+    slides.forEach((slide,i)=>{
+      slide.hidden=i!==index;slide.inert=i!==index;
+      slide.setAttribute('aria-hidden',String(i!==index));
+      slide.style.removeProperty('opacity');slide.style.removeProperty('z-index');
+    });
+  }
+  async function show(index:number){
+    current=(index+slides.length)%slides.length;
+    const next=current;const id=++requestId;
+    const image=$<HTMLImageElement>('img',slides[next]);
+    if(image){image.loading='eager';await image.decode().catch(()=>undefined);}
+    if(id!==requestId)return;
+    if(image&&!image.naturalWidth){current=displayed;settle(displayed);return;}
+    settle(displayed);
+    dots.forEach((dot,i)=>dot.setAttribute('aria-current',String(i===next)));
+    if(counter)counter.textContent=`${next+1} / ${slides.length}`;
+    if(next===displayed)return;
+    const incoming=slides[next];const outgoing=slides[displayed];
+    displayed=next;
+    incoming.hidden=false;incoming.inert=false;incoming.setAttribute('aria-hidden','false');
+    if(outgoing.contains(document.activeElement))slider.focus({preventScroll:true});
+    outgoing.inert=true;outgoing.setAttribute('aria-hidden','true');
+    incoming.style.zIndex='1';
+    // Fade the decoded image over an opaque previous frame, without a background flash.
+    if(reduceMotion.matches){settle(next);return;}
+    gsap.fromTo(incoming,{opacity:0},{opacity:1,duration:.45,ease:'power1.out',overwrite:true,onComplete:()=>{if(id===requestId)settle(next);}});
+  }
+  $('[data-prev]',slider)?.addEventListener('click',()=>{void show(current-1);});
+  $('[data-next]',slider)?.addEventListener('click',()=>{void show(current+1);});
+  dots.forEach(dot=>dot.addEventListener('click',()=>{void show(Number(dot.dataset.slideTo));}));
+  slider.addEventListener('keydown',event=>{
+    if(event.target instanceof HTMLSelectElement||event.target instanceof HTMLInputElement||event.target instanceof HTMLTextAreaElement)return;
+    if(event.key==='ArrowRight'){event.preventDefault();void show(current+1);}
+    if(event.key==='ArrowLeft'){event.preventDefault();void show(current-1);}
+  });
+  const track=$<HTMLElement>('.interior-slides',slider)||slider;
+  track.addEventListener('pointerdown',event=>{
+    if(event.pointerType==='mouse'||!event.isPrimary)return;
+    gesture={id:event.pointerId,x:event.clientX,y:event.clientY};suppressClick=false;
+  });
+  track.addEventListener('pointermove',event=>{
+    if(!gesture||gesture.id!==event.pointerId)return;
+    const dx=event.clientX-gesture.x,dy=event.clientY-gesture.y;
+    if(Math.abs(dx)>10&&Math.abs(dx)>Math.abs(dy)*1.5&&!track.hasPointerCapture(event.pointerId))track.setPointerCapture(event.pointerId);
+  });
+  track.addEventListener('pointerup',event=>{
+    if(!gesture||gesture.id!==event.pointerId)return;
+    const dx=event.clientX-gesture.x,dy=event.clientY-gesture.y;gesture=null;
+    if(track.hasPointerCapture(event.pointerId))track.releasePointerCapture(event.pointerId);
+    if(Math.abs(dx)>55&&Math.abs(dx)>Math.abs(dy)*1.5){suppressClick=true;void show(current+(dx<0?1:-1));}
+  });
+  track.addEventListener('pointercancel',()=>{gesture=null;suppressClick=false;});
+  track.addEventListener('lostpointercapture',()=>{gesture=null;});
+  track.addEventListener('click',event=>{if(suppressClick){event.preventDefault();event.stopImmediatePropagation();suppressClick=false;}},true);
+  reduceMotion.addEventListener('change',()=>settle(displayed));
+  settle(0);
 });
 
 const filters=$<HTMLFormElement>('#residence-filters');
@@ -192,21 +265,26 @@ const motion=gsap.matchMedia();
 motion.add({desktop:'(min-width: 801px)',motion:'(prefers-reduced-motion: no-preference)',fine:'(pointer: fine)'},context=>{
   const conditions=context.conditions as Record<string,boolean>;
   if(!conditions.motion)return;
-  $$<HTMLElement>('[data-reveal]').forEach(element=>gsap.from(element,{y:24,duration:1.05,ease:'power2.out',scrollTrigger:{trigger:element,start:'top 92%',once:true}}));
+  $$<HTMLElement>('[data-reveal]').forEach(element=>{
+    if(element.dataset.revealed==='true'||element.getBoundingClientRect().bottom<0)return;
+    gsap.from(element,{y:24,duration:.85,ease:'power2.out',scrollTrigger:{trigger:element,start:'top 92%',once:true,onEnter:()=>{element.dataset.revealed='true';}}});
+  });
   if(conditions.desktop&&conditions.fine){
-    $$<HTMLElement>('[data-parallax]').forEach(element=>gsap.to(element,{yPercent:Number(element.dataset.parallax)||-4,ease:'none',scrollTrigger:{trigger:element.parentElement,start:'top bottom',end:'bottom top',scrub:.8}}));
-    $$<HTMLElement>('[data-collage]').forEach((element,i)=>gsap.from(element,{y:(i%2?1:-1)*28,ease:'none',scrollTrigger:{trigger:element,start:'top bottom',end:'bottom center',scrub:.7}}));
+    $$<HTMLElement>('[data-parallax]').forEach(element=>gsap.to(element,{yPercent:Number(element.dataset.parallax)||-4,ease:'none',scrollTrigger:{trigger:element.parentElement,start:'top bottom',end:'bottom top',scrub:.6}}));
+    $$<HTMLElement>('[data-collage]').forEach((element,i)=>gsap.from(element,{y:(i%2?1:-1)*28,ease:'none',scrollTrigger:{trigger:element,start:'top bottom',end:'bottom center',scrub:.6}}));
     const intro=$<HTMLElement>('[data-scene="residences"]');
     if(intro){
-      // The source storyboard opens the signature silhouette into the paper
-      // catalogue. Pin only the fine-pointer desktop scene; native scrolling
-      // and the complete composition remain the touch/reduced-motion path.
-      const opening=gsap.timeline({scrollTrigger:{trigger:intro,start:'top top',end:()=>`+=${Math.min(window.innerHeight*1.2,1100)}`,pin:true,scrub:.8,anticipatePin:1,invalidateOnRefresh:true}});
+      // A tall source composition must be read before pinning its final viewport.
+      // Starting at bottom/bottom prevents short desktop windows from hiding its lower copy.
+      const opening=gsap.timeline({scrollTrigger:{trigger:intro,start:()=>intro.offsetHeight>window.innerHeight?'bottom bottom':'top top',end:()=>`+=${Math.min(window.innerHeight,1000)}`,pin:true,scrub:.6,anticipatePin:1,invalidateOnRefresh:true}});
       opening.to([$('.residences-shape',intro),$('.residences-art',intro)],{scale:2.8,duration:1,ease:'power1.inOut'},0)
         .to($('.residences-heading',intro),{opacity:0,y:-32,duration:.45,ease:'power1.out'},.13)
         .to($('.residences-background',intro),{scale:1.08,opacity:.25,duration:1,ease:'none'},0);
     }
   }
 });
-window.addEventListener('load',()=>ScrollTrigger.refresh(),{once:true});
-document.fonts.ready.then(()=>ScrollTrigger.refresh());
+let refreshFrame=0;
+function scheduleRefresh(){if(refreshFrame)return;refreshFrame=requestAnimationFrame(()=>{refreshFrame=0;ScrollTrigger.refresh();});}
+window.addEventListener('load',scheduleRefresh,{once:true});
+document.fonts.ready.then(scheduleRefresh);
+window.addEventListener('pageshow',event=>{if(event.persisted)scheduleRefresh();});
