@@ -83,8 +83,34 @@ Exact scope and commands are appended to `docs/MOTION-QA-2026-11-01.md`. Final c
 
 Окончательный commit/deployment и независимая production приемка: [общий MOTION-RELEASE-2026-11-01](https://github.com/IMONsergey/LuxuryRealty/blob/main/docs/MOTION-RELEASE-2026-11-01.md). Эта запись описывает локальную передачу, не заявляет самостоятельную публикацию. Исторические server/API проверки выше сохраняются; текущие enquiries только mocked/blocked.
 
-## Narrow-phone overflow correction, 2026-11-02
+## Narrow-phone catalogue refinement and final visual acceptance, 2026-11-02
 
-A new production E2E run exposed clipping in the residence catalogue's Total area and Balcony values at 320 px. The correction is isolated on branch `fix/atlantis-320px-area-overflow-20261102`, commit `42fe13ccf90bc490035e7501952046b5684e93b3`. Only the narrow-card summary typography and row gaps changed; values, labels, imagery and the desktop layout are unchanged. At 320 px the summary now uses 10 px text with tighter 6 px gaps, while 360/390/1440 px retain the original 11 px type.
+The original 10px narrow-phone workaround is superseded. On screens up to 359px the residence area summary now uses a two-column grid: the label occupies the left column and the two source values are stacked in the right column. Type is 12px at 320px. At 360px, 390px and desktop the original flex row and 11px type remain unchanged. All six authored strings and their values are preserved. No inventory, price or availability data was changed.
 
-Final isolated-worktree validation passed: `npm run check`, `npm run build`, the full Atlantis E2E suite (desktop/mobile, gallery, filters, residence navigation, plan zoom, forms, normal motion and reduced motion), and explicit catalogue geometry at 320/360/390/1440 px. At 320 px both rows and all six text items remain inside the 239 px row bounds. The root `main` worktree remains unchanged at `fc940bd`; the fix is committed locally on its separate branch and is not yet pushed or published.
+Final source change: `src/components/Residences.astro`. Application commit: `5e89bab7380fce379f3cceab42ff45c6de9faf6d`. Branch: `fix/atlantis-320px-area-overflow-20261102`. The earlier narrow-phone application commit `42fe13ccf90bc490035e7501952046b5684e93b3` and checkpoint commit `b87f960e3a7a7419f3d51f6ed5504aade3920296` had already been pushed to the same GitHub branch. This newer 12px grid refinement and its evidence are local only and have not been pushed or deployed. Production remains unchanged. Main remains `fc940bd55cf2815bae27f91072a27b82d3ec6192` and clean.
+
+Final validation after the 12px source change:
+- `npm run check`: passed.
+- `npm run build`: passed (Astro production build completed).
+- `tests/e2e.mjs`: passed desktop and mobile flows, catalogue filters, source imagery, highlights/interiors, Unit 3402 navigation, plan zoom, menu/focus, mocked enquiry failure/retry/success, normal motion, reduced motion, responsive resize and 320/360/390px catalogue clipping. No real enquiry was sent.
+- Four-width visual QA: passed at 320, 360, 390 and 1440px. It verifies exact labels/values, decoded visible imagery, no text overlap, and all six text boxes within the DL bounds. At 320px the DL is 255px wide and the grid uses 12px text; at 360/390/1440 the existing flex composition and 11px type remain intact. Zero page errors.
+- Final visual screenshot job: `20261102T092214-81f2cb122b`, succeeded. The preceding combined build/E2E/screenshot job `20261102T092035-a5260f26c1` logged successful typecheck, build and full E2E, then exited 1 only because the screenshot harness incorrectly demanded 12px at the unchanged 360/390/1440 layouts. The assertion was corrected to require 12px only at 320px and 11px elsewhere; the final screenshot job then passed. This was a test assertion correction, not an application defect.
+
+Final screenshot evidence was generated after the 12px CSS change and visually inspected. Each viewport has a catalogue section capture, a complete residence card capture and a dedicated area-summary capture. Exact file paths and SHA-256 values:
+
+| Width | Screenshot | SHA-256 |
+|---:|---|---|
+| 320 | `docs/verification/2026-11-02-narrow-phone/atlantis-catalogue-320.png` | `d43012c02d9b15dea55abf6841e7904228d69363c315222284945f6ba4f22477` |
+| 320 | `docs/verification/2026-11-02-narrow-phone/atlantis-residence-card-320.png` | `bbbdd5d56f09c3b22d2bc5d09104342c2c2d3fb0fd303a4c5dba93c4b45edb9d` |
+| 320 | `docs/verification/2026-11-02-narrow-phone/atlantis-area-summary-320.png` | `aac09f548df6412e29821c30da6b5d4d0899f343efd587f4ed1bb4e654479f7d` |
+| 360 | `docs/verification/2026-11-02-narrow-phone/atlantis-catalogue-360.png` | `2cb7887fbac2231ca9ba555e8cd1b1e6b22b34060ea9406b11348155dea8a1f2` |
+| 360 | `docs/verification/2026-11-02-narrow-phone/atlantis-residence-card-360.png` | `4c812e7e755753d990c4d58ad0b2ba056fc354471993066d059995c471b1e1ff` |
+| 360 | `docs/verification/2026-11-02-narrow-phone/atlantis-area-summary-360.png` | `1e8b07ec105769645c0b80b6c1d7f425105739fa51ad5fd610637ffca7508844` |
+| 390 | `docs/verification/2026-11-02-narrow-phone/atlantis-catalogue-390.png` | `89a2400d8e5fd2af9fcf70937eb25f50683f5e9ee105fb57e9014a883e25ea95` |
+| 390 | `docs/verification/2026-11-02-narrow-phone/atlantis-residence-card-390.png` | `1da1828af5ec1389716af373cd2f9896f52aa06eb62b7b6d26ae4bc760bc20ec` |
+| 390 | `docs/verification/2026-11-02-narrow-phone/atlantis-area-summary-390.png` | `cc5146717d33f4f49a9d8e813bb835c72b1a9aa8d81e36820b6643887b2e9c23` |
+| 1440 | `docs/verification/2026-11-02-narrow-phone/atlantis-catalogue-1440.png` | `f9af70abbdb9a1bfe3ac650fba323c9a8a63673135b5eca98dbe727b96cbc6c4` |
+| 1440 | `docs/verification/2026-11-02-narrow-phone/atlantis-residence-card-1440.png` | `a5f89b71663aa88db710704c88be07ebdacc07eb122400196c44696e659b0fa5` |
+| 1440 | `docs/verification/2026-11-02-narrow-phone/atlantis-area-summary-1440.png` | `45f06ce6c4bce89a8615de4c79f6909349a11ba34b1993aa293d6d6738b8584d` |
+
+The machine-readable geometry and screenshot manifest is `docs/verification/2026-11-02-narrow-phone/report.json`. This is a locally accepted fix, not a production release. No real enquiries, production writes, external submissions, deployment or GitHub push were performed in this continuation.
