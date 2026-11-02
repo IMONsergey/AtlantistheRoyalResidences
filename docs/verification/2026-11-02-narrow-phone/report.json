@@ -1,0 +1,843 @@
+{
+  "base": "http://127.0.0.1:4322",
+  "createdAt": "2026-11-02T09:22:28.935Z",
+  "viewports": [
+    {
+      "width": 320,
+      "metrics": {
+        "dl": {
+          "left": 25,
+          "right": 280,
+          "top": 562.5,
+          "bottom": 703.88,
+          "width": 255,
+          "height": 141.38
+        },
+        "fontSize": "12px",
+        "rows": [
+          {
+            "rect": {
+              "left": 41,
+              "right": 264,
+              "top": 580.5,
+              "bottom": 632.69,
+              "width": 223,
+              "height": 52.19
+            },
+            "display": "grid",
+            "items": [
+              {
+                "text": "Total area",
+                "rect": {
+                  "left": 41,
+                  "right": 176,
+                  "top": 599,
+                  "bottom": 615.19,
+                  "width": 135,
+                  "height": 16.19
+                }
+              },
+              {
+                "text": "340.43 sq m",
+                "rect": {
+                  "left": 186,
+                  "right": 264,
+                  "top": 590.5,
+                  "bottom": 606.09,
+                  "width": 78,
+                  "height": 15.59
+                }
+              },
+              {
+                "text": "3,664 sq ft",
+                "rect": {
+                  "left": 186,
+                  "right": 264,
+                  "top": 608.09,
+                  "bottom": 623.69,
+                  "width": 78,
+                  "height": 15.59
+                }
+              }
+            ]
+          },
+          {
+            "rect": {
+              "left": 41,
+              "right": 264,
+              "top": 632.69,
+              "bottom": 685.88,
+              "width": 223,
+              "height": 53.19
+            },
+            "display": "grid",
+            "items": [
+              {
+                "text": "Balcony",
+                "rect": {
+                  "left": 41,
+                  "right": 184,
+                  "top": 651.19,
+                  "bottom": 667.38,
+                  "width": 143,
+                  "height": 16.19
+                }
+              },
+              {
+                "text": "60.94 sq m",
+                "rect": {
+                  "left": 194,
+                  "right": 264,
+                  "top": 642.69,
+                  "bottom": 658.28,
+                  "width": 70,
+                  "height": 15.59
+                }
+              },
+              {
+                "text": "656 sq ft",
+                "rect": {
+                  "left": 194,
+                  "right": 264,
+                  "top": 660.28,
+                  "bottom": 675.88,
+                  "width": 70,
+                  "height": 15.59
+                }
+              }
+            ]
+          }
+        ],
+        "elements": [
+          {
+            "text": "Total area",
+            "rect": {
+              "left": 41,
+              "right": 176,
+              "top": 599,
+              "bottom": 615.19,
+              "width": 135,
+              "height": 16.19
+            },
+            "fontSize": "12px",
+            "lineHeight": "16.2px"
+          },
+          {
+            "text": "340.43 sq m",
+            "rect": {
+              "left": 186,
+              "right": 264,
+              "top": 590.5,
+              "bottom": 606.09,
+              "width": 78,
+              "height": 15.59
+            },
+            "fontSize": "12px",
+            "lineHeight": "15.6px"
+          },
+          {
+            "text": "3,664 sq ft",
+            "rect": {
+              "left": 186,
+              "right": 264,
+              "top": 608.09,
+              "bottom": 623.69,
+              "width": 78,
+              "height": 15.59
+            },
+            "fontSize": "12px",
+            "lineHeight": "15.6px"
+          },
+          {
+            "text": "Balcony",
+            "rect": {
+              "left": 41,
+              "right": 184,
+              "top": 651.19,
+              "bottom": 667.38,
+              "width": 143,
+              "height": 16.19
+            },
+            "fontSize": "12px",
+            "lineHeight": "16.2px"
+          },
+          {
+            "text": "60.94 sq m",
+            "rect": {
+              "left": 194,
+              "right": 264,
+              "top": 642.69,
+              "bottom": 658.28,
+              "width": 70,
+              "height": 15.59
+            },
+            "fontSize": "12px",
+            "lineHeight": "15.6px"
+          },
+          {
+            "text": "656 sq ft",
+            "rect": {
+              "left": 194,
+              "right": 264,
+              "top": 660.28,
+              "bottom": 675.88,
+              "width": 70,
+              "height": 15.59
+            },
+            "fontSize": "12px",
+            "lineHeight": "15.6px"
+          }
+        ],
+        "scrollWidth": 255,
+        "clientWidth": 255
+      },
+      "files": [
+        {
+          "path": "docs/verification/2026-11-02-narrow-phone/atlantis-catalogue-320.png",
+          "bytes": 83453,
+          "sha256": "d43012c02d9b15dea55abf6841e7904228d69363c315222284945f6ba4f22477"
+        },
+        {
+          "path": "docs/verification/2026-11-02-narrow-phone/atlantis-residence-card-320.png",
+          "bytes": 54310,
+          "sha256": "bbbdd5d56f09c3b22d2bc5d09104342c2c2d3fb0fd303a4c5dba93c4b45edb9d"
+        },
+        {
+          "path": "docs/verification/2026-11-02-narrow-phone/atlantis-area-summary-320.png",
+          "bytes": 12787,
+          "sha256": "aac09f548df6412e29821c30da6b5d4d0899f343efd587f4ed1bb4e654479f7d"
+        }
+      ]
+    },
+    {
+      "width": 360,
+      "metrics": {
+        "dl": {
+          "left": 25,
+          "right": 320,
+          "top": 569.02,
+          "bottom": 674.8,
+          "width": 295,
+          "height": 105.78
+        },
+        "fontSize": "11px",
+        "rows": [
+          {
+            "rect": {
+              "left": 49,
+              "right": 296,
+              "top": 587.02,
+              "bottom": 621.41,
+              "width": 247,
+              "height": 34.39
+            },
+            "display": "flex",
+            "items": [
+              {
+                "text": "Total area",
+                "rect": {
+                  "left": 49,
+                  "right": 120,
+                  "top": 597.02,
+                  "bottom": 612.41,
+                  "width": 71,
+                  "height": 15.39
+                }
+              },
+              {
+                "text": "340.43 sq m",
+                "rect": {
+                  "left": 135.5,
+                  "right": 209.5,
+                  "top": 597.02,
+                  "bottom": 612.41,
+                  "width": 74,
+                  "height": 15.39
+                }
+              },
+              {
+                "text": "3,664 sq ft",
+                "rect": {
+                  "left": 225,
+                  "right": 296,
+                  "top": 597.02,
+                  "bottom": 612.41,
+                  "width": 71,
+                  "height": 15.39
+                }
+              }
+            ]
+          },
+          {
+            "rect": {
+              "left": 49,
+              "right": 296,
+              "top": 621.41,
+              "bottom": 656.8,
+              "width": 247,
+              "height": 35.39
+            },
+            "display": "flex",
+            "items": [
+              {
+                "text": "Balcony",
+                "rect": {
+                  "left": 49,
+                  "right": 103,
+                  "top": 631.41,
+                  "bottom": 646.8,
+                  "width": 54,
+                  "height": 15.39
+                }
+              },
+              {
+                "text": "60.94 sq m",
+                "rect": {
+                  "left": 135.5,
+                  "right": 203.5,
+                  "top": 631.41,
+                  "bottom": 646.8,
+                  "width": 68,
+                  "height": 15.39
+                }
+              },
+              {
+                "text": "656 sq ft",
+                "rect": {
+                  "left": 236,
+                  "right": 296,
+                  "top": 631.41,
+                  "bottom": 646.8,
+                  "width": 60,
+                  "height": 15.39
+                }
+              }
+            ]
+          }
+        ],
+        "elements": [
+          {
+            "text": "Total area",
+            "rect": {
+              "left": 49,
+              "right": 120,
+              "top": 597.02,
+              "bottom": 612.41,
+              "width": 71,
+              "height": 15.39
+            },
+            "fontSize": "11px",
+            "lineHeight": "15.4px"
+          },
+          {
+            "text": "340.43 sq m",
+            "rect": {
+              "left": 135.5,
+              "right": 209.5,
+              "top": 597.02,
+              "bottom": 612.41,
+              "width": 74,
+              "height": 15.39
+            },
+            "fontSize": "11px",
+            "lineHeight": "15.4px"
+          },
+          {
+            "text": "3,664 sq ft",
+            "rect": {
+              "left": 225,
+              "right": 296,
+              "top": 597.02,
+              "bottom": 612.41,
+              "width": 71,
+              "height": 15.39
+            },
+            "fontSize": "11px",
+            "lineHeight": "15.4px"
+          },
+          {
+            "text": "Balcony",
+            "rect": {
+              "left": 49,
+              "right": 103,
+              "top": 631.41,
+              "bottom": 646.8,
+              "width": 54,
+              "height": 15.39
+            },
+            "fontSize": "11px",
+            "lineHeight": "15.4px"
+          },
+          {
+            "text": "60.94 sq m",
+            "rect": {
+              "left": 135.5,
+              "right": 203.5,
+              "top": 631.41,
+              "bottom": 646.8,
+              "width": 68,
+              "height": 15.39
+            },
+            "fontSize": "11px",
+            "lineHeight": "15.4px"
+          },
+          {
+            "text": "656 sq ft",
+            "rect": {
+              "left": 236,
+              "right": 296,
+              "top": 631.41,
+              "bottom": 646.8,
+              "width": 60,
+              "height": 15.39
+            },
+            "fontSize": "11px",
+            "lineHeight": "15.4px"
+          }
+        ],
+        "scrollWidth": 295,
+        "clientWidth": 295
+      },
+      "files": [
+        {
+          "path": "docs/verification/2026-11-02-narrow-phone/atlantis-catalogue-360.png",
+          "bytes": 90592,
+          "sha256": "2cb7887fbac2231ca9ba555e8cd1b1e6b22b34060ea9406b11348155dea8a1f2"
+        },
+        {
+          "path": "docs/verification/2026-11-02-narrow-phone/atlantis-residence-card-360.png",
+          "bytes": 61879,
+          "sha256": "4c812e7e755753d990c4d58ad0b2ba056fc354471993066d059995c471b1e1ff"
+        },
+        {
+          "path": "docs/verification/2026-11-02-narrow-phone/atlantis-area-summary-360.png",
+          "bytes": 11191,
+          "sha256": "1e8b07ec105769645c0b80b6c1d7f425105739fa51ad5fd610637ffca7508844"
+        }
+      ]
+    },
+    {
+      "width": 390,
+      "metrics": {
+        "dl": {
+          "left": 25,
+          "right": 350,
+          "top": 548.92,
+          "bottom": 654.7,
+          "width": 325,
+          "height": 105.78
+        },
+        "fontSize": "11px",
+        "rows": [
+          {
+            "rect": {
+              "left": 49,
+              "right": 326,
+              "top": 566.92,
+              "bottom": 601.31,
+              "width": 277,
+              "height": 34.39
+            },
+            "display": "flex",
+            "items": [
+              {
+                "text": "Total area",
+                "rect": {
+                  "left": 49,
+                  "right": 120,
+                  "top": 576.92,
+                  "bottom": 592.31,
+                  "width": 71,
+                  "height": 15.39
+                }
+              },
+              {
+                "text": "340.43 sq m",
+                "rect": {
+                  "left": 150.5,
+                  "right": 224.5,
+                  "top": 576.92,
+                  "bottom": 592.31,
+                  "width": 74,
+                  "height": 15.39
+                }
+              },
+              {
+                "text": "3,664 sq ft",
+                "rect": {
+                  "left": 255,
+                  "right": 326,
+                  "top": 576.92,
+                  "bottom": 592.31,
+                  "width": 71,
+                  "height": 15.39
+                }
+              }
+            ]
+          },
+          {
+            "rect": {
+              "left": 49,
+              "right": 326,
+              "top": 601.31,
+              "bottom": 636.7,
+              "width": 277,
+              "height": 35.39
+            },
+            "display": "flex",
+            "items": [
+              {
+                "text": "Balcony",
+                "rect": {
+                  "left": 49,
+                  "right": 103,
+                  "top": 611.31,
+                  "bottom": 626.7,
+                  "width": 54,
+                  "height": 15.39
+                }
+              },
+              {
+                "text": "60.94 sq m",
+                "rect": {
+                  "left": 150.5,
+                  "right": 218.5,
+                  "top": 611.31,
+                  "bottom": 626.7,
+                  "width": 68,
+                  "height": 15.39
+                }
+              },
+              {
+                "text": "656 sq ft",
+                "rect": {
+                  "left": 266,
+                  "right": 326,
+                  "top": 611.31,
+                  "bottom": 626.7,
+                  "width": 60,
+                  "height": 15.39
+                }
+              }
+            ]
+          }
+        ],
+        "elements": [
+          {
+            "text": "Total area",
+            "rect": {
+              "left": 49,
+              "right": 120,
+              "top": 576.92,
+              "bottom": 592.31,
+              "width": 71,
+              "height": 15.39
+            },
+            "fontSize": "11px",
+            "lineHeight": "15.4px"
+          },
+          {
+            "text": "340.43 sq m",
+            "rect": {
+              "left": 150.5,
+              "right": 224.5,
+              "top": 576.92,
+              "bottom": 592.31,
+              "width": 74,
+              "height": 15.39
+            },
+            "fontSize": "11px",
+            "lineHeight": "15.4px"
+          },
+          {
+            "text": "3,664 sq ft",
+            "rect": {
+              "left": 255,
+              "right": 326,
+              "top": 576.92,
+              "bottom": 592.31,
+              "width": 71,
+              "height": 15.39
+            },
+            "fontSize": "11px",
+            "lineHeight": "15.4px"
+          },
+          {
+            "text": "Balcony",
+            "rect": {
+              "left": 49,
+              "right": 103,
+              "top": 611.31,
+              "bottom": 626.7,
+              "width": 54,
+              "height": 15.39
+            },
+            "fontSize": "11px",
+            "lineHeight": "15.4px"
+          },
+          {
+            "text": "60.94 sq m",
+            "rect": {
+              "left": 150.5,
+              "right": 218.5,
+              "top": 611.31,
+              "bottom": 626.7,
+              "width": 68,
+              "height": 15.39
+            },
+            "fontSize": "11px",
+            "lineHeight": "15.4px"
+          },
+          {
+            "text": "656 sq ft",
+            "rect": {
+              "left": 266,
+              "right": 326,
+              "top": 611.31,
+              "bottom": 626.7,
+              "width": 60,
+              "height": 15.39
+            },
+            "fontSize": "11px",
+            "lineHeight": "15.4px"
+          }
+        ],
+        "scrollWidth": 325,
+        "clientWidth": 325
+      },
+      "files": [
+        {
+          "path": "docs/verification/2026-11-02-narrow-phone/atlantis-catalogue-390.png",
+          "bytes": 98652,
+          "sha256": "89a2400d8e5fd2af9fcf70937eb25f50683f5e9ee105fb57e9014a883e25ea95"
+        },
+        {
+          "path": "docs/verification/2026-11-02-narrow-phone/atlantis-residence-card-390.png",
+          "bytes": 70445,
+          "sha256": "1da1828af5ec1389716af373cd2f9896f52aa06eb62b7b6d26ae4bc760bc20ec"
+        },
+        {
+          "path": "docs/verification/2026-11-02-narrow-phone/atlantis-area-summary-390.png",
+          "bytes": 12175,
+          "sha256": "cc5146717d33f4f49a9d8e813bb835c72b1a9aa8d81e36820b6643887b2e9c23"
+        }
+      ]
+    },
+    {
+      "width": 1440,
+      "metrics": {
+        "dl": {
+          "left": 1037.11,
+          "right": 1424.98,
+          "top": 801.11,
+          "bottom": 918.89,
+          "width": 387.88,
+          "height": 117.78
+        },
+        "fontSize": "11px",
+        "rows": [
+          {
+            "rect": {
+              "left": 1109.11,
+              "right": 1352.98,
+              "top": 825.11,
+              "bottom": 859.5,
+              "width": 243.88,
+              "height": 34.39
+            },
+            "display": "flex",
+            "items": [
+              {
+                "text": "Total area",
+                "rect": {
+                  "left": 1109.11,
+                  "right": 1180.11,
+                  "top": 835.11,
+                  "bottom": 850.5,
+                  "width": 71,
+                  "height": 15.39
+                }
+              },
+              {
+                "text": "340.43 sq m",
+                "rect": {
+                  "left": 1194.05,
+                  "right": 1268.05,
+                  "top": 835.11,
+                  "bottom": 850.5,
+                  "width": 74,
+                  "height": 15.39
+                }
+              },
+              {
+                "text": "3,664 sq ft",
+                "rect": {
+                  "left": 1281.98,
+                  "right": 1352.98,
+                  "top": 835.11,
+                  "bottom": 850.5,
+                  "width": 71,
+                  "height": 15.39
+                }
+              }
+            ]
+          },
+          {
+            "rect": {
+              "left": 1109.11,
+              "right": 1352.98,
+              "top": 859.5,
+              "bottom": 894.89,
+              "width": 243.88,
+              "height": 35.39
+            },
+            "display": "flex",
+            "items": [
+              {
+                "text": "Balcony",
+                "rect": {
+                  "left": 1109.11,
+                  "right": 1163.11,
+                  "top": 869.5,
+                  "bottom": 884.89,
+                  "width": 54,
+                  "height": 15.39
+                }
+              },
+              {
+                "text": "60.94 sq m",
+                "rect": {
+                  "left": 1194.05,
+                  "right": 1262.05,
+                  "top": 869.5,
+                  "bottom": 884.89,
+                  "width": 68,
+                  "height": 15.39
+                }
+              },
+              {
+                "text": "656 sq ft",
+                "rect": {
+                  "left": 1292.98,
+                  "right": 1352.98,
+                  "top": 869.5,
+                  "bottom": 884.89,
+                  "width": 60,
+                  "height": 15.39
+                }
+              }
+            ]
+          }
+        ],
+        "elements": [
+          {
+            "text": "Total area",
+            "rect": {
+              "left": 1109.11,
+              "right": 1180.11,
+              "top": 835.11,
+              "bottom": 850.5,
+              "width": 71,
+              "height": 15.39
+            },
+            "fontSize": "11px",
+            "lineHeight": "15.4px"
+          },
+          {
+            "text": "340.43 sq m",
+            "rect": {
+              "left": 1194.05,
+              "right": 1268.05,
+              "top": 835.11,
+              "bottom": 850.5,
+              "width": 74,
+              "height": 15.39
+            },
+            "fontSize": "11px",
+            "lineHeight": "15.4px"
+          },
+          {
+            "text": "3,664 sq ft",
+            "rect": {
+              "left": 1281.98,
+              "right": 1352.98,
+              "top": 835.11,
+              "bottom": 850.5,
+              "width": 71,
+              "height": 15.39
+            },
+            "fontSize": "11px",
+            "lineHeight": "15.4px"
+          },
+          {
+            "text": "Balcony",
+            "rect": {
+              "left": 1109.11,
+              "right": 1163.11,
+              "top": 869.5,
+              "bottom": 884.89,
+              "width": 54,
+              "height": 15.39
+            },
+            "fontSize": "11px",
+            "lineHeight": "15.4px"
+          },
+          {
+            "text": "60.94 sq m",
+            "rect": {
+              "left": 1194.05,
+              "right": 1262.05,
+              "top": 869.5,
+              "bottom": 884.89,
+              "width": 68,
+              "height": 15.39
+            },
+            "fontSize": "11px",
+            "lineHeight": "15.4px"
+          },
+          {
+            "text": "656 sq ft",
+            "rect": {
+              "left": 1292.98,
+              "right": 1352.98,
+              "top": 869.5,
+              "bottom": 884.89,
+              "width": 60,
+              "height": 15.39
+            },
+            "fontSize": "11px",
+            "lineHeight": "15.4px"
+          }
+        ],
+        "scrollWidth": 388,
+        "clientWidth": 388
+      },
+      "files": [
+        {
+          "path": "docs/verification/2026-11-02-narrow-phone/atlantis-catalogue-1440.png",
+          "bytes": 143723,
+          "sha256": "f9af70abbdb9a1bfe3ac650fba323c9a8a63673135b5eca98dbe727b96cbc6c4"
+        },
+        {
+          "path": "docs/verification/2026-11-02-narrow-phone/atlantis-residence-card-1440.png",
+          "bytes": 119668,
+          "sha256": "a5f89b71663aa88db710704c88be07ebdacc07eb122400196c44696e659b0fa5"
+        },
+        {
+          "path": "docs/verification/2026-11-02-narrow-phone/atlantis-area-summary-1440.png",
+          "bytes": 13399,
+          "sha256": "45f06ce6c4bce89a8615de4c79f6909349a11ba34b1993aa293d6d6738b8584d"
+        }
+      ]
+    }
+  ],
+  "pageErrors": [],
+  "checks": {
+    "labelsAndValues": "exact",
+    "minimumAreaTypePx": 11,
+    "minimumAt320Px": 12,
+    "allTextsInsideDl": true,
+    "noTextOverlap": true,
+    "decodedImages": true
+  }
+}

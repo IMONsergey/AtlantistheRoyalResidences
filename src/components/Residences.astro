@@ -35,8 +35,13 @@ const a=(key:string)=>(assets as Record<string,string>)[key];
 @media(max-width:800px){.residences-opening{height:720px}.residences-background{width:1248px;height:720px;left:calc(50% - 624px)}.residences-shape,.residences-art{width:1100px;height:695px;left:calc(50% - 550px);top:0}.residences-shape{height:716px}.residences-heading{top:118px;width:calc(100% - 70px);max-width:360px}.residences-heading>.editorial{font-size:22px}.residences-heading h2{font-size:52px;line-height:1;margin:32px auto}.residences-description{font-size:12px;line-height:1.7;max-width:280px;margin:auto}.catalogue-heading{padding:55px 24px 30px;display:block}.catalogue-heading .editorial{font-size:22px;margin-bottom:18px}.catalogue-heading h2{font-size:42px}.catalogue-note{text-align:left;margin-top:24px;font-size:12px}.filters{display:grid;grid-template-columns:1fr 1fr;gap:18px 20px;padding:0 24px 28px}.filters select{min-width:0;width:100%;font-size:12px;padding-right:20px}.filters .results{margin-left:0;text-align:right;font-size:10px}.filters .link-line{justify-self:start}.preview-options{justify-content:flex-start;gap:28px;padding-bottom:20px}.unit-row{display:flex;flex-direction:column;min-height:0;margin:0 24px;border:1px solid var(--line)}.unit-summary{order:0;padding:24px 0 0}.unit-summary>.eyebrow{font-size:12px;margin-bottom:24px}.unit-summary h3{font-size:78px;margin:16px 0 25px}.unit-summary dl{padding:18px 24px;font-size:11px}.unit-preview{order:1;min-height:350px}.orientation-labels{font-size:9px;padding:16px 14px}.plan-preview{width:300px;height:260px;max-width:93%;margin:0 auto}.palm-label{font-size:10px;margin-top:18px}.unit-arrangement{order:2;padding:22px;display:grid;grid-template-columns:1fr 1fr;gap:20px;border-top:1px solid var(--line);border-right:0}.unit-arrangement .eyebrow{grid-column:1/-1;margin:0;text-align:center;font-size:10px}.building-diagram{width:100%;height:90px}.level-diagram{width:100%;height:90px;margin:0}.level-diagram img{left:-28%;width:141%;height:132%;object-fit:contain}.catalogue-action{padding:24px}.catalogue-action :global(.pill){width:100%;max-width:342px}.no-results h3{font-size:38px}.no-results>div{flex-direction:column;max-width:342px;margin:30px auto 0}}
 </style>
 <style>
-/* Preserve all area values inside the narrow card at the smallest phone widths. */
-@media(max-width:359px){.unit-summary dl{padding-inline:clamp(8px,calc(40vw - 120px),24px);font-size:10px}.unit-summary dl div{gap:6px}.unit-summary dd{letter-spacing:-.015em}}
+/* Keep every area value readable on narrow phones without shrinking type. */
+@media(max-width:359px){
+ .unit-summary dl{padding:18px 16px;font-size:12px}
+ .unit-summary dl div{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;column-gap:10px;row-gap:2px;padding:9px 0}
+ .unit-summary dt{grid-column:1;grid-row:1 / span 2;white-space:normal;text-align:left;line-height:1.35}
+ .unit-summary dd{grid-column:2;white-space:nowrap;text-align:right;line-height:1.3}
+}
 </style>
 <style>
 .residences-background img,.residences-art img{width:100%;height:100%;object-fit:cover}.residences-art img{object-fit:fill}
